@@ -25,8 +25,8 @@ const PricingCard = ({
                 }`}
         >
             {badge && (
-                <div className="absolute -top-[11px] left-1/2 -translate-x-1/2 z-20">
-                    <span className="px-3 py-1 text-[11px] font-medium rounded-full bg-primary/20 text-primary border border-primary/30 backdrop-blur-md shadow-[0_0_10px_rgba(var(--primary),0.2)] tracking-wide whitespace-nowrap">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-20 w-full flex justify-center pointer-events-none">
+                    <span className="inline-flex items-center justify-center px-3 py-1.5 text-[11px] font-medium rounded-full bg-primary/20 text-primary border border-primary/30 backdrop-blur-md shadow-[0_0_10px_rgba(var(--primary),0.2)] tracking-wide whitespace-nowrap min-w-min max-w-[90%] pointer-events-auto">
                         {badge}
                     </span>
                 </div>

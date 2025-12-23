@@ -238,7 +238,7 @@ export const en: Translations = {
                 period: 'year',
                 description1: 'OpenAI, Gemini, Claude and Perplexity access',
                 description2: 'Usage through intermediary platform',
-                badge: 'Most Preferred',
+                badge: 'Most Popular',
             },
             trust: 'Original platform, access from your own account',
             cta: 'Explore all our services',
