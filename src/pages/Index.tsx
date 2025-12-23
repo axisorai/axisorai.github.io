@@ -45,26 +45,26 @@ const Index = () => {
 
             <Navbar />
 
-            <main className="relative z-10">
+            <main className="relative z-10 space-y-4 md:space-y-0 pb-10 md:pb-0">
                 {/* Hero Section */}
-                <section className="py-20 px-6">
+                <section className="py-12 md:py-20 px-4 md:px-6">
                     <div className="container mx-auto text-center">
-                        <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-4 leading-tight tracking-tight">
-                            {t('portfolio.hero.title')} <span className="text-gradient">{t('portfolio.hero.titleHighlight')}</span>
+                        <h1 className="hero-title text-3xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-3 md:mb-4 leading-tight tracking-tight">
+                            {t('portfolio.hero.title')} <span className="text-gradient block md:inline">{t('portfolio.hero.titleHighlight')}</span>
                         </h1>
-                        <p className="hero-subtitle text-lg md:text-xl text-muted-foreground/80 max-w-xl mx-auto leading-relaxed">
+                        <p className="hero-subtitle text-base md:text-xl text-muted-foreground/80 max-w-xl mx-auto leading-relaxed px-2">
                             {t('portfolio.hero.subtitle')}
                         </p>
                     </div>
                 </section>
 
                 {/* Technologies Section */}
-                <section className="py-16 px-6">
+                <section className="py-8 md:py-16 px-4 md:px-6">
                     <div className="container mx-auto max-w-4xl">
-                        <p className="section-label text-center text-xs text-muted-foreground/60 uppercase tracking-[0.2em] mb-10">
+                        <p className="section-label text-center text-[10px] md:text-xs text-muted-foreground/60 uppercase tracking-[0.2em] mb-6 md:mb-10">
                             {t('portfolio.technologies.label')}
                         </p>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                             {technologies.map((tech, index) => (
                                 <div
                                     key={tech.name}
@@ -79,11 +79,11 @@ const Index = () => {
                 </section>
 
                 {/* Pricing Section */}
-                <section className="py-20 px-6">
+                <section className="py-10 md:py-20 px-4 md:px-6">
                     <div className="container mx-auto max-w-3xl">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
                             {/* Monthly Card */}
-                            <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                            <div className="animate-fade-in order-2 md:order-1" style={{ animationDelay: '0.2s' }}>
                                 <PricingCard
                                     title={t('portfolio.pricing.monthly.title')}
                                     price={t('portfolio.pricing.monthly.price')}
@@ -93,7 +93,7 @@ const Index = () => {
                             </div>
 
                             {/* Yearly / Featured Card */}
-                            <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                            <div className="animate-fade-in order-1 md:order-2" style={{ animationDelay: '0.3s' }}>
                                 <PricingCard
                                     title={t('portfolio.pricing.yearly.title')}
                                     subtitle={t('portfolio.pricing.yearly.subtitle')}
@@ -110,18 +110,18 @@ const Index = () => {
                         </div>
 
                         {/* Trust Line */}
-                        <div className="mt-16 text-center">
-                            <p className="text-sm text-muted-foreground/60 flex items-center justify-center gap-2 leading-relaxed">
-                                <span className="w-2 h-2 rounded-full bg-primary/60 animate-pulse" />
+                        <div className="mt-10 md:mt-16 text-center">
+                            <p className="text-xs md:text-sm text-muted-foreground/60 flex items-center justify-center gap-2 leading-relaxed px-4 text-center">
+                                <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-primary/60 animate-pulse shrink-0" />
                                 {t('portfolio.pricing.trust')}
                             </p>
                         </div>
 
                         {/* Link to Services */}
-                        <div className="mt-8 text-center">
+                        <div className="mt-8 text-center pb-8 md:pb-0">
                             <Link
                                 to="/services"
-                                className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors"
+                                className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors py-2 px-4 active:scale-95 transition-transform"
                             >
                                 {t('portfolio.pricing.cta')} →
                             </Link>
