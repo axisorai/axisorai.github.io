@@ -226,7 +226,7 @@ export const en: Translations = {
         },
         pricing: {
             monthly: {
-                title: 'Monthly Package',
+                title: 'Pro',
                 price: '₺650',
                 period: 'month',
                 description: 'OpenAI ChatGPT support only',

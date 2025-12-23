@@ -25,8 +25,8 @@ const PricingCard = ({
                 }`}
         >
             {badge && (
-                <div className="absolute -top-2.5 left-1/2 -translate-x-1/2">
-                    <span className="px-3 py-1 text-[11px] font-medium rounded-full bg-primary/20 text-primary border border-primary/30 backdrop-blur-sm tracking-wide">
+                <div className="absolute -top-[13px] left-1/2 -translate-x-1/2 z-20">
+                    <span className="px-3 py-1 text-[11px] font-medium rounded-full bg-primary/20 text-primary border border-primary/30 backdrop-blur-md shadow-[0_0_10px_rgba(var(--primary),0.2)] tracking-wide whitespace-nowrap">
                         {badge}
                     </span>
                 </div>

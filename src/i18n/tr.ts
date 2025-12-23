@@ -226,7 +226,7 @@ export const tr: Translations = {
         },
         pricing: {
             monthly: {
-                title: 'Aylık Paket',
+                title: 'Pro',
                 price: '₺650',
                 period: 'ay',
                 description: 'Sadece OpenAI ChatGPT desteği',
