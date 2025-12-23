@@ -8,7 +8,6 @@ import { useLocation, useNavigate } from 'react-router-dom';
 const navLinks = [
   { name: 'products', href: '#pricing' },
   { name: 'solutions', href: '#technologies' },
-  { name: 'about', href: '#footer' },
   { name: 'contact', href: '#footer' },
 ];
 
@@ -30,7 +29,7 @@ export function Navbar() {
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const targetId = href.replace('#', '');
-    
+
     // If not on home page, navigate to home first then scroll
     if (location.pathname !== '/') {
       navigate('/');
@@ -47,6 +46,8 @@ export function Navbar() {
     const element = document.getElementById(targetId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      console.warn(`Element with id ${targetId} not found`);
     }
   };
 
@@ -59,9 +60,9 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="/" className="text-2xl font-bold gradient-text" onClick={(e) => {
-             e.preventDefault();
-             window.scrollTo({ top: 0, behavior: 'smooth' });
-             if (location.pathname !== '/') navigate('/');
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (location.pathname !== '/') navigate('/');
           }}>
             axisorai
           </a>

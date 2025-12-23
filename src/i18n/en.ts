@@ -7,7 +7,7 @@ export const en: Translations = {
     },
 
     nav: {
-        products: 'Products',
+        products: 'Packages',
         solutions: 'Solutions',
         method: 'Method',
         about: 'About',
