@@ -73,18 +73,28 @@ const Contact = () => {
                                             {t('community.social.instagram')}
                                         </h3>
                                         <p className="text-sm text-muted-foreground">
-                                            Follow us on Instagram
+                                            Send us a direct message
                                         </p>
                                     </div>
                                 </div>
-                                <a 
-                                    href="https://instagram.com"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-primary hover:text-primary/80 transition-colors text-lg"
-                                >
-                                    @axisorai
-                                </a>
+                                <div className="flex flex-col gap-3">
+                                    <a 
+                                        href="https://www.instagram.com/axisorai/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-primary hover:text-primary/80 transition-colors text-lg"
+                                    >
+                                        @axisorai
+                                    </a>
+                                    <a 
+                                        href="https://www.instagram.com/direct/t/axisorai/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
+                                    >
+                                        Send Direct Message
+                                    </a>
+                                </div>
                             </div>
                         </div>
 

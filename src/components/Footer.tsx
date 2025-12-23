@@ -3,7 +3,7 @@ import { useTranslation } from '@/hooks/useTranslation';
 import { Link } from 'react-router-dom';
 
 const socialLinks = [
-  { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
+  { icon: Instagram, href: 'https://www.instagram.com/axisorai/', label: 'Instagram' },
 ];
 
 export function Footer() {
