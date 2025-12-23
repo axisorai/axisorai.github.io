@@ -33,7 +33,7 @@ export function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="text-2xl font-bold gradient-text">
-            Axisorai
+            axisorai
           </a>
 
           {/* Desktop Navigation */}

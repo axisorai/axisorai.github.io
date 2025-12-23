@@ -20,7 +20,7 @@ export function Community() {
             <div className="flex justify-center lg:order-2">
               <img
                 src={mascotImage}
-                alt="Axisorai AI mascot"
+                alt="axisorai AI mascot"
                 className="w-48 h-48 sm:w-64 sm:h-64 object-contain animate-float"
               />
             </div>

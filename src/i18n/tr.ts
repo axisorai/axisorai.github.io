@@ -2,7 +2,7 @@ import { Translations } from './types';
 
 export const tr: Translations = {
     meta: {
-        title: 'Axisorai | Uygun Fiyatlı AI Kullanım Paketleri',
+        title: 'axisorai | Uygun Fiyatlı AI Kullanım Paketleri',
         description: 'ChatGPT, Claude ve Gemini tabanlı çözümlerle yazın, araştırın ve üretin.',
     },
 
@@ -20,7 +20,7 @@ export const tr: Translations = {
         subtitle: 'ChatGPT, Claude ve Gemini tabanlı çözümlerle yazın, araştırın ve üretin.',
         ctaPrimary: 'Paketleri Gör',
         ctaSecondary: 'İletişime Geç',
-        disclaimer: 'Gösterilen AI modelleri, Axisorai paketlerinin desteklediği teknolojileri temsil eder.',
+        disclaimer: 'Gösterilen AI modelleri, axisorai paketlerinin desteklediği teknolojileri temsil eder.',
     },
 
     products: {
@@ -83,7 +83,7 @@ export const tr: Translations = {
             },
             limitsNote: 'En iyi değer — %90\'dan fazla tasarruf',
         },
-        disclaimer: 'Axisorai, stratejik toplu lisanslama anlaşmaları aracılığıyla uygun fiyatlı AI erişimi sağlar. Yüksek hacimli kullanım hakları satın alır ve önemli ölçüde indirimli fiyatlarla sunarız.',
+        disclaimer: 'axisorai, stratejik toplu lisanslama anlaşmaları aracılığıyla uygun fiyatlı AI erişimi sağlar. Yüksek hacimli kullanım hakları satın alır ve önemli ölçüde indirimli fiyatlarla sunarız.',
     },
 
     method: {
@@ -127,11 +127,11 @@ export const tr: Translations = {
             },
             q4: {
                 question: 'Fiyatlandırma nasıl çalışır?',
-                answer: 'Bireyler için Axisorai Workspace ile başlayan esnek planlar sunuyoruz. Takım ve kurumsal fiyatlandırma, ihtiyaçlarınıza göre özelleştirilir. Özel bir teklif için bizimle iletişime geçin.',
+                answer: 'Bireyler için axisorai Workspace ile başlayan esnek planlar sunuyoruz. Takım ve kurumsal fiyatlandırma, ihtiyaçlarınıza göre özelleştirilir. Özel bir teklif için bizimle iletişime geçin.',
             },
             q5: {
                 question: 'Mevcut araçlarımla entegre edebilir miyim?',
-                answer: 'Kesinlikle. Axisorai Pro ve Team Enablement planları API erişimi ve özel entegrasyonlar içerir. Slack, Notion, Google Workspace ve daha fazlası gibi popüler araçlarla çalışıyoruz.',
+                answer: 'Kesinlikle. axisorai Pro ve Team Enablement planları API erişimi ve özel entegrasyonlar içerir. Slack, Notion, Google Workspace ve daha fazlası gibi popüler araçlarla çalışıyoruz.',
             },
         },
     },
@@ -158,7 +158,7 @@ export const tr: Translations = {
         products: 'Ürünler',
         company: 'Şirket',
         resources: 'Kaynaklar',
-        copyright: '© 2025 Axisorai. Tüm hakları saklıdır.',
+        copyright: '© 2025 axisorai. Tüm hakları saklıdır.',
         privacy: 'Gizlilik Politikası',
         terms: 'Hizmet Şartları',
         links: {

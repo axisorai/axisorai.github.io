@@ -35,7 +35,7 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2">
             <a href="#" className="text-2xl font-bold gradient-text">
-              Axisorai
+              axisorai
             </a>
             <p className="text-muted-foreground mt-4 max-w-xs">
               {t('footer.description')}

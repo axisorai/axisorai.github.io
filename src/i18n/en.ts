@@ -2,7 +2,7 @@ import { Translations } from './types';
 
 export const en: Translations = {
     meta: {
-        title: 'Axisorai | Affordable AI Usage Bundles',
+        title: 'axisorai | Affordable AI Usage Bundles',
         description: 'Write, research, and produce faster with solutions built on ChatGPT, Claude, and Gemini.',
     },
 
@@ -20,7 +20,7 @@ export const en: Translations = {
         subtitle: 'Write, research, and produce faster with solutions built on ChatGPT, Claude, and Gemini.',
         ctaPrimary: 'View Packages',
         ctaSecondary: 'Contact Us',
-        disclaimer: 'Displayed AI models represent technologies supported by Axisorai bundles.',
+        disclaimer: 'Displayed AI models represent technologies supported by axisorai bundles.',
     },
 
     products: {
@@ -83,7 +83,7 @@ export const en: Translations = {
             },
             limitsNote: 'Best value — save over 90%',
         },
-        disclaimer: 'Axisorai provides affordable AI access through strategic bulk licensing agreements. We purchase high-volume usage rights and distribute them at significantly reduced prices.',
+        disclaimer: 'axisorai provides affordable AI access through strategic bulk licensing agreements. We purchase high-volume usage rights and distribute them at significantly reduced prices.',
     },
 
     method: {
@@ -127,11 +127,11 @@ export const en: Translations = {
             },
             q4: {
                 question: 'What does pricing look like?',
-                answer: 'We offer flexible plans starting with Axisorai Workspace for individuals. For teams and enterprises, contact us for custom pricing based on your needs. All plans include core features with no hidden fees.',
+                answer: 'We offer flexible plans starting with axisorai Workspace for individuals. For teams and enterprises, contact us for custom pricing based on your needs. All plans include core features with no hidden fees.',
             },
             q5: {
                 question: 'Can I integrate with my existing tools?',
-                answer: 'Absolutely. Axisorai Pro and Team Enablement plans include API access and custom integrations. We work with popular tools like Slack, Notion, Google Workspace, and more.',
+                answer: 'Absolutely. axisorai Pro and Team Enablement plans include API access and custom integrations. We work with popular tools like Slack, Notion, Google Workspace, and more.',
             },
         },
     },
@@ -158,7 +158,7 @@ export const en: Translations = {
         products: 'Products',
         company: 'Company',
         resources: 'Resources',
-        copyright: '© 2025 Axisorai. All rights reserved.',
+        copyright: '© 2025 axisorai. All rights reserved.',
         privacy: 'Privacy Policy',
         terms: 'Terms of Service',
         links: {
