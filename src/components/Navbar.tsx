@@ -11,6 +11,15 @@ const navLinks = [
   { name: 'contact', href: '#footer' },
 ];
 
+const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  e.preventDefault();
+  const targetId = href.replace('#', '');
+  const element = document.getElementById(targetId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+};
+
 export function Navbar() {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
@@ -42,14 +51,20 @@ export function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium"
+                onClick={(e) => scrollToSection(e, link.href)}
+                className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium cursor-pointer"
               >
                 {t(`nav.${link.name}`)}
               </a>
             ))}
             <LanguageToggle />
             <Button size="sm" asChild>
-              <a href="#contact">{t('nav.getStarted')}</a>
+              <a
+                href="#footer"
+                onClick={(e) => scrollToSection(e, '#footer')}
+              >
+                {t('nav.getStarted')}
+              </a>
             </Button>
           </div>
 
@@ -71,8 +86,11 @@ export function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors py-2 text-lg"
-                  onClick={() => setIsOpen(false)}
+                  className="text-muted-foreground hover:text-foreground transition-colors py-2 text-lg cursor-pointer"
+                  onClick={(e) => {
+                    scrollToSection(e, link.href);
+                    setIsOpen(false);
+                  }}
                 >
                   {t(`nav.${link.name}`)}
                 </a>
@@ -81,7 +99,13 @@ export function Navbar() {
                 <LanguageToggle />
               </div>
               <Button className="mt-2" asChild>
-                <a href="#contact" onClick={() => setIsOpen(false)}>
+                <a
+                  href="#footer"
+                  onClick={(e) => {
+                    scrollToSection(e, '#footer');
+                    setIsOpen(false);
+                  }}
+                >
                   {t('nav.getStarted')}
                 </a>
               </Button>
