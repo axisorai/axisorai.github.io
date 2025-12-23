@@ -59,7 +59,6 @@ export function Contact() {
                     >
                       {t('contact.email.display')}
                     </a>
-                    <p className="text-xs text-muted-foreground mt-1">{t('contact.email.microtext')}</p>
                   </div>
                 </div>
               </div>
