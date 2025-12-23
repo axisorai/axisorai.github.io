@@ -1,14 +1,13 @@
 import { Instagram, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useTranslation } from '@/hooks/useTranslation';
 import mascotImage from '@/assets/mascot.png';
 
-const features = [
-  { title: 'Weekly Tips', description: 'Practical AI productivity tips every week' },
-  { title: 'Mini-Guides', description: 'Step-by-step guides for common workflows' },
-  { title: 'Prompt Drops', description: 'Ready-to-use prompts for any task' },
-];
+const featureKeys = ['tips', 'guides', 'prompts'];
 
 export function Community() {
+  const { t } = useTranslation();
+
   return (
     <section id="community" className="py-24 relative">
       {/* Background */}
@@ -21,7 +20,7 @@ export function Community() {
             <div className="flex justify-center lg:order-2">
               <img
                 src={mascotImage}
-                alt="Axiora AI mascot"
+                alt="Axisorai AI mascot"
                 className="w-48 h-48 sm:w-64 sm:h-64 object-contain animate-float"
               />
             </div>
@@ -29,18 +28,18 @@ export function Community() {
             {/* Content */}
             <div className="lg:order-1 text-center lg:text-left">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                Join the <span className="gradient-text">Community</span>
+                {t('community.title')}
               </h2>
               <p className="text-muted-foreground text-lg mb-8">
-                Learn AI productivity with thousands of professionals. Get exclusive content, tips, and resources.
+                {t('community.subtitle')}
               </p>
 
               {/* Features */}
               <div className="grid sm:grid-cols-3 gap-4 mb-8">
-                {features.map((feature) => (
-                  <div key={feature.title} className="text-center lg:text-left">
-                    <h3 className="font-semibold text-foreground">{feature.title}</h3>
-                    <p className="text-sm text-muted-foreground">{feature.description}</p>
+                {featureKeys.map((key) => (
+                  <div key={key} className="text-center lg:text-left">
+                    <h3 className="font-semibold text-foreground">{t(`community.features.${key}.title`)}</h3>
+                    <p className="text-sm text-muted-foreground">{t(`community.features.${key}.description`)}</p>
                   </div>
                 ))}
               </div>
@@ -50,13 +49,13 @@ export function Community() {
                 <Button variant="outline" size="lg" asChild>
                   <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                     <Instagram className="w-5 h-5" />
-                    Instagram
+                    {t('community.social.instagram')}
                   </a>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
                   <a href="https://x.com" target="_blank" rel="noopener noreferrer">
                     <Twitter className="w-5 h-5" />
-                    X / Twitter
+                    {t('community.social.twitter')}
                   </a>
                 </Button>
               </div>

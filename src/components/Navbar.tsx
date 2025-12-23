@@ -1,16 +1,18 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useTranslation } from '@/hooks/useTranslation';
+import { LanguageToggle } from '@/components/LanguageToggle';
 
 const navLinks = [
-  { name: 'Products', href: '#products' },
-  { name: 'Solutions', href: '#method' },
-  { name: 'About', href: '#commitment' },
-  { name: 'Blog', href: '#community' },
-  { name: 'Contact', href: '#contact' },
+  { name: 'products', href: '#products' },
+  { name: 'solutions', href: '#method' },
+  { name: 'about', href: '#commitment' },
+  { name: 'contact', href: '#contact' },
 ];
 
 export function Navbar() {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -24,30 +26,30 @@ export function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-background/90 backdrop-blur-xl border-b border-border/50' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-background/90 backdrop-blur-xl border-b border-border/50' : 'bg-transparent'
+        }`}
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#" className="text-2xl font-bold gradient-text">
-            Axiora
+            Axisorai
           </a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium"
               >
-                {link.name}
+                {t(`nav.${link.name}`)}
               </a>
             ))}
+            <LanguageToggle />
             <Button size="sm" asChild>
-              <a href="#contact">Get Started</a>
+              <a href="#contact">{t('nav.getStarted')}</a>
             </Button>
           </div>
 
@@ -72,12 +74,15 @@ export function Navbar() {
                   className="text-muted-foreground hover:text-foreground transition-colors py-2 text-lg"
                   onClick={() => setIsOpen(false)}
                 >
-                  {link.name}
+                  {t(`nav.${link.name}`)}
                 </a>
               ))}
-              <Button className="mt-4" asChild>
+              <div className="pt-2 pb-2">
+                <LanguageToggle />
+              </div>
+              <Button className="mt-2" asChild>
                 <a href="#contact" onClick={() => setIsOpen(false)}>
-                  Get Started
+                  {t('nav.getStarted')}
                 </a>
               </Button>
             </div>

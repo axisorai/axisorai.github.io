@@ -4,9 +4,11 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import { useTranslation } from '@/hooks/useTranslation';
 
 export function Contact() {
   const { toast } = useToast();
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,12 +17,12 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Create mailto link as fallback
     const subject = encodeURIComponent(`Contact from ${formData.name}`);
-    const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    window.location.href = `mailto:hello@axiora.ai?subject=${subject}&body=${body}`;
-    
+    const body = encodeURIComponent(`Name: ${formData.name}\\nEmail: ${formData.email}\\n\\nMessage:\\n${formData.message}`);
+    window.location.href = `mailto:${t('contact.email.address')}?subject=${subject}&body=${body}`;
+
     toast({
       title: 'Opening email client...',
       description: 'Your message is ready to send.',
@@ -38,10 +40,10 @@ export function Contact() {
             {/* Info */}
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                Let's <span className="gradient-text">Connect</span>
+                {t('contact.title')}
               </h2>
               <p className="text-muted-foreground text-lg mb-8">
-                Ready to transform your workflow? Get in touch and we'll help you find the perfect solution.
+                {t('contact.subtitle')}
               </p>
 
               <div className="space-y-4">
@@ -50,12 +52,12 @@ export function Contact() {
                     <Mail className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm text-muted-foreground">Email us at</p>
+                    <p className="text-sm text-muted-foreground">{t('contact.email.label')}</p>
                     <a
-                      href="mailto:hello@axiora.ai"
+                      href={`mailto:${t('contact.email.address')}`}
                       className="text-foreground font-medium hover:text-primary transition-colors"
                     >
-                      hello@axiora.ai
+                      {t('contact.email.address')}
                     </a>
                   </div>
                 </div>
@@ -66,7 +68,7 @@ export function Contact() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Input
-                  placeholder="Your Name"
+                  placeholder={t('contact.form.name')}
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   required
@@ -76,7 +78,7 @@ export function Contact() {
               <div>
                 <Input
                   type="email"
-                  placeholder="Your Email"
+                  placeholder={t('contact.form.email')}
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   required
@@ -85,7 +87,7 @@ export function Contact() {
               </div>
               <div>
                 <Textarea
-                  placeholder="Your Message"
+                  placeholder={t('contact.form.message')}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   required
@@ -95,7 +97,7 @@ export function Contact() {
               </div>
               <Button type="submit" variant="hero" size="lg" className="w-full">
                 <Send className="w-4 h-4" />
-                Send Message
+                {t('contact.form.submit')}
               </Button>
             </form>
           </div>

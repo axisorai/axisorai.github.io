@@ -1,23 +1,24 @@
 import { Instagram, Twitter, Linkedin, Github } from 'lucide-react';
+import { useTranslation } from '@/hooks/useTranslation';
 
 const footerLinks = {
   products: [
-    { name: 'Axiora Workspace', href: '#products' },
-    { name: 'Axiora Plus', href: '#products' },
-    { name: 'Axiora Pro', href: '#products' },
-    { name: 'Team Enablement', href: '#products' },
+    { nameKey: 'Axisorai Workspace', href: '#products' },
+    { nameKey: 'Axisorai Plus', href: '#products' },
+    { nameKey: 'Axisorai Pro', href: '#products' },
+    { nameKey: 'Team Enablement', href: '#products' },
   ],
   company: [
-    { name: 'About', href: '#commitment' },
-    { name: 'Blog', href: '#community' },
-    { name: 'Careers', href: '#' },
-    { name: 'Press', href: '#' },
+    { nameKey: 'footer.links.about', href: '#commitment' },
+    { nameKey: 'footer.links.blog', href: '#community' },
+    { nameKey: 'footer.links.careers', href: '#' },
+    { nameKey: 'footer.links.press', href: '#' },
   ],
   resources: [
-    { name: 'Documentation', href: '#' },
-    { name: 'Help Center', href: '#' },
-    { name: 'Community', href: '#community' },
-    { name: 'Contact', href: '#contact' },
+    { nameKey: 'footer.links.documentation', href: '#' },
+    { nameKey: 'footer.links.helpCenter', href: '#' },
+    { nameKey: 'footer.links.community', href: '#community' },
+    { nameKey: 'footer.links.contact', href: '#contact' },
   ],
 };
 
@@ -29,6 +30,8 @@ const socialLinks = [
 ];
 
 export function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="py-16 border-t border-border/50">
       <div className="container mx-auto px-6">
@@ -36,12 +39,12 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2">
             <a href="#" className="text-2xl font-bold gradient-text">
-              Axiora
+              Axisorai
             </a>
             <p className="text-muted-foreground mt-4 max-w-xs">
-              Empowering individuals and teams with AI-powered productivity solutions.
+              {t('footer.description')}
             </p>
-            
+
             {/* Social Links */}
             <div className="flex gap-4 mt-6">
               {socialLinks.map((social) => (
@@ -61,15 +64,15 @@ export function Footer() {
 
           {/* Products */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Products</h4>
+            <h4 className="font-semibold text-foreground mb-4">{t('footer.products')}</h4>
             <ul className="space-y-2">
               {footerLinks.products.map((link) => (
-                <li key={link.name}>
+                <li key={link.nameKey}>
                   <a
                     href={link.href}
                     className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                   >
-                    {link.name}
+                    {link.nameKey}
                   </a>
                 </li>
               ))}
@@ -78,15 +81,15 @@ export function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Company</h4>
+            <h4 className="font-semibold text-foreground mb-4">{t('footer.company')}</h4>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
-                <li key={link.name}>
+                <li key={link.nameKey}>
                   <a
                     href={link.href}
                     className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                   >
-                    {link.name}
+                    {t(link.nameKey)}
                   </a>
                 </li>
               ))}
@@ -95,15 +98,15 @@ export function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Resources</h4>
+            <h4 className="font-semibold text-foreground mb-4">{t('footer.resources')}</h4>
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (
-                <li key={link.name}>
+                <li key={link.nameKey}>
                   <a
                     href={link.href}
                     className="text-muted-foreground hover:text-foreground transition-colors text-sm"
                   >
-                    {link.name}
+                    {t(link.nameKey)}
                   </a>
                 </li>
               ))}
@@ -114,14 +117,14 @@ export function Footer() {
         {/* Bottom */}
         <div className="pt-8 border-t border-border/50 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Axiora. All rights reserved.
+            {t('footer.copyright')}
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
             <a href="#" className="hover:text-foreground transition-colors">
-              Privacy Policy
+              {t('footer.privacy')}
             </a>
             <a href="#" className="hover:text-foreground transition-colors">
-              Terms of Service
+              {t('footer.terms')}
             </a>
           </div>
         </div>
