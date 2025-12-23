@@ -88,7 +88,11 @@ const Index = () => {
                                     title={t('portfolio.pricing.monthly.title')}
                                     price={t('portfolio.pricing.monthly.price')}
                                     period={t('portfolio.pricing.monthly.period')}
-                                    description={[t('portfolio.pricing.monthly.description')]}
+                                    description={[
+                                        t('portfolio.pricing.monthly.description'),
+                                        t('portfolio.pricing.monthly.trust') || '',
+                                        t('portfolio.pricing.monthly.ownAccount') || '',
+                                    ]}
                                 />
                             </div>
 
@@ -102,19 +106,12 @@ const Index = () => {
                                     description={[
                                         t('portfolio.pricing.yearly.description1'),
                                         t('portfolio.pricing.yearly.description2'),
+                                        t('portfolio.pricing.yearly.ownAccount') || '',
                                     ]}
                                     featured
                                     badge={t('portfolio.pricing.yearly.badge')}
                                 />
                             </div>
-                        </div>
-
-                        {/* Trust Line */}
-                        <div className="mt-10 md:mt-16 text-center">
-                            <p className="text-xs md:text-sm text-muted-foreground/60 flex items-center justify-center gap-2 leading-relaxed px-4 text-center">
-                                <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-primary/60 animate-pulse shrink-0" />
-                                {t('portfolio.pricing.trust')}
-                            </p>
                         </div>
 
                         {/* Link to Services */}

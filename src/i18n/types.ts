@@ -175,6 +175,8 @@ export interface Translations {
         price: string;
         period: string;
         description: string;
+        trust?: string;
+        ownAccount?: string;
       };
       yearly: {
         title: string;
@@ -184,8 +186,9 @@ export interface Translations {
         description1: string;
         description2: string;
         badge: string;
+        ownAccount?: string;
       };
-      trust: string;
+      trust?: string;
       cta: string;
     };
   };
