@@ -154,7 +154,7 @@ export const tr: Translations = {
     },
 
     footer: {
-        description: 'Bireyleri ve ekipleri AI destekli üretkenlik çözümleriyle güçlendiriyoruz.',
+        description: 'Bireyleri ve ekipleri AI destekli üretkenlik çözümleriyle güçlendiriyoruz. Bir Çelebi Finance iştirakidir.',
         products: 'Ürünler',
         company: 'Şirket',
         resources: 'Kaynaklar',

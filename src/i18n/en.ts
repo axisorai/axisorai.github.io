@@ -154,7 +154,7 @@ export const en: Translations = {
     },
 
     footer: {
-        description: 'Empowering individuals and teams with AI-powered productivity solutions.',
+        description: 'Empowering individuals and teams with AI-powered productivity solutions. A Çelebi Finance subsidiary.',
         products: 'Products',
         company: 'Company',
         resources: 'Resources',

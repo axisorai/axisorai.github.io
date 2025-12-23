@@ -59,7 +59,7 @@ const Index = () => {
                 </section>
 
                 {/* Technologies Section */}
-                <section className="py-8 md:py-16 px-4 md:px-6">
+                <section id="technologies" className="py-8 md:py-16 px-4 md:px-6">
                     <div className="container mx-auto max-w-4xl">
                         <p className="section-label text-center text-[10px] md:text-xs text-muted-foreground/60 uppercase tracking-[0.2em] mb-6 md:mb-10">
                             {t('portfolio.technologies.label')}
@@ -79,7 +79,7 @@ const Index = () => {
                 </section>
 
                 {/* Pricing Section */}
-                <section className="py-10 md:py-20 px-4 md:px-6">
+                <section id="pricing" className="py-10 md:py-20 px-4 md:px-6">
                     <div className="container mx-auto max-w-3xl">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
                             {/* Monthly Card */}
@@ -127,7 +127,9 @@ const Index = () => {
                 </section>
             </main>
 
-            <Footer />
+            <div id="footer">
+                <Footer />
+            </div>
         </div>
     );
 };

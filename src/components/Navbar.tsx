@@ -5,10 +5,10 @@ import { useTranslation } from '@/hooks/useTranslation';
 import { LanguageToggle } from '@/components/LanguageToggle';
 
 const navLinks = [
-  { name: 'products', href: '#products' },
-  { name: 'solutions', href: '#method' },
-  { name: 'about', href: '#commitment' },
-  { name: 'contact', href: '#contact' },
+  { name: 'products', href: '#pricing' },
+  { name: 'solutions', href: '#technologies' },
+  { name: 'about', href: '#footer' },
+  { name: 'contact', href: '#footer' },
 ];
 
 export function Navbar() {
