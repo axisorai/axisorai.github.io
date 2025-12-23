@@ -6,8 +6,14 @@ import OpenAIIcon from "@/components/icons/OpenAIIcon";
 import GeminiIcon from "@/components/icons/GeminiIcon";
 import ClaudeIcon from "@/components/icons/ClaudeIcon";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { LanguageContext } from "@/contexts/LanguageContext";
 
 const Index = () => {
+    const context = useContext(LanguageContext);
+    if (!context) throw new Error("LanguageContext not found");
+    const { t } = context;
+
     const technologies = [
         {
             name: "OpenAI",
@@ -44,10 +50,10 @@ const Index = () => {
                 <section className="py-20 px-6">
                     <div className="container mx-auto text-center">
                         <h1 className="hero-title text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-4 leading-tight tracking-tight">
-                            Yapay Zeka, <span className="text-gradient">Tek Noktada</span>
+                            {t('portfolio.hero.title')} <span className="text-gradient">{t('portfolio.hero.titleHighlight')}</span>
                         </h1>
                         <p className="hero-subtitle text-lg md:text-xl text-muted-foreground/80 max-w-xl mx-auto leading-relaxed">
-                            Premium AI erişimi, uygun fiyatlarla
+                            {t('portfolio.hero.subtitle')}
                         </p>
                     </div>
                 </section>
@@ -56,7 +62,7 @@ const Index = () => {
                 <section className="py-16 px-6">
                     <div className="container mx-auto max-w-4xl">
                         <p className="section-label text-center text-xs text-muted-foreground/60 uppercase tracking-[0.2em] mb-10">
-                            Desteklenen teknolojiler
+                            {t('portfolio.technologies.label')}
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {technologies.map((tech, index) => (
@@ -79,26 +85,26 @@ const Index = () => {
                             {/* Monthly Card */}
                             <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
                                 <PricingCard
-                                    title="Aylık Paket"
-                                    price="₺650"
-                                    period="ay"
-                                    description={["Sadece OpenAI ChatGPT desteği"]}
+                                    title={t('portfolio.pricing.monthly.title')}
+                                    price={t('portfolio.pricing.monthly.price')}
+                                    period={t('portfolio.pricing.monthly.period')}
+                                    description={[t('portfolio.pricing.monthly.description')]}
                                 />
                             </div>
 
                             {/* Yearly / Featured Card */}
                             <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
                                 <PricingCard
-                                    title="ALL-IN-ONE"
-                                    subtitle="Tüm AI tek pakette"
-                                    price="₺1.250"
-                                    period="yıl"
+                                    title={t('portfolio.pricing.yearly.title')}
+                                    subtitle={t('portfolio.pricing.yearly.subtitle')}
+                                    price={t('portfolio.pricing.yearly.price')}
+                                    period={t('portfolio.pricing.yearly.period')}
                                     description={[
-                                        "OpenAI, Gemini, Claude ve Perplexity erişimi",
-                                        "Aracı platform üzerinden kullanım",
+                                        t('portfolio.pricing.yearly.description1'),
+                                        t('portfolio.pricing.yearly.description2'),
                                     ]}
                                     featured
-                                    badge="En Çok Tercih Edilen"
+                                    badge={t('portfolio.pricing.yearly.badge')}
                                 />
                             </div>
                         </div>
@@ -107,7 +113,7 @@ const Index = () => {
                         <div className="mt-16 text-center">
                             <p className="text-sm text-muted-foreground/60 flex items-center justify-center gap-2 leading-relaxed">
                                 <span className="w-2 h-2 rounded-full bg-primary/60 animate-pulse" />
-                                Orijinal platform, kendi hesabınızdan erişim
+                                {t('portfolio.pricing.trust')}
                             </p>
                         </div>
 
@@ -117,7 +123,7 @@ const Index = () => {
                                 to="/services"
                                 className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors"
                             >
-                                Tüm hizmetlerimizi keşfedin →
+                                {t('portfolio.pricing.cta')} →
                             </Link>
                         </div>
                     </div>

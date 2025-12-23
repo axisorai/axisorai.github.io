@@ -215,6 +215,36 @@ export const tr: Translations = {
         },
     },
 
+    portfolio: {
+        hero: {
+            title: 'Yapay Zeka,',
+            titleHighlight: 'Tek Noktada',
+            subtitle: 'Premium AI erişimi, uygun fiyatlarla',
+        },
+        technologies: {
+            label: 'Desteklenen teknolojiler',
+        },
+        pricing: {
+            monthly: {
+                title: 'Aylık Paket',
+                price: '₺650',
+                period: 'ay',
+                description: 'Sadece OpenAI ChatGPT desteği',
+            },
+            yearly: {
+                title: 'ALL-IN-ONE',
+                subtitle: 'Tüm AI tek pakette',
+                price: '₺1.250',
+                period: 'yıl',
+                description1: 'OpenAI, Gemini, Claude ve Perplexity erişimi',
+                description2: 'Aracı platform üzerinden kullanım',
+                badge: 'En Çok Tercih Edilen',
+            },
+            trust: 'Orijinal platform, kendi hesabınızdan erişim',
+            cta: 'Tüm hizmetlerimizi keşfedin',
+        },
+    },
+
     trustedBy: {
         title: 'Dünya çapında önde gelen şirketler tarafından güveniliyor',
     },

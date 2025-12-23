@@ -160,6 +160,35 @@ export interface Translations {
       transparency: { title: string; description: string };
     };
   };
+  portfolio: {
+    hero: {
+      title: string;
+      titleHighlight: string;
+      subtitle: string;
+    };
+    technologies: {
+      label: string;
+    };
+    pricing: {
+      monthly: {
+        title: string;
+        price: string;
+        period: string;
+        description: string;
+      };
+      yearly: {
+        title: string;
+        subtitle: string;
+        price: string;
+        period: string;
+        description1: string;
+        description2: string;
+        badge: string;
+      };
+      trust: string;
+      cta: string;
+    };
+  };
   trustedBy: {
     title: string;
   };

@@ -215,6 +215,36 @@ export const en: Translations = {
         },
     },
 
+    portfolio: {
+        hero: {
+            title: 'AI,',
+            titleHighlight: 'All in One Place',
+            subtitle: 'Premium AI access at affordable prices',
+        },
+        technologies: {
+            label: 'Supported technologies',
+        },
+        pricing: {
+            monthly: {
+                title: 'Monthly Package',
+                price: '₺650',
+                period: 'month',
+                description: 'OpenAI ChatGPT support only',
+            },
+            yearly: {
+                title: 'ALL-IN-ONE',
+                subtitle: 'All AI in one package',
+                price: '₺1,250',
+                period: 'year',
+                description1: 'OpenAI, Gemini, Claude and Perplexity access',
+                description2: 'Usage through intermediary platform',
+                badge: 'Most Preferred',
+            },
+            trust: 'Original platform, access from your own account',
+            cta: 'Explore all our services',
+        },
+    },
+
     trustedBy: {
         title: 'Trusted by leading companies worldwide',
     },
