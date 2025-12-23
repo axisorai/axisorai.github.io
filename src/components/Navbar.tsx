@@ -3,12 +3,12 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from '@/hooks/useTranslation';
 import { LanguageToggle } from '@/components/LanguageToggle';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate, Link } from 'react-router-dom';
 
 const navLinks = [
-  { name: 'products', href: '#pricing' },
-  { name: 'solutions', href: '#technologies' },
-  { name: 'contact', href: '#footer' },
+  { name: 'products', href: '/packages' },
+  { name: 'solutions', href: '/solutions' },
+  { name: 'contact', href: '/contact' },
 ];
 
 export function Navbar() {
@@ -59,34 +59,26 @@ export function Navbar() {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="/" className="text-2xl font-bold gradient-text" onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            if (location.pathname !== '/') navigate('/');
-          }}>
+          <Link to="/" className="text-2xl font-bold gradient-text">
             axisorai
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
-                onClick={(e) => scrollToSection(e, link.href)}
+                to={link.href}
                 className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium cursor-pointer"
               >
                 {t(`nav.${link.name}`)}
-              </a>
+              </Link>
             ))}
             <LanguageToggle />
             <Button size="sm" asChild>
-              <a
-                href="#pricing"
-                onClick={(e) => scrollToSection(e, '#pricing')}
-              >
+              <Link to="/packages">
                 {t('nav.getStarted')}
-              </a>
+              </Link>
             </Button>
           </div>
 
@@ -105,31 +97,25 @@ export function Navbar() {
           <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border animate-fade-in">
             <div className="flex flex-col p-6 gap-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   className="text-muted-foreground hover:text-foreground transition-colors py-2 text-lg cursor-pointer"
-                  onClick={(e) => {
-                    scrollToSection(e, link.href);
-                    setIsOpen(false);
-                  }}
+                  onClick={() => setIsOpen(false)}
                 >
                   {t(`nav.${link.name}`)}
-                </a>
+                </Link>
               ))}
               <div className="pt-2 pb-2">
                 <LanguageToggle />
               </div>
               <Button className="mt-2" asChild>
-                <a
-                  href="#pricing"
-                  onClick={(e) => {
-                    scrollToSection(e, '#pricing');
-                    setIsOpen(false);
-                  }}
+                <Link
+                  to="/packages"
+                  onClick={() => setIsOpen(false)}
                 >
                   {t('nav.getStarted')}
-                </a>
+                </Link>
               </Button>
             </div>
           </div>
