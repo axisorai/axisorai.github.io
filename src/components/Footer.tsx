@@ -1,6 +1,5 @@
 import { Instagram } from 'lucide-react';
 import { useTranslation } from '@/hooks/useTranslation';
-import { useLocation, useNavigate } from 'react-router-dom';
 
 const footerLinks = {
   products: [
@@ -28,44 +27,6 @@ const socialLinks = [
 
 export function Footer() {
   const { t } = useTranslation();
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    e.stopPropagation();
-    const targetId = href.replace('#', '');
-
-    // With HashRouter, we need to check if we're on the home route
-    // The hash contains both the route and any anchor
-    const isOnHome = location.pathname === '/' || location.pathname === '';
-
-    if (!isOnHome) {
-      navigate('/');
-      setTimeout(() => {
-        const element = document.getElementById(targetId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 150);
-      return;
-    }
-
-    // Scroll to element on current page
-    const element = document.getElementById(targetId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      // Fallback: scroll to top if element not found
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  };
-
-  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    if (location.pathname !== '/') navigate('/');
-  };
 
   return (
     <footer className="py-16 border-t border-border/50">
@@ -73,9 +34,13 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           {/* Brand */}
           <div className="col-span-2">
-            <a href="#" onClick={scrollToTop} className="text-2xl font-bold gradient-text">
+            <button 
+              type="button"
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="text-2xl font-bold gradient-text"
+            >
               axisorai
-            </a>
+            </button>
             <p className="text-muted-foreground mt-4 max-w-xs">
               {t('footer.description')}
             </p>
@@ -103,13 +68,16 @@ export function Footer() {
             <ul className="space-y-2">
               {footerLinks.products.map((link) => (
                 <li key={link.nameKey}>
-                  <a
-                    href={link.href}
-                    onClick={(e) => scrollToSection(e, link.href)}
-                    className="text-muted-foreground hover:text-foreground transition-colors text-sm cursor-pointer"
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const el = document.getElementById(link.href.replace('#', ''));
+                      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }}
+                    className="text-muted-foreground hover:text-foreground transition-colors text-sm cursor-pointer text-left"
                   >
                     {link.nameKey}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -121,13 +89,16 @@ export function Footer() {
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.nameKey}>
-                  <a
-                    href={link.href}
-                    onClick={(e) => scrollToSection(e, link.href)}
-                    className="text-muted-foreground hover:text-foreground transition-colors text-sm cursor-pointer"
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const el = document.getElementById(link.href.replace('#', ''));
+                      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }}
+                    className="text-muted-foreground hover:text-foreground transition-colors text-sm cursor-pointer text-left"
                   >
                     {t(link.nameKey)}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -139,13 +110,16 @@ export function Footer() {
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (
                 <li key={link.nameKey}>
-                  <a
-                    href={link.href}
-                    onClick={(e) => scrollToSection(e, link.href)}
-                    className="text-muted-foreground hover:text-foreground transition-colors text-sm cursor-pointer"
+                  <button
+                    type="button"
+                    onClick={() => {
+                      const el = document.getElementById(link.href.replace('#', ''));
+                      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }}
+                    className="text-muted-foreground hover:text-foreground transition-colors text-sm cursor-pointer text-left"
                   >
                     {t(link.nameKey)}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
@@ -158,20 +132,26 @@ export function Footer() {
             {t('footer.copyright')}
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
-            <a 
-              href="#footer" 
-              onClick={(e) => scrollToSection(e, '#footer')}
+            <button 
+              type="button"
+              onClick={() => {
+                const el = document.getElementById('footer');
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
               className="hover:text-foreground transition-colors cursor-pointer"
             >
               {t('footer.privacy')}
-            </a>
-            <a 
-              href="#footer" 
-              onClick={(e) => scrollToSection(e, '#footer')}
+            </button>
+            <button 
+              type="button"
+              onClick={() => {
+                const el = document.getElementById('footer');
+                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
               className="hover:text-foreground transition-colors cursor-pointer"
             >
               {t('footer.terms')}
-            </a>
+            </button>
           </div>
         </div>
       </div>
