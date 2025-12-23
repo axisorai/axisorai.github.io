@@ -3,6 +3,7 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from '@/hooks/useTranslation';
 import { LanguageToggle } from '@/components/LanguageToggle';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const navLinks = [
   { name: 'products', href: '#pricing' },
@@ -11,19 +12,12 @@ const navLinks = [
   { name: 'contact', href: '#footer' },
 ];
 
-const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-  e.preventDefault();
-  const targetId = href.replace('#', '');
-  const element = document.getElementById(targetId);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-};
-
 export function Navbar() {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,6 +27,29 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    
+    // If not on home page, navigate to home first then scroll
+    if (location.pathname !== '/') {
+      navigate('/');
+      // Wait for navigation to complete then scroll
+      setTimeout(() => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+      return;
+    }
+
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-background/90 backdrop-blur-xl border-b border-border/50' : 'bg-transparent'
@@ -41,7 +58,11 @@ export function Navbar() {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="text-2xl font-bold gradient-text">
+          <a href="/" className="text-2xl font-bold gradient-text" onClick={(e) => {
+             e.preventDefault();
+             window.scrollTo({ top: 0, behavior: 'smooth' });
+             if (location.pathname !== '/') navigate('/');
+          }}>
             axisorai
           </a>
 
@@ -60,8 +81,8 @@ export function Navbar() {
             <LanguageToggle />
             <Button size="sm" asChild>
               <a
-                href="#footer"
-                onClick={(e) => scrollToSection(e, '#footer')}
+                href="#pricing"
+                onClick={(e) => scrollToSection(e, '#pricing')}
               >
                 {t('nav.getStarted')}
               </a>
@@ -100,9 +121,9 @@ export function Navbar() {
               </div>
               <Button className="mt-2" asChild>
                 <a
-                  href="#footer"
+                  href="#pricing"
                   onClick={(e) => {
-                    scrollToSection(e, '#footer');
+                    scrollToSection(e, '#pricing');
                     setIsOpen(false);
                   }}
                 >
