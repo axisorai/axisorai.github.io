@@ -61,7 +61,7 @@ const Index = () => {
                 {/* Technologies Section */}
                 <section id="technologies" className="py-8 md:py-16 px-4 md:px-6">
                     <div className="container mx-auto max-w-4xl">
-                        <p className="section-label text-center text-[10px] md:text-xs text-muted-foreground/60 uppercase tracking-[0.2em] mb-6 md:mb-10">
+                        <p className="section-label text-center text-base md:text-lg text-muted-foreground/60 uppercase tracking-[0.2em] mb-6 md:mb-10 font-semibold">
                             {t('portfolio.technologies.label')}
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
@@ -118,7 +118,7 @@ const Index = () => {
                         <div className="mt-8 text-center pb-8 md:pb-0">
                             <Link
                                 to="/services"
-                                className="inline-flex items-center gap-2 text-lg md:text-xl font-semibold text-primary hover:text-primary/80 transition-colors py-3 px-6 active:scale-95 transition-transform"
+                                className="inline-flex items-center gap-2 text-2xl md:text-4xl font-semibold text-primary hover:text-primary/80 transition-colors py-3 px-6 active:scale-95 transition-transform"
                             >
                                 {t('portfolio.pricing.cta')} →
                             </Link>
