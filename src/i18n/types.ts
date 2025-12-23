@@ -69,7 +69,9 @@ export interface Translations {
     };
     email: {
       label: string;
-      address: string;
+      display: string;
+      mailto: string;
+      microtext: string;
     };
   };
   footer: {

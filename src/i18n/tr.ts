@@ -134,7 +134,9 @@ export const tr: Translations = {
         },
         email: {
             label: 'E-posta',
-            address: 'hello@axisorai.ai',
+            display: 'hello@axisorai.ai',
+            mailto: 'celebifinans@proton.me',
+            microtext: 'Gönderimler: celebifinans@proton.me',
         },
     },
 

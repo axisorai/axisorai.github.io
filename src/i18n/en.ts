@@ -134,7 +134,9 @@ export const en: Translations = {
         },
         email: {
             label: 'Email',
-            address: 'hello@axisorai.ai',
+            display: 'hello@axisorai.ai',
+            mailto: 'celebifinans@proton.me',
+            microtext: 'Delivery: celebifinans@proton.me',
         },
     },
 

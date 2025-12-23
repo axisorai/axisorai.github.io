@@ -21,7 +21,7 @@ export function Contact() {
     // Create mailto link as fallback
     const subject = encodeURIComponent(`Contact from ${formData.name}`);
     const body = encodeURIComponent(`Name: ${formData.name}\\nEmail: ${formData.email}\\n\\nMessage:\\n${formData.message}`);
-    window.location.href = `mailto:${t('contact.email.address')}?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${t('contact.email.mailto')}?subject=${subject}&body=${body}`;
 
     toast({
       title: 'Opening email client...',
@@ -54,11 +54,12 @@ export function Contact() {
                   <div>
                     <p className="text-sm text-muted-foreground">{t('contact.email.label')}</p>
                     <a
-                      href={`mailto:${t('contact.email.address')}`}
+                      href={`mailto:${t('contact.email.mailto')}`}
                       className="text-foreground font-medium hover:text-primary transition-colors"
                     >
-                      {t('contact.email.address')}
+                      {t('contact.email.display')}
                     </a>
+                    <p className="text-xs text-muted-foreground mt-1">{t('contact.email.microtext')}</p>
                   </div>
                 </div>
               </div>
