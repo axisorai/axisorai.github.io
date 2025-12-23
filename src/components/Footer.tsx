@@ -33,23 +33,31 @@ export function Footer() {
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
+    e.stopPropagation();
     const targetId = href.replace('#', '');
 
-    // If not on home page, navigate to home first then scroll
-    if (location.pathname !== '/') {
+    // With HashRouter, we need to check if we're on the home route
+    // The hash contains both the route and any anchor
+    const isOnHome = location.pathname === '/' || location.pathname === '';
+
+    if (!isOnHome) {
       navigate('/');
       setTimeout(() => {
         const element = document.getElementById(targetId);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-      }, 100);
+      }, 150);
       return;
     }
 
+    // Scroll to element on current page
     const element = document.getElementById(targetId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      // Fallback: scroll to top if element not found
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 
