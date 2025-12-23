@@ -74,25 +74,25 @@ export const en: Translations = {
     },
 
     method: {
-        title: 'The Axisorai Method',
-        subtitle: 'Our proven four-step approach transforms how you work with AI, delivering measurable productivity gains from day one.',
-        cta: 'Learn How It Works',
+        title: 'How We Offer Affordable AI',
+        subtitle: 'We leverage strategic volume purchasing to bring you premium AI tools at a fraction of the retail cost.',
+        cta: 'Start Saving Today',
         steps: {
             step1: {
-                title: 'Setup',
-                description: 'Quick onboarding and tool configuration tailored to your workflow.',
+                title: 'Bulk Licensing',
+                description: 'We negotiate enterprise-level agreements with AI providers, securing high-volume usage rights.',
             },
             step2: {
-                title: 'Templates',
-                description: 'Pre-built templates for common tasks that save hours every week.',
+                title: 'Smart Allocation',
+                description: 'Usage is distributed across our member base, maximizing efficiency and minimizing waste.',
             },
             step3: {
-                title: 'Automation',
-                description: 'Connect your tools and automate repetitive processes.',
+                title: 'Affordable Packages',
+                description: 'You get access to premium AI models like GPT-4, Claude, and Gemini at prices up to 70% lower.',
             },
             step4: {
-                title: 'Optimization',
-                description: 'Continuous improvement based on your usage patterns.',
+                title: 'Continuous Access',
+                description: 'Enjoy uninterrupted service with our managed quota system and priority support.',
             },
         },
     },

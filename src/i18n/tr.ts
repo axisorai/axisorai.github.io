@@ -74,25 +74,25 @@ export const tr: Translations = {
     },
 
     method: {
-        title: 'Axisorai Yöntemi',
-        subtitle: 'Kanıtlanmış dört adımlı yaklaşımımız, AI ile çalışma şeklinizi dönüştürür ve ilk günden itibaren ölçülebilir verimlilik kazanımları sağlar.',
-        cta: 'Nasıl Çalıştığını Öğrenin',
+        title: 'Uygun Fiyatlı AI Nasıl Sunuyoruz?',
+        subtitle: 'Stratejik toplu alım gücümüzle, premium AI araçlarını piyasa fiyatının çok altında sizlere sunuyoruz.',
+        cta: 'Bugün Tasarruf Edin',
         steps: {
             step1: {
-                title: 'Kurulum',
-                description: 'İş akışınıza özel hızlı oryantasyon ve araç yapılandırması.',
+                title: 'Toplu Lisanslama',
+                description: 'AI sağlayıcılarıyla kurumsal düzeyde anlaşmalar yaparak yüksek hacimli kullanım hakları elde ediyoruz.',
             },
             step2: {
-                title: 'Şablonlar',
-                description: 'Her hafta saatler kazandıran, yaygın görevler için hazır şablonlar.',
+                title: 'Akıllı Dağıtım',
+                description: 'Kullanım, üye tabanımız genelinde dağıtılarak verimlilik maksimize edilir ve israf önlenir.',
             },
             step3: {
-                title: 'Otomasyon',
-                description: 'Araçlarınızı bağlayın ve tekrarlayan işlemleri otomatikleştirin.',
+                title: 'Uygun Paketler',
+                description: 'GPT-4, Claude ve Gemini gibi premium AI modellerine %70\'e varan indirimlerle erişin.',
             },
             step4: {
-                title: 'Optimizasyon',
-                description: 'Kullanım kalıplarınıza göre sürekli iyileştirme.',
+                title: 'Kesintisiz Erişim',
+                description: 'Yönetilen kota sistemimiz ve öncelikli destek ile kesintisiz hizmetin keyfini çıkarın.',
             },
         },
     },

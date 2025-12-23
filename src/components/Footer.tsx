@@ -1,4 +1,4 @@
-import { Instagram, Twitter, Linkedin, Github } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 import { useTranslation } from '@/hooks/useTranslation';
 
 const footerLinks = {
@@ -23,10 +23,7 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Twitter, href: 'https://x.com', label: 'Twitter' },
   { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
-  { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: Github, href: 'https://github.com', label: 'GitHub' },
 ];
 
 export function Footer() {

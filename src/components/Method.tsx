@@ -20,7 +20,7 @@ export function Method() {
           <div className="order-2 lg:order-1 flex justify-center">
             <img
               src={methodImage}
-              alt="The Axisorai Method visualization"
+              alt="Affordable AI bulk licensing visualization"
               className="w-full max-w-md rounded-2xl animate-float"
             />
           </div>
