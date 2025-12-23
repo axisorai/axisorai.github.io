@@ -54,12 +54,20 @@ const Contact = () => {
                                         </p>
                                     </div>
                                 </div>
-                                <a 
-                                    href={`mailto:${t('contact.email.mailto')}`}
-                                    className="text-primary hover:text-primary/80 transition-colors text-lg"
-                                >
-                                    {t('contact.email.display')}
-                                </a>
+                                <div className="flex flex-col gap-3">
+                                    <a 
+                                        href={`mailto:${t('contact.email.mailto')}`}
+                                        className="text-primary hover:text-primary/80 transition-colors text-lg"
+                                    >
+                                        {t('contact.email.display')}
+                                    </a>
+                                    <a 
+                                        href={`mailto:${t('contact.email.mailto')}`}
+                                        className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
+                                    >
+                                        Send Us Mail
+                                    </a>
+                                </div>
                             </div>
 
                             {/* Social Media */}
