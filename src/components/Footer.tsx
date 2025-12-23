@@ -1,23 +1,24 @@
 import { Instagram } from 'lucide-react';
 import { useTranslation } from '@/hooks/useTranslation';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const footerLinks = {
   products: [
-    { nameKey: 'Plus', href: '#products' },
-    { nameKey: 'Pro', href: '#products' },
-    { nameKey: 'All-in-One Bundle', href: '#products' },
+    { nameKey: 'Plus', href: '#pricing' },
+    { nameKey: 'Pro', href: '#pricing' },
+    { nameKey: 'All-in-One Bundle', href: '#pricing' },
   ],
   company: [
-    { nameKey: 'footer.links.about', href: '#commitment' },
-    { nameKey: 'footer.links.blog', href: '#community' },
-    { nameKey: 'footer.links.careers', href: '#' },
-    { nameKey: 'footer.links.press', href: '#' },
+    { nameKey: 'footer.links.about', href: '#technologies' },
+    { nameKey: 'footer.links.blog', href: '#pricing' },
+    { nameKey: 'footer.links.careers', href: '#footer' },
+    { nameKey: 'footer.links.press', href: '#footer' },
   ],
   resources: [
-    { nameKey: 'footer.links.documentation', href: '#' },
-    { nameKey: 'footer.links.helpCenter', href: '#' },
-    { nameKey: 'footer.links.community', href: '#community' },
-    { nameKey: 'footer.links.contact', href: '#contact' },
+    { nameKey: 'footer.links.documentation', href: '#technologies' },
+    { nameKey: 'footer.links.helpCenter', href: '#footer' },
+    { nameKey: 'footer.links.community', href: '#footer' },
+    { nameKey: 'footer.links.contact', href: '#footer' },
   ],
 };
 
@@ -27,6 +28,36 @@ const socialLinks = [
 
 export function Footer() {
   const { t } = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+
+    // If not on home page, navigate to home first then scroll
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+      return;
+    }
+
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (location.pathname !== '/') navigate('/');
+  };
 
   return (
     <footer className="py-16 border-t border-border/50">
@@ -34,7 +65,7 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           {/* Brand */}
           <div className="col-span-2">
-            <a href="#" className="text-2xl font-bold gradient-text">
+            <a href="#" onClick={scrollToTop} className="text-2xl font-bold gradient-text">
               axisorai
             </a>
             <p className="text-muted-foreground mt-4 max-w-xs">
@@ -66,7 +97,8 @@ export function Footer() {
                 <li key={link.nameKey}>
                   <a
                     href={link.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+                    onClick={(e) => scrollToSection(e, link.href)}
+                    className="text-muted-foreground hover:text-foreground transition-colors text-sm cursor-pointer"
                   >
                     {link.nameKey}
                   </a>
@@ -83,7 +115,8 @@ export function Footer() {
                 <li key={link.nameKey}>
                   <a
                     href={link.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+                    onClick={(e) => scrollToSection(e, link.href)}
+                    className="text-muted-foreground hover:text-foreground transition-colors text-sm cursor-pointer"
                   >
                     {t(link.nameKey)}
                   </a>
@@ -100,7 +133,8 @@ export function Footer() {
                 <li key={link.nameKey}>
                   <a
                     href={link.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors text-sm"
+                    onClick={(e) => scrollToSection(e, link.href)}
+                    className="text-muted-foreground hover:text-foreground transition-colors text-sm cursor-pointer"
                   >
                     {t(link.nameKey)}
                   </a>
@@ -116,10 +150,18 @@ export function Footer() {
             {t('footer.copyright')}
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a 
+              href="#footer" 
+              onClick={(e) => scrollToSection(e, '#footer')}
+              className="hover:text-foreground transition-colors cursor-pointer"
+            >
               {t('footer.privacy')}
             </a>
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a 
+              href="#footer" 
+              onClick={(e) => scrollToSection(e, '#footer')}
+              className="hover:text-foreground transition-colors cursor-pointer"
+            >
               {t('footer.terms')}
             </a>
           </div>
