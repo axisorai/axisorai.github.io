@@ -154,13 +154,14 @@ export const tr: Translations = {
     },
 
     footer: {
-        description: 'Bireyleri ve ekipleri AI destekli üretkenlik çözümleriyle güçlendiriyoruz. Bir Çelebi Finance iştirakidir.',
-        products: 'Ürünler',
+        description: 'Bireyler ve ekipler için AI destekli üretkenlik çözümleriyle güçlendirme. Bir Çelebi Finance yan kuruluşu.',
+        products: 'Paketler',
         company: 'Şirket',
         resources: 'Kaynaklar',
         copyright: '© 2025 axisorai. Tüm hakları saklıdır.',
         privacy: 'Gizlilik Politikası',
         terms: 'Hizmet Şartları',
+        howWeOffer: 'Nasıl Ucuza Sunuyoruz?',
         links: {
             about: 'Hakkımızda',
             blog: 'Blog',

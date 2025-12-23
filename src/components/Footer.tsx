@@ -1,5 +1,6 @@
 import { Instagram } from 'lucide-react';
 import { useTranslation } from '@/hooks/useTranslation';
+import { Link } from 'react-router-dom';
 
 const socialLinks = [
   { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' },
@@ -24,6 +25,16 @@ export function Footer() {
             <p className="text-muted-foreground mt-4 max-w-xs mx-auto">
               {t('footer.description')}
             </p>
+
+            {/* How We Offer Link */}
+            <div className="mt-6">
+              <Link
+                to="/services2"
+                className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+              >
+                {t('footer.howWeOffer')} →
+              </Link>
+            </div>
 
             {/* Social Links */}
             <div className="flex gap-4 mt-6 justify-center">

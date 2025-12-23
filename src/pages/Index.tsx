@@ -118,7 +118,7 @@ const Index = () => {
                         <div className="mt-8 text-center pb-8 md:pb-0">
                             <Link
                                 to="/services"
-                                className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors py-2 px-4 active:scale-95 transition-transform"
+                                className="inline-flex items-center gap-2 text-lg md:text-xl font-semibold text-primary hover:text-primary/80 transition-colors py-3 px-6 active:scale-95 transition-transform"
                             >
                                 {t('portfolio.pricing.cta')} →
                             </Link>

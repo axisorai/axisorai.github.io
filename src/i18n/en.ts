@@ -161,6 +161,7 @@ export const en: Translations = {
         copyright: '© 2025 axisorai. All rights reserved.',
         privacy: 'Privacy Policy',
         terms: 'Terms of Service',
+        howWeOffer: 'How We Offer Affordably?',
         links: {
             about: 'About',
             blog: 'Blog',
