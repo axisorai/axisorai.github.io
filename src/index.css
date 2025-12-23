@@ -1,89 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 222 47% 8%;
+    --background: 222 47% 5%;
     --foreground: 210 40% 98%;
 
-    --card: 222 47% 11%;
+    --card: 222 47% 8%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222 47% 11%;
+    --popover: 222 47% 8%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 262 83% 58%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 187 85% 53%;
+    --primary-foreground: 222 47% 5%;
 
-    --secondary: 188 78% 55%;
-    --secondary-foreground: 222 47% 8%;
+    --secondary: 280 85% 65%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 222 47% 15%;
+    --muted: 222 30% 18%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 262 60% 45%;
+    --accent: 280 85% 65%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 222 47% 18%;
-    --input: 222 47% 18%;
-    --ring: 262 83% 58%;
+    --border: 222 30% 18%;
+    --input: 222 30% 18%;
+    --ring: 187 85% 53%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
 
-    /* Custom gradient tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(262, 83%, 58%) 0%, hsl(188, 78%, 55%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(222, 47%, 8%) 0%, hsl(262, 40%, 12%) 50%, hsl(222, 47%, 8%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(222, 47%, 13%) 0%, hsl(222, 47%, 9%) 100%);
-    --gradient-glow: radial-gradient(ellipse at center, hsl(262, 83%, 58%, 0.15) 0%, transparent 70%);
-
-    /* Shadow tokens */
-    --shadow-sm: 0 2px 8px hsl(262, 83%, 58%, 0.1);
-    --shadow-md: 0 4px 20px hsl(262, 83%, 58%, 0.15);
-    --shadow-lg: 0 8px 40px hsl(262, 83%, 58%, 0.2);
-    --shadow-glow: 0 0 60px hsl(262, 83%, 58%, 0.3);
+    /* Custom tokens */
+    --glow-primary: 187 85% 53%;
+    --glow-accent: 280 85% 65%;
+    --glass-bg: 222 47% 11%;
+    --glass-border: 222 30% 25%;
+    --surface-elevated: 222 47% 9%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(187 85% 53% / 0.15), hsl(280 85% 65% / 0.1));
+    --gradient-glow: radial-gradient(ellipse at center, hsl(187 85% 53% / 0.15), transparent 70%);
+    --gradient-card: linear-gradient(145deg, hsl(222 47% 12% / 0.8), hsl(222 47% 8% / 0.9));
+    --gradient-featured: linear-gradient(145deg, hsl(187 85% 53% / 0.1), hsl(280 85% 65% / 0.08));
 
     --sidebar-background: 222 47% 8%;
     --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 262 83% 58%;
+    --sidebar-primary: 187 85% 53%;
     --sidebar-primary-foreground: 210 40% 98%;
     --sidebar-accent: 222 47% 15%;
     --sidebar-accent-foreground: 210 40% 98%;
     --sidebar-border: 222 47% 18%;
-    --sidebar-ring: 262 83% 58%;
+    --sidebar-ring: 187 85% 53%;
   }
 
   .dark {
-    --background: 222 47% 8%;
+    --background: 222 47% 5%;
     --foreground: 210 40% 98%;
-
-    --card: 222 47% 11%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222 47% 11%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 262 83% 58%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 188 78% 55%;
-    --secondary-foreground: 222 47% 8%;
-
-    --muted: 222 47% 15%;
-    --muted-foreground: 215 20% 65%;
-
-    --accent: 262 60% 45%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 222 47% 18%;
-    --input: 222 47% 18%;
-    --ring: 262 83% 58%;
   }
 }
 
@@ -98,95 +76,151 @@
 
   body {
     @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  /* Unified Typography - Only Inter */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   }
 }
 
 @layer components {
+  /* Glass Card Styles */
+  .glass-card {
+    @apply relative overflow-hidden rounded-2xl border backdrop-blur-xl;
+    background: var(--gradient-card);
+    border-color: hsl(var(--glass-border) / 0.3);
+  }
+
+  .glass-card-featured {
+    @apply relative overflow-hidden rounded-2xl border backdrop-blur-xl;
+    background: var(--gradient-featured);
+    border-color: hsl(var(--primary) / 0.3);
+    box-shadow: 
+      0 0 40px hsl(var(--primary) / 0.15),
+      0 0 80px hsl(var(--primary) / 0.05),
+      inset 0 1px 0 hsl(var(--primary) / 0.1);
+  }
+
+  .glow-text {
+    text-shadow: 0 0 40px hsl(var(--primary) / 0.5);
+  }
+
+  .glow-box {
+    box-shadow: 
+      0 0 20px hsl(var(--primary) / 0.2),
+      0 0 40px hsl(var(--primary) / 0.1);
+  }
+
+  .subtle-grid {
+    background-image: 
+      linear-gradient(hsl(var(--border) / 0.3) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.3) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  /* Typography Classes */
+  .hero-title {
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+
+  .hero-subtitle {
+    line-height: 1.6;
+  }
+
+  .section-label {
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .card-title {
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .price-text {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .card-description {
+    line-height: 1.7;
+  }
+
+  .footer-text {
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  /* Gradient text */
   .gradient-text {
     @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-primary);
-  }
-
-  .glass-card {
-    @apply bg-card/80 backdrop-blur-xl border border-border/50 rounded-xl;
-    box-shadow: var(--shadow-md);
-  }
-
-  .glow-effect {
-    position: relative;
-  }
-
-  .glow-effect::before {
-    content: '';
-    position: absolute;
-    inset: -1px;
-    background: var(--gradient-primary);
-    border-radius: inherit;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -1;
-    filter: blur(8px);
-  }
-
-  .glow-effect:hover::before {
-    opacity: 0.6;
+    background-image: linear-gradient(135deg, hsl(262, 83%, 58%) 0%, hsl(188, 78%, 55%) 100%);
   }
 }
 
 @layer utilities {
-  .animate-fade-up {
-    animation: fadeUp 0.6s ease-out forwards;
-  }
-
-  .animate-fade-in {
-    animation: fadeIn 0.5s ease-out forwards;
-  }
-
-  .animate-scale-in {
-    animation: scaleIn 0.4s ease-out forwards;
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
   }
 
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
 
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  .animate-glow-pulse {
+    animation: glow-pulse 4s ease-in-out infinite;
   }
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  .animate-fade-up {
+    animation: fadeUp 0.6s ease-out forwards;
   }
 
-  @keyframes scaleIn {
-    from {
-      opacity: 0;
-      transform: scale(0.95);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
   }
 
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
