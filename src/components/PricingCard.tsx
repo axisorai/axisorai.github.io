@@ -20,13 +20,13 @@ const PricingCard = ({
     return (
         <div
             className={`relative p-8 transition-all duration-300 ${featured
-                    ? "glass-card-featured scale-[1.02]"
-                    : "glass-card hover:border-muted-foreground/30"
+                ? "glass-card-featured scale-[1.02]"
+                : "glass-card hover:border-muted-foreground/30"
                 }`}
         >
             {badge && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="px-4 py-1.5 text-xs font-medium rounded-full bg-primary/20 text-primary border border-primary/30 backdrop-blur-sm tracking-wide">
+                <div className="absolute -top-2.5 left-1/2 -translate-x-1/2">
+                    <span className="px-3 py-1 text-[11px] font-medium rounded-full bg-primary/20 text-primary border border-primary/30 backdrop-blur-sm tracking-wide">
                         {badge}
                     </span>
                 </div>
