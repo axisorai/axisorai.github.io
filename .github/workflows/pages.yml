@@ -27,6 +27,13 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+      
+      # Ensure .nojekyll exists in dist
+      - run: touch dist/.nojekyll
+      
+      # Debug: Show what's being deployed
+      - run: ls -la dist/
+      - run: head -30 dist/index.html
 
       - uses: actions/upload-pages-artifact@v3
         with:
