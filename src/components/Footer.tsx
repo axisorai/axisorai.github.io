@@ -3,10 +3,9 @@ import { useTranslation } from '@/hooks/useTranslation';
 
 const footerLinks = {
   products: [
-    { nameKey: 'Axisorai Workspace', href: '#products' },
-    { nameKey: 'Axisorai Plus', href: '#products' },
-    { nameKey: 'Axisorai Pro', href: '#products' },
-    { nameKey: 'Team Enablement', href: '#products' },
+    { nameKey: 'Plus', href: '#products' },
+    { nameKey: 'Pro', href: '#products' },
+    { nameKey: 'All-in-One Bundle', href: '#products' },
   ],
   company: [
     { nameKey: 'footer.links.about', href: '#commitment' },

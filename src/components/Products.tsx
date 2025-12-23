@@ -1,17 +1,20 @@
-import { Zap, Layers, Crown, Users } from 'lucide-react';
+import { Layers, Crown, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from '@/hooks/useTranslation';
 
 interface Product {
   icon: any;
-  title: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
+  originalPrice: string;
+  price: string;
   features: string[];
-  price?: string;
   showTaxNote?: boolean;
-  badge?: string;
+  badge?: 'popular' | 'exclusive';
   cta: string;
   href: string;
+  limitsNote?: string;
+  isYearly?: boolean;
 }
 
 export function Products() {
@@ -19,59 +22,69 @@ export function Products() {
 
   const products: Product[] = [
     {
-      icon: Zap,
-      title: 'Axisorai Workspace',
-      description: 'products.workspace.description',
-      features: [
-        'products.workspace.features.feature1',
-        'products.workspace.features.feature2',
-        'products.workspace.features.feature3',
-      ],
-      price: '₺1.499',
-      showTaxNote: true,
-      cta: 'products.cta.choose',
-      href: '#contact',
-    },
-    {
       icon: Layers,
-      title: 'Axisorai Plus',
-      description: 'products.plus.description',
+      titleKey: 'products.plus.title',
+      descriptionKey: 'products.plus.description',
+      originalPrice: '$20',
+      price: '₺250',
       features: [
         'products.plus.features.feature1',
         'products.plus.features.feature2',
         'products.plus.features.feature3',
+        'products.plus.features.feature4',
+        'products.plus.features.feature5',
+        'products.plus.features.feature6',
+        'products.plus.features.feature7',
+        'products.plus.features.feature8',
+        'products.plus.features.feature9',
       ],
-      price: '₺2.999',
       showTaxNote: true,
       badge: 'popular',
       cta: 'products.cta.choose',
       href: '#contact',
+      limitsNote: 'products.plus.limitsNote',
     },
     {
       icon: Crown,
-      title: 'Axisorai Pro',
-      description: 'products.pro.description',
+      titleKey: 'products.pro.title',
+      descriptionKey: 'products.pro.description',
+      originalPrice: '$200',
+      price: '₺650',
       features: [
         'products.pro.features.feature1',
         'products.pro.features.feature2',
         'products.pro.features.feature3',
+        'products.pro.features.feature4',
+        'products.pro.features.feature5',
+        'products.pro.features.feature6',
+        'products.pro.features.feature7',
+        'products.pro.features.feature8',
+        'products.pro.features.feature9',
       ],
-      price: '₺4.999',
       showTaxNote: true,
       cta: 'products.cta.choose',
       href: '#contact',
+      limitsNote: 'products.pro.limitsNote',
     },
     {
-      icon: Users,
-      title: 'Team Enablement',
-      description: 'products.team.description',
+      icon: Star,
+      titleKey: 'products.exclusive.title',
+      descriptionKey: 'products.exclusive.description',
+      originalPrice: '$360+',
+      price: '₺1.250',
       features: [
-        'products.team.features.feature1',
-        'products.team.features.feature2',
-        'products.team.features.feature3',
+        'products.exclusive.features.feature1',
+        'products.exclusive.features.feature2',
+        'products.exclusive.features.feature3',
+        'products.exclusive.features.feature4',
+        'products.exclusive.features.feature5',
       ],
-      cta: 'products.cta.contactSales',
+      showTaxNote: true,
+      badge: 'exclusive',
+      cta: 'products.cta.choose',
       href: '#contact',
+      limitsNote: 'products.exclusive.limitsNote',
+      isYearly: true,
     },
   ];
 
@@ -92,62 +105,69 @@ export function Products() {
         </div>
 
         {/* Products Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {products.map((product, index) => (
             <div
-              key={product.title}
-              className="glass-card p-6 flex flex-col hover:border-primary/50 transition-all duration-300 group relative"
+              key={t(product.titleKey)}
+              className="glass-card p-8 flex flex-col hover:border-primary/50 transition-all duration-300 group relative"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Badge */}
               {product.badge && (
-                <div className="absolute -top-3 right-4">
-                  <span className="bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full shadow-lg">
-                    {t('products.badge.popular')}
+                <div className="absolute -top-3 right-6">
+                  <span className={`text-xs font-semibold px-3 py-1 rounded-full shadow-lg ${product.badge === 'exclusive'
+                      ? 'bg-gradient-to-r from-amber-500 to-orange-500 text-white'
+                      : 'bg-primary text-primary-foreground'
+                    }`}>
+                    {t(`products.badge.${product.badge}`)}
                   </span>
                 </div>
               )}
 
               {/* Icon */}
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                <product.icon className="w-6 h-6 text-primary" />
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+                <product.icon className="w-7 h-7 text-primary" />
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-bold mb-2 text-foreground">{product.title}</h3>
-              <p className="text-muted-foreground text-sm mb-4">
-                {t(product.description)}
+              <h3 className="text-2xl font-bold mb-2 text-foreground">{t(product.titleKey)}</h3>
+              <p className="text-muted-foreground text-sm mb-5">
+                {t(product.descriptionKey)}
               </p>
 
               {/* Price */}
-              <div className="mb-4">
-                {product.price ? (
-                  <div>
-                    <div>
-                      <span className="text-3xl font-bold text-foreground">{product.price}</span>
-                      <span className="text-muted-foreground text-sm ml-1">{t('products.pricing.perMonth')}</span>
-                    </div>
-                    {product.showTaxNote && (
-                      <p className="text-xs text-muted-foreground/60 mt-1">{t('products.pricing.taxNote')}</p>
-                    )}
-                  </div>
-                ) : (
-                  <div className="text-lg font-semibold text-primary">{t('products.pricing.custom')}</div>
+              <div className="mb-6">
+                <div className="flex items-baseline gap-2 mb-1">
+                  <span className="text-sm text-muted-foreground line-through">{t('products.pricing.normalPrice')} {product.originalPrice}</span>
+                </div>
+                <div>
+                  <span className="text-4xl font-bold text-foreground">{product.price}</span>
+                  <span className="text-muted-foreground text-sm ml-1">
+                    {product.isYearly ? t('products.pricing.perYear') : t('products.pricing.perMonth')}
+                  </span>
+                </div>
+                {product.showTaxNote && (
+                  <p className="text-xs text-muted-foreground/60 mt-1">{t('products.pricing.taxNote')}</p>
                 )}
               </div>
 
               {/* Features */}
-              <ul className="space-y-2 mb-6 flex-grow">
+              <ul className="space-y-2.5 mb-6 flex-grow">
                 {product.features.map((feature) => (
-                  <li key={feature} className="text-sm text-muted-foreground flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0" />
+                  <li key={feature} className="text-sm text-muted-foreground flex items-start gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-secondary flex-shrink-0 mt-1.5" />
                     {t(feature)}
                   </li>
                 ))}
               </ul>
 
+              {/* Limits Note */}
+              {product.limitsNote && (
+                <p className="text-xs text-muted-foreground/50 mb-4 italic">{t(product.limitsNote)}</p>
+              )}
+
               {/* CTA */}
-              <Button variant="outline" size="sm" className="w-full" asChild>
+              <Button variant="hero" size="lg" className="w-full" asChild>
                 <a href={product.href}>{t(product.cta)}</a>
               </Button>
             </div>

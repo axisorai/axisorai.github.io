@@ -25,15 +25,60 @@ export interface Translations {
     sectionSubtitle: string;
     badge: {
       popular: string;
+      exclusive: string;
     };
     pricing: {
       perMonth: string;
-      custom: string;
+      perYear: string;
+      normalPrice: string;
       taxNote: string;
     };
     cta: {
       choose: string;
-      contactSales: string;
+    };
+    plus: {
+      title: string;
+      description: string;
+      features: {
+        feature1: string;
+        feature2: string;
+        feature3: string;
+        feature4: string;
+        feature5: string;
+        feature6: string;
+        feature7: string;
+        feature8: string;
+        feature9: string;
+      };
+      limitsNote: string;
+    };
+    pro: {
+      title: string;
+      description: string;
+      features: {
+        feature1: string;
+        feature2: string;
+        feature3: string;
+        feature4: string;
+        feature5: string;
+        feature6: string;
+        feature7: string;
+        feature8: string;
+        feature9: string;
+      };
+      limitsNote: string;
+    };
+    exclusive: {
+      title: string;
+      description: string;
+      features: {
+        feature1: string;
+        feature2: string;
+        feature3: string;
+        feature4: string;
+        feature5: string;
+      };
+      limitsNote: string;
     };
     disclaimer: string;
   };
