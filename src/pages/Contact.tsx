@@ -2,7 +2,7 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { useContext } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
-import { Mail, Instagram } from "lucide-react";
+import { Mail, Instagram, Send } from "lucide-react";
 
 const Contact = () => {
     const context = useContext(LanguageContext);
@@ -101,6 +101,41 @@ const Contact = () => {
                                         className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
                                     >
                                         Send Direct Message
+                                    </a>
+                                </div>
+                            </div>
+
+                            {/* Telegram */}
+                            <div className="mt-8">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                                        <Send className="w-6 h-6 text-primary" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg font-semibold text-foreground">
+                                            Telegram
+                                        </h3>
+                                        <p className="text-sm text-muted-foreground">
+                                            Message us on Telegram
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="flex flex-col gap-3">
+                                    <a 
+                                        href="https://t.me/+19172670527"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-primary hover:text-primary/80 transition-colors text-lg"
+                                    >
+                                        +1 917 267 0527
+                                    </a>
+                                    <a 
+                                        href="https://t.me/+19172670527"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
+                                    >
+                                        Message on Telegram
                                     </a>
                                 </div>
                             </div>

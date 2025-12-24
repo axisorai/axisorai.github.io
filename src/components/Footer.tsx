@@ -1,9 +1,10 @@
-import { Instagram } from 'lucide-react';
+import { Instagram, Send } from 'lucide-react';
 import { useTranslation } from '@/hooks/useTranslation';
 import { Link } from 'react-router-dom';
 
 const socialLinks = [
   { icon: Instagram, href: 'https://www.instagram.com/axisorai/', label: 'Instagram' },
+  { icon: Send, href: 'https://t.me/+19172670527', label: 'Telegram' },
 ];
 
 export function Footer() {
