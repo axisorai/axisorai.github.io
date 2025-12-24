@@ -23,12 +23,9 @@ export function Footer() {
             >
               axisorai
             </button>
-            <p className="text-muted-foreground mt-4 max-w-xs mx-auto">
-              {t('footer.description')}
-            </p>
-
+            
             {/* Social Links */}
-            <div className="flex gap-6 mt-8 justify-center">
+            <div className="flex gap-6 mt-6 justify-center">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
@@ -42,6 +39,10 @@ export function Footer() {
                 </a>
               ))}
             </div>
+
+            <p className="text-muted-foreground mt-6 max-w-xs mx-auto">
+              {t('footer.description')}
+            </p>
 
             {/* How We Offer Link */}
             <div className="mt-8">
