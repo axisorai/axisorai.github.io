@@ -27,18 +27,8 @@ export function Footer() {
               {t('footer.description')}
             </p>
 
-            {/* How We Offer Link */}
-            <div className="mt-6">
-              <Link
-                to="/services2"
-                className="inline-flex items-center gap-2 text-5xl font-medium text-primary hover:text-primary/80 transition-colors"
-              >
-                {t('footer.howWeOffer')} →
-              </Link>
-            </div>
-
             {/* Social Links */}
-            <div className="flex gap-4 mt-6 justify-center">
+            <div className="flex gap-6 mt-8 justify-center">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
@@ -46,11 +36,21 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="w-10 h-10 rounded-lg bg-muted/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                  className="w-20 h-20 rounded-lg bg-muted/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
                 >
-                  <social.icon className="w-5 h-5" />
+                  <social.icon className="w-10 h-10" />
                 </a>
               ))}
+            </div>
+
+            {/* How We Offer Link */}
+            <div className="mt-8">
+              <Link
+                to="/services2"
+                className="inline-flex items-center gap-2 text-5xl font-medium text-primary hover:text-primary/80 transition-colors"
+              >
+                {t('footer.howWeOffer')} →
+              </Link>
             </div>
           </div>
         </div>

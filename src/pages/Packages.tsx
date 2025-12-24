@@ -3,6 +3,12 @@ import { Footer } from "@/components/Footer";
 import PricingCard from "@/components/PricingCard";
 import { useContext } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
+import { Instagram, Send } from "lucide-react";
+
+const socialLinks = [
+  { icon: Instagram, href: 'https://www.instagram.com/axisorai/', label: 'Instagram' },
+  { icon: Send, href: 'https://t.me/+19172670527', label: 'Telegram' },
+];
 
 const Packages = () => {
     const context = useContext(LanguageContext);
@@ -68,6 +74,27 @@ const Packages = () => {
                                     featured
                                     badge={t('portfolio.pricing.yearly.badge')}
                                 />
+                            </div>
+                        </div>
+
+                        {/* Social Contact Buttons */}
+                        <div className="mt-12 text-center">
+                            <p className="text-muted-foreground mb-6 text-lg">
+                                {t('contact.title')}
+                            </p>
+                            <div className="flex gap-6 justify-center">
+                                {socialLinks.map((social) => (
+                                    <a
+                                        key={social.label}
+                                        href={social.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={social.label}
+                                        className="w-20 h-20 rounded-lg bg-muted/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                                    >
+                                        <social.icon className="w-10 h-10" />
+                                    </a>
+                                ))}
                             </div>
                         </div>
                     </div>
