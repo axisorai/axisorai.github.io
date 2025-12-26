@@ -174,6 +174,8 @@ export interface Translations {
         title: string;
         price: string;
         period: string;
+        originalPrice?: string;
+        savingsPercent?: string;
         description: string;
         trust?: string;
         ownAccount?: string;
@@ -183,6 +185,8 @@ export interface Translations {
         subtitle: string;
         price: string;
         period: string;
+        originalPrice?: string;
+        savingsPercent?: string;
         description1: string;
         description2: string;
         badge: string;

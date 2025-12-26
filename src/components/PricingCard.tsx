@@ -6,6 +6,8 @@ interface PricingCardProps {
     description: string[];
     featured?: boolean;
     badge?: string;
+    originalPrice?: string;
+    savingsPercent?: string;
 }
 
 const PricingCard = ({
@@ -16,6 +18,8 @@ const PricingCard = ({
     description,
     featured = false,
     badge,
+    originalPrice,
+    savingsPercent,
 }: PricingCardProps) => {
     return (
         <div

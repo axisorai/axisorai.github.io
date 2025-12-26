@@ -78,6 +78,8 @@ const Index = () => {
                                     title={t('portfolio.pricing.monthly.title')}
                                     price={t('portfolio.pricing.monthly.price')}
                                     period={t('portfolio.pricing.monthly.period')}
+                                    originalPrice={t('portfolio.pricing.monthly.originalPrice')}
+                                    savingsPercent={t('portfolio.pricing.monthly.savingsPercent')}
                                     description={[
                                         t('portfolio.pricing.monthly.description'),
                                         t('portfolio.pricing.monthly.trust') || '',
@@ -93,6 +95,8 @@ const Index = () => {
                                     subtitle={t('portfolio.pricing.yearly.subtitle')}
                                     price={t('portfolio.pricing.yearly.price')}
                                     period={t('portfolio.pricing.yearly.period')}
+                                    originalPrice={t('portfolio.pricing.yearly.originalPrice')}
+                                    savingsPercent={t('portfolio.pricing.yearly.savingsPercent')}
                                     description={[
                                         t('portfolio.pricing.yearly.description1'),
                                         t('portfolio.pricing.yearly.description2'),
