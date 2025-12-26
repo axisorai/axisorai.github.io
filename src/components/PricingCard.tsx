@@ -46,6 +46,18 @@ const PricingCard = ({
             </div>
 
             <div className="text-center mb-6">
+                {originalPrice && (
+                    <div className="mb-2">
+                        <span className="text-lg text-muted-foreground/50 line-through">
+                            {originalPrice}
+                        </span>
+                        {savingsPercent && (
+                            <span className="ml-2 inline-flex items-center px-2.5 py-1 text-xs font-bold rounded-full bg-green-500/20 text-green-400 border border-green-500/30">
+                                {savingsPercent} Tasarruf
+                            </span>
+                        )}
+                    </div>
+                )}
                 <div className="flex items-baseline justify-center gap-1">
                     <span
                         className={`text-4xl font-bold tracking-tight ${featured ? "text-gradient" : "text-foreground"
