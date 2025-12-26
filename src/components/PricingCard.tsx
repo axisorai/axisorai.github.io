@@ -37,22 +37,22 @@ const PricingCard = ({
             )}
 
             <div className="text-center mb-6">
-                <h3 className="text-lg font-semibold text-foreground mb-1 tracking-tight">
+                <h3 className="text-2xl font-bold text-foreground mb-1 tracking-tight">
                     {title}
                 </h3>
                 {subtitle && (
-                    <p className="text-sm text-muted-foreground/70 leading-relaxed">{subtitle}</p>
+                    <p className="text-base text-muted-foreground/70 leading-relaxed">{subtitle}</p>
                 )}
             </div>
 
             <div className="text-center mb-6">
                 {originalPrice && (
                     <div className="mb-2">
-                        <span className="text-lg text-muted-foreground/50 line-through">
+                        <span className="text-2xl text-muted-foreground/50 line-through">
                             {originalPrice}
                         </span>
                         {savingsPercent && (
-                            <span className="ml-2 inline-flex items-center px-2.5 py-1 text-xs font-bold rounded-full bg-green-500/20 text-green-400 border border-green-500/30">
+                            <span className="ml-2 inline-flex items-center px-3 py-1.5 text-sm font-bold rounded-full bg-green-500/20 text-green-400 border border-green-500/30">
                                 {savingsPercent} Tasarruf
                             </span>
                         )}
@@ -60,12 +60,12 @@ const PricingCard = ({
                 )}
                 <div className="flex items-baseline justify-center gap-1">
                     <span
-                        className={`text-4xl font-bold tracking-tight ${featured ? "text-gradient" : "text-foreground"
+                        className={`text-5xl font-bold tracking-tight ${featured ? "text-gradient" : "text-foreground"
                             }`}
                     >
                         {price}
                     </span>
-                    <span className="text-muted-foreground/60 text-sm font-normal">/ {period}</span>
+                    <span className="text-muted-foreground/60 text-base font-normal">/ {period}</span>
                 </div>
             </div>
 
@@ -73,7 +73,7 @@ const PricingCard = ({
                 {description.map((line, index) => (
                     <p
                         key={index}
-                        className="text-sm text-muted-foreground/70 text-center leading-relaxed"
+                        className="text-base text-muted-foreground/80 text-center leading-relaxed"
                     >
                         {line}
                     </p>

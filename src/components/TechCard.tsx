@@ -13,11 +13,11 @@ const TechCard = ({ name, models, icon, price }: TechCardProps) => {
                     {icon}
                 </div>
                 <div>
-                    <h3 className="text-base font-medium text-foreground tracking-tight">
+                    <h3 className="text-xl font-semibold text-foreground tracking-tight">
                         {name}
                     </h3>
                     {price && (
-                        <p className="text-sm font-semibold text-primary">{price}</p>
+                        <p className="text-lg font-bold text-primary">{price}</p>
                     )}
                 </div>
             </div>
@@ -25,9 +25,9 @@ const TechCard = ({ name, models, icon, price }: TechCardProps) => {
                 {models.map((model, index) => (
                     <div
                         key={index}
-                        className="text-sm text-muted-foreground/70 pl-1 flex items-center gap-2 leading-relaxed"
+                        className="text-base text-muted-foreground/80 pl-1 flex items-center gap-2 leading-relaxed"
                     >
-                        <span className="w-1 h-1 rounded-full bg-primary/60" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary/60" />
                         {model}
                     </div>
                 ))}
