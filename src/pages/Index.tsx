@@ -16,19 +16,9 @@ const Index = () => {
 
     const technologies = [
         {
-            name: "OpenAI",
-            models: ["GPT 5.2", "GPT 5.2 Thinking", "GPT 3.5 Pro"],
+            name: "ChatGPT Package",
+            models: ["GPT-5.2", "GPT-5.2 Thinking", "GPT-5.2 Pro", "GPT-5 Thinking Mini"],
             icon: <OpenAIIcon />,
-        },
-        {
-            name: "Google Gemini",
-            models: ["2.5 Pro", "Flash"],
-            icon: <GeminiIcon />,
-        },
-        {
-            name: "Anthropic Claude",
-            models: ["Opus", "Sonnet 4.5"],
-            icon: <ClaudeIcon />,
         },
     ];
 

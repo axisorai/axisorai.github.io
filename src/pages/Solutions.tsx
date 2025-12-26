@@ -14,19 +14,14 @@ const Solutions = () => {
 
     const technologies = [
         {
-            name: "OpenAI",
-            models: ["GPT 5.2", "GPT 5.2 Thinking", "GPT 3.5 Pro"],
+            name: "ChatGPT Package (Monthly)",
+            models: ["GPT-5.2", "GPT-5.2 Thinking", "GPT-5.2 Pro", "GPT-5 Thinking Mini"],
             icon: <OpenAIIcon />,
         },
         {
-            name: "Google Gemini",
-            models: ["2.5 Pro", "Flash"],
+            name: "ALL-IN-ONE Package (Yearly)",
+            models: ["Sonar (Perplexity)", "GPT-5.2", "Claude Sonnet 4.5", "Gemini 3 Pro", "Grok 4.1", "Kimi K2 Thinking"],
             icon: <GeminiIcon />,
-        },
-        {
-            name: "Anthropic Claude",
-            models: ["Opus", "Sonnet 4.5"],
-            icon: <ClaudeIcon />,
         },
     ];
 
@@ -62,7 +57,7 @@ const Solutions = () => {
                         <p className="section-label text-center text-[10px] md:text-xs text-muted-foreground/60 uppercase tracking-[0.2em] mb-6 md:mb-10">
                             {t('portfolio.technologies.label')}
                         </p>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                             {technologies.map((tech, index) => (
                                 <div
                                     key={tech.name}
