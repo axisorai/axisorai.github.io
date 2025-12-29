@@ -7,7 +7,7 @@ import { Mail, Instagram, Send, User, Phone, MessageSquare } from "lucide-react"
 const Contact = () => {
     const context = useContext(LanguageContext);
     if (!context) throw new Error("LanguageContext not found");
-    const { t } = context;
+    const { t, language } = context;
 
     const [formData, setFormData] = useState({
         name: '',
@@ -18,7 +18,25 @@ const Contact = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        const mailtoLink = `mailto:celebifinans@proton.me?subject=İletişim Formu - ${formData.name}&body=İsim: ${formData.name}%0D%0AE-posta: ${formData.email}%0D%0ATelefon: ${formData.phone}%0D%0A%0D%0AMesaj:%0D%0A${formData.message}`;
+        
+        // Language-aware email formatting
+        const isEnglish = language === 'en';
+        const subject = isEnglish 
+            ? `Contact Form - ${formData.name}` 
+            : `İletişim Formu - ${formData.name}`;
+        
+        const bodyLabels = isEnglish 
+            ? { name: 'Name', email: 'Email', phone: 'Phone', message: 'Message' }
+            : { name: 'İsim', email: 'E-posta', phone: 'Telefon', message: 'Mesaj' };
+        
+        const body = `${bodyLabels.name}: ${formData.name}
+${bodyLabels.email}: ${formData.email}
+${bodyLabels.phone}: ${formData.phone || '-'}
+
+${bodyLabels.message}:
+${formData.message}`;
+        
+        const mailtoLink = `mailto:celebifinans@proton.me?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         window.location.href = mailtoLink;
     };
 
