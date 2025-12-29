@@ -3,11 +3,13 @@ import { Footer } from "@/components/Footer";
 import { useContext, useState } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
 import { Mail, Instagram, Send, User, Phone, MessageSquare } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Contact = () => {
     const context = useContext(LanguageContext);
     if (!context) throw new Error("LanguageContext not found");
     const { t, language } = context;
+    const isMobile = useIsMobile();
 
     const [formData, setFormData] = useState({
         name: '',
@@ -49,17 +51,22 @@ ${formData.message}`;
 
     return (
         <div className="min-h-screen bg-background relative overflow-hidden">
-            {/* Background Video */}
+            {/* Background - Video for desktop, gradient for mobile */}
             <div className="absolute inset-0 z-0">
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover"
-                >
-                    <source src="/background-video.mp4" type="video/mp4" />
-                </video>
+                {!isMobile ? (
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        preload="auto"
+                        className="w-full h-full object-cover"
+                    >
+                        <source src="/background-video.mp4" type="video/mp4" />
+                    </video>
+                ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-background via-background to-primary/20" />
+                )}
                 {/* Dark overlay for better text readability */}
                 <div className="absolute inset-0 bg-background/70" />
             </div>

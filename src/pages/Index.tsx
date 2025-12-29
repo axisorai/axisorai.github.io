@@ -8,11 +8,13 @@ import ClaudeIcon from "@/components/icons/ClaudeIcon";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Index = () => {
     const context = useContext(LanguageContext);
     if (!context) throw new Error("LanguageContext not found");
     const { t } = context;
+    const isMobile = useIsMobile();
 
     const technologies = [
         {
@@ -31,17 +33,22 @@ const Index = () => {
 
     return (
         <div className="min-h-screen bg-background relative overflow-hidden">
-            {/* Background Video */}
+            {/* Background - Video for desktop, gradient for mobile */}
             <div className="absolute inset-0 z-0">
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover"
-                >
-                    <source src="/background-video.mp4" type="video/mp4" />
-                </video>
+                {!isMobile ? (
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        preload="auto"
+                        className="w-full h-full object-cover"
+                    >
+                        <source src="/background-video.mp4" type="video/mp4" />
+                    </video>
+                ) : (
+                    <div className="w-full h-full bg-gradient-to-br from-background via-background to-primary/20" />
+                )}
                 {/* Dark overlay for better text readability */}
                 <div className="absolute inset-0 bg-background/70" />
             </div>
