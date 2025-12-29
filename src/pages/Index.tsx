@@ -33,22 +33,18 @@ const Index = () => {
 
     return (
         <div className="min-h-screen bg-background relative overflow-hidden">
-            {/* Background - Video for desktop, gradient for mobile */}
+            {/* Background - Optimized video for mobile, full video for desktop */}
             <div className="absolute inset-0 z-0">
-                {!isMobile ? (
-                    <video
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        preload="auto"
-                        className="w-full h-full object-cover"
-                    >
-                        <source src="/background-video.mp4" type="video/mp4" />
-                    </video>
-                ) : (
-                    <div className="w-full h-full bg-gradient-to-br from-background via-background to-primary/20" />
-                )}
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
+                    className="w-full h-full object-cover"
+                >
+                    <source src={isMobile ? "/background-video-mobile.mp4" : "/background-video.mp4"} type="video/mp4" />
+                </video>
                 {/* Dark overlay for better text readability */}
                 <div className="absolute inset-0 bg-background/70" />
             </div>
