@@ -140,9 +140,15 @@ export const en: Translations = {
         title: 'Get in Touch',
         subtitle: 'Ready to transform your productivity with AI? Contact us to discuss your needs and find the right solution.',
         form: {
+            title: 'Send Us a Message',
             name: 'Your Name',
+            namePlaceholder: 'Your Full Name',
             email: 'Your Email',
+            emailPlaceholder: 'example@email.com',
+            phone: 'Phone',
+            phonePlaceholder: '+1 XXX XXX XXXX',
             message: 'Your Message',
+            messagePlaceholder: 'Write your message here...',
             submit: 'Send Message',
         },
         email: {

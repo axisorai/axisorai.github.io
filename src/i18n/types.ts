@@ -107,9 +107,15 @@ export interface Translations {
     title: string;
     subtitle: string;
     form: {
+      title: string;
       name: string;
+      namePlaceholder: string;
       email: string;
+      emailPlaceholder: string;
+      phone: string;
+      phonePlaceholder: string;
       message: string;
+      messagePlaceholder: string;
       submit: string;
     };
     email: {

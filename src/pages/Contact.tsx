@@ -1,13 +1,33 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
-import { Mail, Instagram, Send } from "lucide-react";
+import { Mail, Instagram, Send, User, Phone, MessageSquare } from "lucide-react";
 
 const Contact = () => {
     const context = useContext(LanguageContext);
     if (!context) throw new Error("LanguageContext not found");
     const { t } = context;
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        message: ''
+    });
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        const mailtoLink = `mailto:celebifinans@proton.me?subject=İletişim Formu - ${formData.name}&body=İsim: ${formData.name}%0D%0AE-posta: ${formData.email}%0D%0ATelefon: ${formData.phone}%0D%0A%0D%0AMesaj:%0D%0A${formData.message}`;
+        window.location.href = mailtoLink;
+    };
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
 
     return (
         <div className="min-h-screen bg-background relative overflow-hidden">
@@ -47,6 +67,94 @@ const Contact = () => {
                         <p className="hero-subtitle text-base md:text-xl text-muted-foreground/80 leading-relaxed px-2">
                             {t('contact.subtitle')}
                         </p>
+                    </div>
+                </section>
+
+                {/* Contact Form */}
+                <section className="py-8 md:py-12 px-4 md:px-6">
+                    <div className="container mx-auto max-w-2xl">
+                        <div className="glass-card p-8 md:p-12">
+                            <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
+                                {t('contact.form.title') || 'Bize Mesaj Gönderin'}
+                            </h2>
+                            <form onSubmit={handleSubmit} className="space-y-6">
+                                {/* Name */}
+                                <div>
+                                    <label className="flex items-center gap-2 text-sm font-medium text-foreground mb-2">
+                                        <User className="w-4 h-4 text-primary" />
+                                        {t('contact.form.name')}
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full px-4 py-3 bg-background/50 border border-border/50 rounded-lg text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/20 transition-all"
+                                        placeholder={t('contact.form.namePlaceholder') || 'Adınız Soyadınız'}
+                                    />
+                                </div>
+
+                                {/* Email */}
+                                <div>
+                                    <label className="flex items-center gap-2 text-sm font-medium text-foreground mb-2">
+                                        <Mail className="w-4 h-4 text-primary" />
+                                        {t('contact.form.email')}
+                                    </label>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full px-4 py-3 bg-background/50 border border-border/50 rounded-lg text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/20 transition-all"
+                                        placeholder={t('contact.form.emailPlaceholder') || 'ornek@email.com'}
+                                    />
+                                </div>
+
+                                {/* Phone */}
+                                <div>
+                                    <label className="flex items-center gap-2 text-sm font-medium text-foreground mb-2">
+                                        <Phone className="w-4 h-4 text-primary" />
+                                        {t('contact.form.phone') || 'Telefon'}
+                                    </label>
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleChange}
+                                        className="w-full px-4 py-3 bg-background/50 border border-border/50 rounded-lg text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/20 transition-all"
+                                        placeholder={t('contact.form.phonePlaceholder') || '+90 5XX XXX XX XX'}
+                                    />
+                                </div>
+
+                                {/* Message */}
+                                <div>
+                                    <label className="flex items-center gap-2 text-sm font-medium text-foreground mb-2">
+                                        <MessageSquare className="w-4 h-4 text-primary" />
+                                        {t('contact.form.message')}
+                                    </label>
+                                    <textarea
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        required
+                                        rows={5}
+                                        className="w-full px-4 py-3 bg-background/50 border border-border/50 rounded-lg text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-primary/50 focus:ring-2 focus:ring-primary/20 transition-all resize-none"
+                                        placeholder={t('contact.form.messagePlaceholder') || 'Mesajınızı buraya yazın...'}
+                                    />
+                                </div>
+
+                                {/* Submit Button */}
+                                <button
+                                    type="submit"
+                                    className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-primary to-purple-600 rounded-xl hover:opacity-90 transition-all shadow-lg shadow-primary/25"
+                                >
+                                    <Send className="w-5 h-5" />
+                                    {t('contact.form.submit')}
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </section>
 

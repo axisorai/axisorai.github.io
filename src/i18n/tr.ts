@@ -140,9 +140,15 @@ export const tr: Translations = {
         title: 'İletişime Geçin',
         subtitle: 'İş akışınızı AI ile dönüştürmeye hazır mısınız? Bizimle iletişime geçin, sizin için mükemmel çözümü bulalım.',
         form: {
+            title: 'Bize Mesaj Gönderin',
             name: 'Adınız',
+            namePlaceholder: 'Adınız Soyadınız',
             email: 'E-posta Adresiniz',
+            emailPlaceholder: 'ornek@email.com',
+            phone: 'Telefon',
+            phonePlaceholder: '+90 5XX XXX XX XX',
             message: 'Mesajınız',
+            messagePlaceholder: 'Mesajınızı buraya yazın...',
             submit: 'Mesaj Gönder',
         },
         email: {
