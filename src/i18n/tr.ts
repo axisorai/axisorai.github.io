@@ -180,6 +180,59 @@ export const tr: Translations = {
         },
     },
 
+    webDesign: {
+        title: 'Web Tasarım Hizmetleri',
+        subtitle: 'İşletmenizi online platformlarda geliştiriyoruz. Profesyonel web siteleri ile dijital varlığınızı güçlendirin.',
+        services: {
+            domain: {
+                title: 'Domain Alımı',
+                description: 'İşletmenize özel domain adı alımı ve yönetimi',
+            },
+            security: {
+                title: 'Güvenlik Paketi',
+                description: 'SSL sertifikası ve güvenlik önlemleri ile sitenizi koruyun',
+            },
+            modernDesign: {
+                title: 'Modern Tasarım',
+                description: 'Çağdaş ve kullanıcı dostu arayüz tasarımı',
+            },
+            seo: {
+                title: 'SEO Optimizasyonu',
+                description: 'Arama motorlarında üst sıralarda yer alın',
+            },
+            responsive: {
+                title: 'Mobil Uyumluluk',
+                description: 'Tüm cihazlarda mükemmel görüntüleme',
+            },
+            hosting: {
+                title: 'Hosting & Bakım',
+                description: 'Güvenilir hosting ve sürekli teknik destek',
+            },
+        },
+        packages: {
+            popular: 'En Popüler',
+            domainIncluded: 'domain dahil',
+            github: {
+                name: 'Başlangıç Paketi',
+                feature1: 'GitHub Pages hosting (ücretsiz, sınırsız)',
+                feature2: 'Profesyonel modern tasarım',
+                feature3: 'Mobil uyumlu responsive yapı',
+                feature4: 'Temel SEO optimizasyonu',
+            },
+            custom: {
+                name: 'Profesyonel Paket',
+                feature1: 'Özel domain (.com veya .com.tr)',
+                feature2: 'Premium hosting (1 yıl)',
+                feature3: 'SSL güvenlik sertifikası',
+                feature4: 'Gelişmiş SEO ve analitik',
+                feature5: '6 ay ücretsiz bakım & destek',
+            },
+        },
+        cta: 'Teklif Al',
+        ctaButton: 'Projenizi Başlatın',
+        bottomText: 'Web siteniz için özel teklif almak ister misiniz?',
+    },
+
     community: {
         title: 'Topluluğa Katılın',
         subtitle: 'Binlerce profesyonelle birlikte AI üretkenliğini öğrenin. Özel içerik, ipuçları ve kaynaklar edinin.',

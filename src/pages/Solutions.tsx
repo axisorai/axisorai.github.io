@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import TechCard from "@/components/TechCard";
+import WebDesignService from "@/components/WebDesignService";
 import OpenAIIcon from "@/components/icons/OpenAIIcon";
 import GeminiIcon from "@/components/icons/GeminiIcon";
 import ClaudeIcon from "@/components/icons/ClaudeIcon";
@@ -70,6 +71,9 @@ const Solutions = () => {
                         </div>
                     </div>
                 </section>
+
+                {/* Web Design Service Section */}
+                <WebDesignService />
 
                 {/* Features/Benefits Section */}
                 <section className="py-12 md:py-20 px-4 md:px-6">

@@ -133,6 +133,7 @@ export interface Translations {
     copyright: string;
     privacy: string;
     terms: string;
+    howWeOffer: string;
     links: {
       about: string;
       blog: string;
@@ -143,6 +144,40 @@ export interface Translations {
       community: string;
       contact: string;
     };
+  };
+  webDesign: {
+    title: string;
+    subtitle: string;
+    services: {
+      domain: { title: string; description: string };
+      security: { title: string; description: string };
+      modernDesign: { title: string; description: string };
+      seo: { title: string; description: string };
+      responsive: { title: string; description: string };
+      hosting: { title: string; description: string };
+    };
+    packages: {
+      popular: string;
+      domainIncluded: string;
+      github: {
+        name: string;
+        feature1: string;
+        feature2: string;
+        feature3: string;
+        feature4: string;
+      };
+      custom: {
+        name: string;
+        feature1: string;
+        feature2: string;
+        feature3: string;
+        feature4: string;
+        feature5: string;
+      };
+    };
+    cta: string;
+    ctaButton: string;
+    bottomText: string;
   };
   community: {
     title: string;

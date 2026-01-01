@@ -1,5 +1,6 @@
 import TechCard from "@/components/TechCard";
 import PricingCard from "@/components/PricingCard";
+import WebDesignService from "@/components/WebDesignService";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import OpenAIIcon from "@/components/icons/OpenAIIcon";
@@ -108,6 +109,9 @@ const Index = () => {
                         </div>
                     </div>
                 </section>
+
+                {/* Web Design Service Section */}
+                <WebDesignService />
 
                 {/* Pricing Section */}
                 <section id="pricing" className="py-10 md:py-20 px-4 md:px-6">

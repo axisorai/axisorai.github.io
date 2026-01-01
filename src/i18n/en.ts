@@ -180,6 +180,59 @@ export const en: Translations = {
         },
     },
 
+    webDesign: {
+        title: 'Web Design Services',
+        subtitle: 'We develop your business on online platforms. Strengthen your digital presence with professional websites.',
+        services: {
+            domain: {
+                title: 'Domain Registration',
+                description: 'Custom domain name registration and management for your business',
+            },
+            security: {
+                title: 'Security Package',
+                description: 'Protect your site with SSL certificate and security measures',
+            },
+            modernDesign: {
+                title: 'Modern Design',
+                description: 'Contemporary and user-friendly interface design',
+            },
+            seo: {
+                title: 'SEO Optimization',
+                description: 'Rank higher in search engines',
+            },
+            responsive: {
+                title: 'Mobile Compatibility',
+                description: 'Perfect display on all devices',
+            },
+            hosting: {
+                title: 'Hosting & Maintenance',
+                description: 'Reliable hosting and continuous technical support',
+            },
+        },
+        packages: {
+            popular: 'Most Popular',
+            domainIncluded: 'domain included',
+            github: {
+                name: 'Starter Package',
+                feature1: 'GitHub Pages hosting (free, unlimited)',
+                feature2: 'Professional modern design',
+                feature3: 'Mobile-friendly responsive structure',
+                feature4: 'Basic SEO optimization',
+            },
+            custom: {
+                name: 'Professional Package',
+                feature1: 'Custom domain (.com or .com.tr)',
+                feature2: 'Premium hosting (1 year)',
+                feature3: 'SSL security certificate',
+                feature4: 'Advanced SEO and analytics',
+                feature5: '6 months free maintenance & support',
+            },
+        },
+        cta: 'Get Quote',
+        ctaButton: 'Start Your Project',
+        bottomText: 'Would you like to get a custom quote for your website?',
+    },
+
     community: {
         title: 'Join the Community',
         subtitle: 'Learn AI productivity with thousands of professionals. Get exclusive content, tips, and resources.',
