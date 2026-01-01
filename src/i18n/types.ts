@@ -165,6 +165,7 @@ export interface Translations {
         feature2: string;
         feature3: string;
         feature4: string;
+        feature5: string;
       };
       custom: {
         name: string;
@@ -173,6 +174,8 @@ export interface Translations {
         feature3: string;
         feature4: string;
         feature5: string;
+        feature6: string;
+        pricing: string;
       };
     };
     cta: string;

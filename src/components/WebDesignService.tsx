@@ -45,17 +45,20 @@ const WebDesignService = () => {
         {
             name: t('webDesign.packages.github.name'),
             price: '₺3.000',
+            period: 'tek seferlik',
             domain: 'github.io',
             features: [
                 t('webDesign.packages.github.feature1'),
                 t('webDesign.packages.github.feature2'),
                 t('webDesign.packages.github.feature3'),
                 t('webDesign.packages.github.feature4'),
+                t('webDesign.packages.github.feature5'),
             ]
         },
         {
             name: t('webDesign.packages.custom.name'),
-            price: '₺8.000',
+            price: '₺3.000 + ₺1.000/ay',
+            period: '12 ay taahhüt',
             domain: '.com / .com.tr',
             features: [
                 t('webDesign.packages.custom.feature1'),
@@ -63,7 +66,9 @@ const WebDesignService = () => {
                 t('webDesign.packages.custom.feature3'),
                 t('webDesign.packages.custom.feature4'),
                 t('webDesign.packages.custom.feature5'),
+                t('webDesign.packages.custom.feature6'),
             ],
+            pricing: t('webDesign.packages.custom.pricing'),
             featured: true,
         }
     ];
@@ -117,13 +122,20 @@ const WebDesignService = () => {
                             <h3 className="text-2xl font-bold text-foreground mb-2">
                                 {pkg.name}
                             </h3>
-                            <div className="mb-4">
+                            <div className="mb-2">
                                 <span className="text-4xl font-bold text-primary">{pkg.price}</span>
-                                <span className="text-muted-foreground ml-2">tek seferlik</span>
+                            </div>
+                            <div className="text-sm text-muted-foreground mb-2">
+                                {pkg.period}
                             </div>
                             <div className="text-sm text-muted-foreground mb-6">
                                 {pkg.domain} {t('webDesign.packages.domainIncluded')}
                             </div>
+                            {pkg.pricing && (
+                                <div className="text-sm bg-primary/5 text-foreground/80 px-4 py-3 rounded-lg mb-6 border border-primary/20">
+                                    {pkg.pricing}
+                                </div>
+                            )}
                             <ul className="space-y-3 mb-8">
                                 {pkg.features.map((feature, idx) => (
                                     <li key={idx} className="flex items-start gap-2 text-muted-foreground">
