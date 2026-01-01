@@ -5,21 +5,20 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && react-snap && cp build/index.html build/404.html",
+    "build": "vite build && react-snap",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "reactSnap": {
     "source": "dist",
-    "destination": "build",
     "minifyHtml": {
-      "collapseWhitespace": true,
-      "removeComments": true
+      "collapseWhitespace": false,
+      "removeComments": false
     },
     "puppeteerArgs": ["--no-sandbox", "--disable-setuid-sandbox"],
     "crawl": true,
-    "include": ["/", "/#/services"],
+    "include": ["/"],
     "skipThirdPartyRequests": true
   },
   "dependencies": {
