@@ -1,3 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+# axisorai - AI Paketleri ve Web Tasarım Hizmetleri
+
 User-agent: Googlebot
 Allow: /
 
@@ -12,3 +15,9 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# Sitemap
+Sitemap: https://axisorai.github.io/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
