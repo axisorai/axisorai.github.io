@@ -45,34 +45,31 @@ const Packages = () => {
                 <section className="py-10 md:py-20 px-4 md:px-6">
                     <div className="container mx-auto max-w-3xl">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
-                            {/* Monthly Card */}
-                            <div className="animate-fade-in order-2 md:order-1" style={{ animationDelay: '0.2s' }}>
+                            {/* ChatGPT Package */}
+                            <div className="animate-fade-in order-1 md:order-1" style={{ animationDelay: '0.2s' }}>
                                 <PricingCard
-                                    title={t('portfolio.pricing.monthly.title')}
-                                    price={t('portfolio.pricing.monthly.price')}
-                                    period={t('portfolio.pricing.monthly.period')}
+                                    title="ChatGPT Paketi"
+                                    price="₺800"
+                                    period="/ay"
                                     description={[
-                                        t('portfolio.pricing.monthly.description'),
-                                        t('portfolio.pricing.monthly.trust') || '',
-                                        t('portfolio.pricing.monthly.ownAccount') || '',
+                                        "GPT-5.2, GPT-5.2 Thinking, GPT-5.2 Pro, GPT-5 Thinking Mini",
+                                        "Aylık abonelik",
+                                        "Kendi hesabınız",
                                     ]}
                                 />
                             </div>
 
-                            {/* Yearly / Featured Card */}
-                            <div className="animate-fade-in order-1 md:order-2" style={{ animationDelay: '0.3s' }}>
+                            {/* Claude Package */}
+                            <div className="animate-fade-in order-2 md:order-2" style={{ animationDelay: '0.3s' }}>
                                 <PricingCard
-                                    title={t('portfolio.pricing.yearly.title')}
-                                    subtitle={t('portfolio.pricing.yearly.subtitle')}
-                                    price={t('portfolio.pricing.yearly.price')}
-                                    period={t('portfolio.pricing.yearly.period')}
+                                    title="Claude Paketi"
+                                    price="₺800"
+                                    period="/ay"
                                     description={[
-                                        t('portfolio.pricing.yearly.description1'),
-                                        t('portfolio.pricing.yearly.description2'),
-                                        t('portfolio.pricing.yearly.ownAccount') || '',
+                                        "Claude Sonnet 4.5 + Opus 4.5 Thinking",
+                                        "Aylık abonelik",
+                                        "Kendi hesabınız",
                                     ]}
-                                    featured
-                                    badge={t('portfolio.pricing.yearly.badge')}
                                 />
                             </div>
                         </div>

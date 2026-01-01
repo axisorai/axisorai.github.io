@@ -21,13 +21,13 @@ const Index = () => {
             name: "ChatGPT Paketi",
             models: ["GPT-5.2", "GPT-5.2 Thinking", "GPT-5.2 Pro", "GPT-5 Thinking Mini"],
             icon: <OpenAIIcon />,
-            price: "₺650/ay",
+            price: "₺800/ay",
         },
         {
-            name: "ALL-IN-ONE Paket",
-            models: ["Sonar (Perplexity)", "GPT-5.2", "Claude Sonnet 4.5", "Gemini 3 Pro", "Grok 4.1", "Kimi K2"],
-            icon: <GeminiIcon />,
-            price: "₺1.250/yıl",
+            name: "Claude Paketi",
+            models: ["Claude Sonnet 4.5", "Opus 4.5 Thinking"],
+            icon: <ClaudeIcon />,
+            price: "₺800/ay",
         },
     ];
 
