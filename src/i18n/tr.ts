@@ -214,7 +214,7 @@ export const tr: Translations = {
             domainIncluded: 'domain dahil',
             github: {
                 name: 'Başlangıç Paketi',
-                feature1: 'GitHub Pages hosting (ücretsiz, sınırsız)',
+                feature1: 'GitHub domain (.github.io)',
                 feature2: 'Profesyonel modern tasarım',
                 feature3: 'Mobil uyumlu responsive yapı',
                 feature4: 'Temel SEO optimizasyonu',

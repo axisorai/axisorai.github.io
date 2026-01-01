@@ -214,7 +214,7 @@ export const en: Translations = {
             domainIncluded: 'domain included',
             github: {
                 name: 'Starter Package',
-                feature1: 'GitHub Pages hosting (free, unlimited)',
+                feature1: 'GitHub domain (.github.io)',
                 feature2: 'Professional modern design',
                 feature3: 'Mobile-friendly responsive structure',
                 feature4: 'Basic SEO optimization',
