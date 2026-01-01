@@ -20,13 +20,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "npm"
-
-      - run: npm ci
-      - run: npm run build
+      # Skip build - use pre-built dist folder from repo
+      # The dist folder already contains react-snap generated static HTML
       
       # Ensure .nojekyll exists in dist
       - run: touch dist/.nojekyll
