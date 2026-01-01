@@ -228,7 +228,7 @@ export const en: Translations = {
                 feature4: 'Google Maps and form integration',
                 feature5: 'Advanced SEO and analytics',
                 feature6: '12 months maintenance & support',
-                pricing: 'Design: ₺3,000 (one-time) + ₺1,000/month (12-month commitment)',
+                pricing: 'Design: ₺4,000 (one-time) + ₺1,000/month (12-month commitment)',
             },
         },
         cta: 'Get Quote',

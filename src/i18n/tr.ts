@@ -228,7 +228,7 @@ export const tr: Translations = {
                 feature4: 'Google Maps ve form entegrasyonu',
                 feature5: 'Gelişmiş SEO ve analitik',
                 feature6: '12 ay boyunca bakım & destek',
-                pricing: 'Tasarım: ₺3.000 (tek seferlik) + ₺1.000/ay (12 ay taahhüt)',
+                pricing: 'Tasarım: ₺4.000 (tek seferlik) + ₺1.000/ay (12 ay taahhüt)',
             },
         },
         cta: 'Teklif Al',

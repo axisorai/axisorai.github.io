@@ -53,11 +53,12 @@ const WebDesignService = () => {
                 t('webDesign.packages.github.feature3'),
                 t('webDesign.packages.github.feature4'),
                 t('webDesign.packages.github.feature5'),
-            ]
+            ],
+            featured: true,
         },
         {
             name: t('webDesign.packages.custom.name'),
-            price: '₺3.000 + ₺1.000/ay',
+            price: '₺4.000 + ₺1.000/ay',
             period: '12 ay taahhüt',
             domain: '.com / .com.tr',
             features: [
@@ -69,7 +70,6 @@ const WebDesignService = () => {
                 t('webDesign.packages.custom.feature6'),
             ],
             pricing: t('webDesign.packages.custom.pricing'),
-            featured: true,
         }
     ];
 
