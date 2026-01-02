@@ -242,15 +242,15 @@ ${formData.message}`;
                                 </div>
                                 <div className="flex flex-col gap-3">
                                     <a 
-                                        href="https://t.me/+19172670527"
+                                        href="https://t.me/axisorai"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="text-primary hover:text-primary/80 transition-colors text-lg"
                                     >
-                                        +1 917 267 0527
+                                        @axisorai
                                     </a>
                                     <a 
-                                        href="https://t.me/+19172670527"
+                                        href="https://t.me/axisorai"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"

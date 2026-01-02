@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const socialLinks = [
   { icon: Instagram, href: 'https://www.instagram.com/axisorai/', label: 'Instagram' },
-  { icon: Send, href: 'https://t.me/+19172670527', label: 'Telegram' },
+  { icon: Send, href: 'https://t.me/axisorai', label: 'Telegram' },
 ];
 
 export function Footer() {
@@ -33,7 +33,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="w-20 h-20 rounded-lg bg-muted/50 flex items-center justify-center text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                  className="w-20 h-20 rounded-lg bg-muted/70 border border-border/60 flex items-center justify-center text-foreground/80 hover:text-foreground hover:bg-muted transition-colors"
                 >
                   <social.icon className="w-10 h-10" />
                 </a>

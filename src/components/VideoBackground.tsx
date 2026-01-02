@@ -6,7 +6,7 @@ export const VideoBackground = () => {
     return (
         <>
             {/* Background - Optimized video for mobile, full video for desktop */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0 pointer-events-none">
                 <video
                     autoPlay
                     loop
