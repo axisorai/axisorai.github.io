@@ -2,11 +2,14 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import TechCard from "@/components/TechCard";
 import WebDesignService from "@/components/WebDesignService";
+import PricingCard from "@/components/PricingCard";
 import OpenAIIcon from "@/components/icons/OpenAIIcon";
 import GeminiIcon from "@/components/icons/GeminiIcon";
 import ClaudeIcon from "@/components/icons/ClaudeIcon";
 import { useContext } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
+import { VideoBackground } from "@/components/VideoBackground";
+import { Link } from "react-router-dom";
 
 const Solutions = () => {
     const context = useContext(LanguageContext);
@@ -15,27 +18,22 @@ const Solutions = () => {
 
     const technologies = [
         {
-            name: "ChatGPT Package (Monthly)",
+            name: "ChatGPT Paketi",
             models: ["GPT-5.2", "GPT-5.2 Thinking", "GPT-5.2 Pro", "GPT-5 Thinking Mini"],
             icon: <OpenAIIcon />,
+            price: "₺800/ay",
         },
         {
-            name: "ALL-IN-ONE Package (Yearly)",
-            models: ["Sonar (Perplexity)", "GPT-5.2", "Claude Sonnet 4.5", "Gemini 3 Pro", "Grok 4.1", "Kimi K2 Thinking"],
-            icon: <GeminiIcon />,
+            name: "Claude Paketi",
+            models: ["Claude Sonnet 4.5", "Opus 4.5 Thinking"],
+            icon: <ClaudeIcon />,
+            price: "₺800/ay",
         },
     ];
 
     return (
         <div className="min-h-screen bg-background relative overflow-hidden">
-            {/* Background glow effects */}
-            <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px] animate-glow-pulse" />
-                <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/10 rounded-full blur-[100px] animate-glow-pulse" style={{ animationDelay: '2s' }} />
-            </div>
-
-            {/* Subtle grid overlay */}
-            <div className="absolute inset-0 subtle-grid opacity-30 pointer-events-none" />
+            <VideoBackground />
 
             <Navbar />
 
@@ -68,6 +66,44 @@ const Solutions = () => {
                                     <TechCard {...tech} />
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                </section>
+
+                {/* AI Pricing Section */}
+                <section className="py-10 md:py-20 px-4 md:px-6">
+                    <div className="container mx-auto max-w-3xl">
+                        <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
+                            AI Paket Fiyatları
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
+                            {/* ChatGPT Package */}
+                            <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                                <PricingCard
+                                    title="ChatGPT Paketi"
+                                    price="₺800"
+                                    period="/ay"
+                                    description={[
+                                        "GPT-5.2, GPT-5.2 Thinking, GPT-5.2 Pro, GPT-5 Thinking Mini",
+                                        "Aylık abonelik",
+                                        "Kendi hesabınız",
+                                    ]}
+                                />
+                            </div>
+
+                            {/* Claude Package */}
+                            <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                                <PricingCard
+                                    title="Claude Paketi"
+                                    price="₺800"
+                                    period="/ay"
+                                    description={[
+                                        "Claude Sonnet 4.5 + Opus 4.5 Thinking",
+                                        "Aylık abonelik",
+                                        "Kendi hesabınız",
+                                    ]}
+                                />
+                            </div>
                         </div>
                     </div>
                 </section>

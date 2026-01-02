@@ -8,12 +8,14 @@ import { TrustedBy } from '@/components/TrustedBy';
 import { FAQ } from '@/components/FAQ';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
+import { VideoBackground } from '@/components/VideoBackground';
 
 const Services = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background relative overflow-hidden">
+      <VideoBackground />
       <Navbar />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <Products />
         <Method />
