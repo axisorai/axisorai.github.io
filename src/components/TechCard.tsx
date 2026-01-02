@@ -6,9 +6,10 @@ interface TechCardProps {
     badge?: string;
     originalPrice?: string;
     savingsPercent?: string;
+    savingsText?: string;
 }
 
-const TechCard = ({ name, models, icon, price, badge, originalPrice, savingsPercent }: TechCardProps) => {
+const TechCard = ({ name, models, icon, price, badge, originalPrice, savingsPercent, savingsText }: TechCardProps) => {
     return (
         <div className="glass-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10 group bg-black/60 backdrop-blur-md border border-white/10 relative">
             {badge && (
@@ -28,7 +29,7 @@ const TechCard = ({ name, models, icon, price, badge, originalPrice, savingsPerc
                         <div className="flex items-center gap-2 mt-1">
                             <span className="text-sm text-gray-400 line-through">{originalPrice}</span>
                             <span className="text-xs font-bold text-green-400 bg-green-400/20 px-2 py-0.5 rounded">
-                                {savingsPercent} Savings
+                                {savingsPercent} {savingsText || 'Savings'}
                             </span>
                         </div>
                     )}

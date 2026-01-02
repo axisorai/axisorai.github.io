@@ -36,6 +36,7 @@ const Solutions = () => {
             price: t('portfolio.technologies.gemini.price'),
             originalPrice: t('portfolio.technologies.gemini.originalPrice'),
             savingsPercent: t('portfolio.technologies.gemini.savingsPercent'),
+            savingsText: t('portfolio.technologies.gemini.savingsText'),
             badge: t('portfolio.technologies.gemini.badge'),
         },
     ];

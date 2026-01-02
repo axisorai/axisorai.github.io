@@ -304,6 +304,7 @@ export const en: Translations = {
                 price: '₺850/year',
                 originalPrice: '₺8,639',
                 savingsPercent: '90%',
+                savingsText: 'Savings',
                 badge: 'Brand New',
             },
             cta: 'View all packages',

@@ -304,6 +304,7 @@ export const tr: Translations = {
                 price: '₺850/yıl',
                 originalPrice: '₺8.639',
                 savingsPercent: '%90',
+                savingsText: 'Tasarruf',
                 badge: 'Yeni',
             },
             cta: 'Tüm paketleri incele',
