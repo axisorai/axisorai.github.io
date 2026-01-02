@@ -341,4 +341,49 @@ export const tr: Translations = {
     trustedBy: {
         title: 'Dünya çapında önde gelen şirketler tarafından güveniliyor',
     },
+
+    howWeOffer: {
+        badge: '%90\'a Varan Tasarruf',
+        title: 'Premium AI\'ı Nasıl Uygun Fiyata Sunuyoruz?',
+        subtitle: 'Toplu lisanslama ve inside sales stratejileri ile kurumsal düzeyde AI araçlarını piyasa fiyatının çok altında sizlere ulaştırıyoruz.',
+        stepLabel: 'Adım',
+        keyMessage: {
+            title: 'Toplu Lisanslama & Inside Sales Modeli',
+            description: 'OpenAI, Anthropic ve Google gibi AI sağlayıcılarıyla doğrudan görüşerek yüksek hacimli kurumsal lisanslar elde ediyoruz. Kullanım haklarını toplu olarak satın alıp üye tabanımız genelinde dağıtarak elde ettiğimiz önemli maliyet düşüşlerini doğrudan size yansıtıyoruz.',
+        },
+        steps: {
+            step1: {
+                title: 'Kurumsal Görüşmeler',
+                description: 'Ekibimiz AI sağlayıcılarıyla doğrudan çalışarak kurumsal düzeyde anlaşmalar yapar. Büyüyen kullanıcı tabanımızı kullanarak en iyi fiyatları elde ederiz.',
+            },
+            step2: {
+                title: 'Yüksek Hacimli Satın Alma',
+                description: 'AI kullanım haklarını toplu olarak satın alıyoruz—bir seferde binlerce API çağrısı ve token. Bu hacimli alım gücü, bireysel kullanıcılara açık olmayan fiyat kademelerine erişmemizi sağlar.',
+            },
+            step3: {
+                title: 'Akıllı Dağıtım',
+                description: 'Kullanım, gelişmiş kota yönetimi ile üye tabanımız genelinde akıllıca dağıtılır. Bu, verimliliği maksimize eder ve herkesin tutarlı, güvenilir erişim elde etmesini sağlar.',
+            },
+            step4: {
+                title: 'Doğrudan Size Tasarruf',
+                description: 'Tasarrufları doğrudan kullanıcılarımıza yansıtıyoruz—gizli kar marjı yok. Perakende fiyatlandırmanın %90\'ına varan indirimle premium AI erişimi elde ediyorsunuz.',
+            },
+        },
+        benefitsTitle: 'Neden Bu Çalışıyor',
+        benefits: {
+            benefit1: {
+                title: 'Şeffaf Fiyatlandırma',
+                description: 'Gizli ücret yok, sürpriz ödeme yok. Gördüğünüz, ödeyeceğiniz fiyattır.',
+            },
+            benefit2: {
+                title: 'Kurumsal Kalite',
+                description: 'Fortune 500 şirketlerinin kullandığı premium modeller, artık herkese erişilebilir.',
+            },
+        },
+        cta: {
+            title: 'Tasarruf Etmeye Hazır mısınız?',
+            description: 'Premium AI\'ı uygun fiyatlarla kullanan binlerce kullanıcıya katılın.',
+            button: 'Paketleri Görüntüle',
+        },
+    },
 };

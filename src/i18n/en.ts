@@ -341,4 +341,49 @@ export const en: Translations = {
     trustedBy: {
         title: 'Trusted by leading companies worldwide',
     },
+
+    howWeOffer: {
+        badge: 'Up to 90% Savings',
+        title: 'How We Offer Premium AI at Affordable Prices',
+        subtitle: 'We leverage bulk licensing and inside sales strategies to bring you enterprise-grade AI tools at a fraction of the retail cost.',
+        stepLabel: 'Step',
+        keyMessage: {
+            title: 'Bulk Licensing & Inside Sales Model',
+            description: 'We negotiate directly with AI providers like OpenAI, Anthropic, and Google to secure high-volume enterprise licenses. By purchasing usage rights in bulk and distributing them across our member base, we achieve significant cost reductions that we pass directly to you.',
+        },
+        steps: {
+            step1: {
+                title: 'Enterprise Negotiations',
+                description: 'Our team works directly with AI providers to secure enterprise-level agreements. We leverage our growing user base to negotiate the best possible rates.',
+            },
+            step2: {
+                title: 'High-Volume Purchasing',
+                description: 'We purchase AI usage rights in bulk—thousands of API calls and tokens at once. This volume buying power gives us access to pricing tiers unavailable to individual users.',
+            },
+            step3: {
+                title: 'Smart Distribution',
+                description: 'Usage is intelligently allocated across our member base using advanced quota management. This maximizes efficiency and ensures everyone gets consistent, reliable access.',
+            },
+            step4: {
+                title: 'Direct Savings to You',
+                description: 'We pass the savings directly to our users—no hidden markups. You get premium AI access at up to 90% less than retail pricing.',
+            },
+        },
+        benefitsTitle: 'Why This Works',
+        benefits: {
+            benefit1: {
+                title: 'Transparent Pricing',
+                description: 'No hidden fees, no surprise charges. What you see is what you pay.',
+            },
+            benefit2: {
+                title: 'Enterprise Quality',
+                description: 'Same premium models used by Fortune 500 companies, now accessible to everyone.',
+            },
+        },
+        cta: {
+            title: 'Ready to Start Saving?',
+            description: 'Join thousands of users already enjoying premium AI at affordable prices.',
+            button: 'View Packages',
+        },
+    },
 };

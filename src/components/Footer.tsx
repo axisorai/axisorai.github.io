@@ -47,7 +47,7 @@ export function Footer() {
             {/* How We Offer Link */}
             <div className="mt-8">
               <Link
-                to="/services2"
+                to="/how-we-offer"
                 className="inline-flex items-center gap-2 text-lg md:text-xl font-medium text-primary hover:text-primary/80 transition-colors"
               >
                 {t('footer.howWeOffer')} →
