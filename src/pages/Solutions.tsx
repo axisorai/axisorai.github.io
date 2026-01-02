@@ -31,7 +31,7 @@ const Solutions = () => {
         },
         {
             name: t('portfolio.technologies.gemini.name'),
-            models: ["Gemini Pro 2.0", "Gemini Advanced", "1.5 Pro Deep Research"],
+            models: ["Gemini Pro 2.0", "Gemini Advanced", "3.5 Pro Deep Research"],
             icon: <GeminiIcon />,
             price: t('portfolio.technologies.gemini.price'),
             originalPrice: t('portfolio.technologies.gemini.originalPrice'),
@@ -65,7 +65,7 @@ const Solutions = () => {
                         <p className="section-label text-center text-[10px] md:text-xs text-gray-300 font-semibold uppercase tracking-[0.2em] mb-6 md:mb-10">
                             {t('portfolio.technologies.label')}
                         </p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                             {technologies.map((tech, index) => (
                                 <div
                                     key={tech.name}
