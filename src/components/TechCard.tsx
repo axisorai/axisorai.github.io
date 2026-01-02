@@ -12,19 +12,19 @@ interface TechCardProps {
 const TechCard = ({ name, models, icon, price, badge, originalPrice, savingsPercent, savingsText }: TechCardProps) => {
     return (
         <div className="glass-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10 group bg-black/60 backdrop-blur-md border border-white/10 relative">
-            {badge && (
-                <div className="absolute -top-10 left-1/2 -translate-x-1/2 bg-gradient-to-r from-green-400 to-emerald-400 text-black text-lg font-black px-6 py-2 rounded-full shadow-[0_0_15px_rgba(52,211,153,0.6)] border-4 border-white z-20 whitespace-nowrap flex items-center gap-2 transform hover:scale-105 transition-transform">
-                    <span className="text-2xl">🆕</span>
-                    <span className="uppercase tracking-wider">{badge}</span>
-                </div>
-            )}
             <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 flex items-center justify-center text-2xl">
                     {icon}
                 </div>
                 <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white tracking-tight drop-shadow-lg">
-                        {name}
+                    <h3 className="text-xl font-bold text-white tracking-tight drop-shadow-lg flex items-center gap-2">
+                        <span>{name}</span>
+                        {badge && (
+                            <span className="inline-flex items-center gap-1 rounded-full bg-emerald-400/20 text-emerald-200 border border-emerald-400/30 px-2 py-0.5 text-xs font-extrabold uppercase tracking-wider whitespace-nowrap">
+                                <span className="text-sm">🆕</span>
+                                <span>{badge}</span>
+                            </span>
+                        )}
                     </h3>
                     {originalPrice && savingsPercent && (
                         <div className="flex items-center gap-2 mt-1">
