@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useCallback } from "react"
 import * as THREE from "three"
 
 interface ShaderLogoProps {
@@ -18,6 +18,14 @@ export function ShaderLogo({ size = 40, className = "" }: ShaderLogoProps) {
     animationId: number
   } | null>(null)
 
+  // Function to reset/refresh the animation
+  const refreshAnimation = useCallback(() => {
+    if (sceneRef.current) {
+      // Jump time forward to create a "refresh" effect
+      sceneRef.current.uniforms.time.value += Math.random() * 10 + 5
+    }
+  }, [])
+
   useEffect(() => {
     if (!containerRef.current) return
 
@@ -30,7 +38,7 @@ export function ShaderLogo({ size = 40, className = "" }: ShaderLogoProps) {
       }
     `
 
-    // Fragment shader
+    // Fragment shader - updated with vibrant gradient background
     const fragmentShader = `
       #define TWO_PI 6.2831853072
       #define PI 3.14159265359
@@ -41,15 +49,23 @@ export function ShaderLogo({ size = 40, className = "" }: ShaderLogoProps) {
 
       void main(void) {
         vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
-        float t = time*0.05;
-        float lineWidth = 0.002;
+        float t = time * 0.15; // 3x faster animation
+        float lineWidth = 0.003;
 
-        vec3 color = vec3(0.0);
+        // Vibrant gradient background
+        vec3 bgColor = vec3(0.1, 0.05, 0.2); // Deep purple base
+        bgColor += 0.1 * vec3(0.3, 0.1, 0.4) * (1.0 + sin(t * 0.5));
+        
+        vec3 color = bgColor;
         for(int j = 0; j < 3; j++){
-          for(int i=0; i < 5; i++){
-            color[j] += lineWidth*float(i*i) / abs(fract(t - 0.01*float(j)+float(i)*0.01)*5.0 - length(uv) + mod(uv.x+uv.y, 0.2));
+          for(int i=0; i < 6; i++){ // More iterations for denser effect
+            color[j] += lineWidth*float(i*i) / abs(fract(t - 0.01*float(j)+float(i)*0.008)*5.0 - length(uv) + mod(uv.x+uv.y, 0.15));
           }
         }
+        
+        // Add cyan and magenta tints
+        color.r += 0.15;
+        color.b += 0.2;
         
         gl_FragColor = vec4(color[0],color[1],color[2],1.0);
       }
@@ -94,10 +110,16 @@ export function ShaderLogo({ size = 40, className = "" }: ShaderLogoProps) {
     onResize()
     window.addEventListener("resize", onResize, false)
 
-    // Animation loop
+    // Click handler for refresh on any click
+    const handleGlobalClick = () => {
+      uniforms.time.value += Math.random() * 8 + 3
+    }
+    document.addEventListener("click", handleGlobalClick)
+
+    // Animation loop - faster updates
     const animate = () => {
       const animationId = requestAnimationFrame(animate)
-      uniforms.time.value += 0.05
+      uniforms.time.value += 0.12 // 2.4x faster than before
       renderer.render(scene, camera)
 
       if (sceneRef.current) {
@@ -117,6 +139,7 @@ export function ShaderLogo({ size = 40, className = "" }: ShaderLogoProps) {
 
     return () => {
       window.removeEventListener("resize", onResize)
+      document.removeEventListener("click", handleGlobalClick)
 
       if (sceneRef.current) {
         cancelAnimationFrame(sceneRef.current.animationId)
@@ -135,12 +158,14 @@ export function ShaderLogo({ size = 40, className = "" }: ShaderLogoProps) {
   return (
     <div
       ref={containerRef}
-      className={`rounded-lg overflow-hidden ${className}`}
+      className={`rounded-lg overflow-hidden cursor-pointer ${className}`}
       style={{
         width: size,
         height: size,
-        background: "#000",
+        background: "linear-gradient(135deg, #1a0a2e 0%, #16213e 50%, #0f3460 100%)",
       }}
+      onClick={refreshAnimation}
+      title="Click to refresh"
     />
   )
 }
