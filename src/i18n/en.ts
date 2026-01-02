@@ -288,8 +288,20 @@ export const en: Translations = {
         technologies: {
             label: 'Supported technologies',
             subtitle: 'Access the latest AI models at affordable prices',
+            title: 'AI Packages',
+            chatgpt: {
+                name: 'ChatGPT Package',
+                price: '₺800/month',
+            },
+            claude: {
+                name: 'Claude Package',
+                price: '₺800/month',
+            },
+            cta: 'View all packages',
         },
         pricing: {
+            label: 'Pricing',
+            title: 'Choose Your Plan',
             monthly: {
                 title: 'ChatGPT Package',
                 price: '₺800',

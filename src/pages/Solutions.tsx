@@ -18,16 +18,16 @@ const Solutions = () => {
 
     const technologies = [
         {
-            name: "ChatGPT Paketi",
+            name: t('portfolio.technologies.chatgpt.name'),
             models: ["GPT-5.2", "GPT-5.2 Thinking", "GPT-5.2 Pro", "GPT-5 Thinking Mini"],
             icon: <OpenAIIcon />,
-            price: "₺800/ay",
+            price: t('portfolio.technologies.chatgpt.price'),
         },
         {
-            name: "Claude Paketi",
+            name: t('portfolio.technologies.claude.name'),
             models: ["Claude Sonnet 4.5", "Opus 4.5 Thinking"],
             icon: <ClaudeIcon />,
-            price: "₺800/ay",
+            price: t('portfolio.technologies.claude.price'),
         },
     ];
 

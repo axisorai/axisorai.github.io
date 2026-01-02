@@ -288,8 +288,20 @@ export const tr: Translations = {
         technologies: {
             label: 'Desteklenen teknolojiler',
             subtitle: 'En güncel yapay zeka modellerine uygun fiyatlarla erişin',
+            title: 'AI Paketlerimiz',
+            chatgpt: {
+                name: 'ChatGPT Paketi',
+                price: '₺800/ay',
+            },
+            claude: {
+                name: 'Claude Paketi',
+                price: '₺800/ay',
+            },
+            cta: 'Tüm paketleri incele',
         },
         pricing: {
+            label: 'Fiyatlandırma',
+            title: 'Size Uygun Planı Seçin',
             monthly: {
                 title: 'ChatGPT Paketi',
                 price: '₺800',

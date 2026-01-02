@@ -103,7 +103,7 @@ const Index = () => {
                                 {t('portfolio.technologies.label')}
                             </p>
                             <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg mb-4">
-                                AI Paketlerimiz
+                                {t('portfolio.technologies.title')}
                             </h2>
                             <p className="text-lg font-medium text-gray-200 drop-shadow-md max-w-xl mx-auto">
                                 {t('portfolio.technologies.subtitle')}
@@ -148,7 +148,7 @@ const Index = () => {
                                 to="/packages"
                                 className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold transition-colors"
                             >
-                                Tüm paketleri incele
+                                {t('portfolio.technologies.cta')}
                                 <ArrowRight className="w-4 h-4" />
                             </Link>
                         </div>
@@ -163,10 +163,10 @@ const Index = () => {
                     <div className="container mx-auto max-w-4xl">
                         <div className="text-center mb-12">
                             <p className="text-xs md:text-sm text-primary uppercase tracking-[0.3em] mb-4 font-semibold">
-                                Fiyatlandırma
+                                {t('portfolio.pricing.label')}
                             </p>
                             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                                Size Uygun Planı Seçin
+                                {t('portfolio.pricing.title')}
                             </h2>
                         </div>
                         
