@@ -284,6 +284,7 @@ export const en: Translations = {
             title: 'AI,',
             titleHighlight: 'All in One Place',
             subtitle: 'Premium AI access at affordable prices',
+            badge: 'Premium AI & Web Services',
         },
         technologies: {
             label: 'Supported technologies',

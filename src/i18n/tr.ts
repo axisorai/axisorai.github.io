@@ -284,6 +284,7 @@ export const tr: Translations = {
             title: 'Yapay Zeka,',
             titleHighlight: 'Tek Noktada',
             subtitle: 'Premium AI erişimi, uygun fiyatlarla',
+            badge: 'Premium AI & Web Hizmetleri',
         },
         technologies: {
             label: 'Desteklenen teknolojiler',

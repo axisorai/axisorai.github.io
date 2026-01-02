@@ -55,7 +55,7 @@ const Index = () => {
                         {/* Floating badge */}
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-6 rounded-full bg-black/40 border border-cyan-400/30 backdrop-blur-md animate-fade-in">
                             <Sparkles className="w-3 h-3 text-cyan-400" />
-                            <span className="text-xs text-cyan-300 font-medium">Premium AI & Web Hizmetleri</span>
+                            <span className="text-xs text-cyan-300 font-medium">{t('portfolio.hero.badge')}</span>
                         </div>
                         
                         <h1 className="hero-title text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight tracking-tight drop-shadow-2xl" style={{ textShadow: '0 0 30px rgba(0,0,0,0.8), 0 0 60px rgba(0,0,0,0.6)' }}>
