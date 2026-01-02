@@ -11,6 +11,7 @@ import { useContext } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
 import { EtherealHero } from "@/components/EtherealHero";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { DisplayCardsDemo } from "@/components/DisplayCardsDemo";
 
 const Index = () => {
     const context = useContext(LanguageContext);
@@ -106,6 +107,11 @@ const Index = () => {
                     </div>
                 </section>
 
+                {/* New Display Cards Section */}
+                <section className="py-10 px-4">
+                    <DisplayCardsDemo />
+                </section>
+
                 {/* Technologies Section - Redesigned */}
                 <section id="technologies" className="py-16 md:py-24 px-4 md:px-6">
                     <div className="container mx-auto max-w-5xl">
@@ -125,30 +131,10 @@ const Index = () => {
                             {technologies.map((tech, index) => (
                                 <div
                                     key={tech.name}
-                                    className="animate-fade-in group"
+                                    className="animate-fade-in"
                                     style={{ animationDelay: `${index * 0.15}s` }}
                                 >
-                                    <div className="relative p-6 rounded-3xl bg-gradient-to-b from-card/80 to-card/40 border border-border/50 backdrop-blur-xl hover:border-primary/50 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-1">
-                                        <div className="flex items-start gap-4 mb-4">
-                                            <div className="p-3 rounded-2xl bg-gradient-to-br from-primary/20 to-purple-500/20 group-hover:from-primary/30 group-hover:to-purple-500/30 transition-all">
-                                                {tech.icon}
-                                            </div>
-                                            <div className="flex-1">
-                                                <h3 className="text-xl font-bold text-foreground mb-1">{tech.name}</h3>
-                                                <p className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-500">
-                                                    {tech.price}
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div className="space-y-2">
-                                            {tech.models.map((model, i) => (
-                                                <div key={i} className="flex items-center gap-2 text-muted-foreground/80">
-                                                    <div className="w-1.5 h-1.5 rounded-full bg-primary/60" />
-                                                    <span className="text-sm">{model}</span>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
+                                    <TechCard {...tech} />
                                 </div>
                             ))}
                         </div>
