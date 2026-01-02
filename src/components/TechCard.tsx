@@ -3,11 +3,17 @@ interface TechCardProps {
     models: string[];
     icon: React.ReactNode;
     price?: string;
+    badge?: string;
 }
 
-const TechCard = ({ name, models, icon, price }: TechCardProps) => {
+const TechCard = ({ name, models, icon, price, badge }: TechCardProps) => {
     return (
-        <div className="glass-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10 group bg-black/60 backdrop-blur-md border border-white/10">
+        <div className="glass-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10 group bg-black/60 backdrop-blur-md border border-white/10 relative">
+            {badge && (
+                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-green-400 to-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-pulse">
+                    {badge}
+                </div>
+            )}
             <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 flex items-center justify-center text-2xl">
                     {icon}

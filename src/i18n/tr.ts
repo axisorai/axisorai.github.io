@@ -299,6 +299,11 @@ export const tr: Translations = {
                 name: 'Claude Package',
                 price: '₺800/month',
             },
+            gemini: {
+                name: 'Gemini AI Pro',
+                price: '₺600/year',
+                badge: 'Yeni',
+            },
             cta: 'Tüm paketleri incele',
         },
         pricing: {

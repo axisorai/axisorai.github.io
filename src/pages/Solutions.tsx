@@ -29,6 +29,13 @@ const Solutions = () => {
             icon: <ClaudeIcon />,
             price: t('portfolio.technologies.claude.price'),
         },
+        {
+            name: t('portfolio.technologies.gemini.name'),
+            models: ["Gemini Pro 2.0", "Gemini Advanced", "1.5 Pro Deep Research"],
+            icon: <GeminiIcon />,
+            price: t('portfolio.technologies.gemini.price'),
+            badge: t('portfolio.technologies.gemini.badge'),
+        },
     ];
 
     return (

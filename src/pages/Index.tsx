@@ -5,6 +5,7 @@ import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import OpenAIIcon from "@/components/icons/OpenAIIcon";
 import ClaudeIcon from "@/components/icons/ClaudeIcon";
+import GeminiIcon from "@/components/icons/GeminiIcon";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { LanguageContext } from "@/contexts/LanguageContext";
@@ -28,6 +29,13 @@ const Index = () => {
             models: ["Claude Sonnet 4.5", "Opus 4.5 Thinking"],
             icon: <ClaudeIcon />,
             price: t('portfolio.technologies.claude.price'),
+        },
+        {
+            name: t('portfolio.technologies.gemini.name'),
+            models: ["Gemini Pro 2.0", "Gemini Advanced", "1.5 Pro Deep Research"],
+            icon: <GeminiIcon />,
+            price: t('portfolio.technologies.gemini.price'),
+            badge: t('portfolio.technologies.gemini.badge'),
         },
     ];
 
