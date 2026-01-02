@@ -78,10 +78,10 @@ const WebDesignService = () => {
             <div className="container mx-auto">
                 {/* Header */}
                 <div className="text-center mb-12 md:mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
+                    <h2 className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg mb-4">
                         {t('webDesign.title')}
                     </h2>
-                    <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
+                    <p className="text-lg md:text-xl text-gray-200 font-medium drop-shadow-md max-w-2xl mx-auto">
                         {t('webDesign.subtitle')}
                     </p>
                 </div>
