@@ -13,8 +13,8 @@ const TechCard = ({ name, models, icon, price, badge, originalPrice, savingsPerc
     return (
         <div className="glass-card p-6 transition-all duration-300 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10 group bg-black/60 backdrop-blur-md border border-white/10 relative">
             {badge && (
-                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-green-400 to-emerald-500 text-white text-base font-extrabold px-5 py-2 rounded-full shadow-2xl animate-pulse border-2 border-white/30">
-                    {badge}
+                <div className="absolute -top-5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-green-500 to-emerald-400 text-black text-lg font-black px-8 py-2.5 rounded-full shadow-2xl border-4 border-white z-10">
+                    🆕 {badge}
                 </div>
             )}
             <div className="flex items-center gap-3 mb-4">
