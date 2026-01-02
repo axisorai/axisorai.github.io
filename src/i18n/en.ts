@@ -9,6 +9,7 @@ export const en: Translations = {
     nav: {
         products: 'Packages',
         solutions: 'Solutions',
+        services: 'Services',
         method: 'Method',
         about: 'About',
         contact: 'Contact',

@@ -7,8 +7,7 @@ import { LanguageToggle } from '@/components/LanguageToggle';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 
 const navLinks = [
-  { name: 'products', href: '/packages' },
-  { name: 'solutions', href: '/solutions' },
+  { name: 'services', href: '/solutions' },
   { name: 'contact', href: '/contact' },
 ];
 
@@ -78,7 +77,7 @@ export function Navbar() {
             ))}
             <LanguageToggle />
             <Button size="sm" asChild>
-              <Link to="/packages">
+              <Link to="/solutions">
                 {t('nav.getStarted')}
               </Link>
             </Button>
@@ -113,7 +112,7 @@ export function Navbar() {
               </div>
               <Button className="mt-2" asChild>
                 <Link
-                  to="/packages"
+                  to="/solutions"
                   onClick={() => setIsOpen(false)}
                 >
                   {t('nav.getStarted')}

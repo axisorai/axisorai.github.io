@@ -8,6 +8,7 @@ export interface Translations {
   nav: {
     products: string;
     solutions: string;
+    services: string;
     method: string;
     about: string;
     contact: string;

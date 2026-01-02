@@ -75,7 +75,7 @@ const Index = () => {
                                 to="/solutions"
                                 className="group inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-primary via-purple-600 to-pink-600 rounded-xl hover:opacity-90 transition-all shadow-2xl shadow-primary/30 hover:shadow-primary/50 hover:scale-105"
                             >
-                                Çözümleri Gör
+                                Hizmetleri Gör
                                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </Link>
                             <Link

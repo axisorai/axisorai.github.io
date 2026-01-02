@@ -9,6 +9,7 @@ export const tr: Translations = {
     nav: {
         products: 'Paketler',
         solutions: 'Çözümler',
+        services: 'Hizmetler',
         method: 'Yöntem',
         about: 'Hakkımızda',
         contact: 'İletişim',
