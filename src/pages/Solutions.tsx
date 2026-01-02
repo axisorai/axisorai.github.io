@@ -41,10 +41,10 @@ const Solutions = () => {
                 {/* Hero Section */}
                 <section className="py-12 md:py-20 px-4 md:px-6">
                     <div className="container mx-auto text-center">
-                        <h1 className="hero-title text-3xl md:text-5xl lg:text-6xl font-semibold text-foreground mb-3 md:mb-4 leading-tight tracking-tight">
+                        <h1 className="hero-title text-3xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-lg mb-3 md:mb-4 leading-tight tracking-tight">
                             AI <span className="text-gradient">{t('nav.solutions')}</span>
                         </h1>
-                        <p className="hero-subtitle text-base md:text-xl text-muted-foreground/80 max-w-xl mx-auto leading-relaxed px-2">
+                        <p className="hero-subtitle text-base md:text-xl text-gray-200 font-medium drop-shadow-md max-w-xl mx-auto leading-relaxed px-2">
                             {t('portfolio.hero.subtitle')}
                         </p>
                     </div>
@@ -53,7 +53,7 @@ const Solutions = () => {
                 {/* Technologies Section */}
                 <section className="py-8 md:py-12 px-4 md:px-6">
                     <div className="container mx-auto max-w-4xl">
-                        <p className="section-label text-center text-[10px] md:text-xs text-muted-foreground/60 uppercase tracking-[0.2em] mb-6 md:mb-10">
+                        <p className="section-label text-center text-[10px] md:text-xs text-gray-300 font-semibold uppercase tracking-[0.2em] mb-6 md:mb-10">
                             {t('portfolio.technologies.label')}
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
