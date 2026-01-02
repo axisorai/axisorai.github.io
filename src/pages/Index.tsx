@@ -3,7 +3,6 @@ import PricingCard from "@/components/PricingCard";
 import WebDesignService from "@/components/WebDesignService";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
-import { ShaderAnimation } from "@/components/ui/shader-animation";
 import OpenAIIcon from "@/components/icons/OpenAIIcon";
 import GeminiIcon from "@/components/icons/GeminiIcon";
 import ClaudeIcon from "@/components/icons/ClaudeIcon";
@@ -87,21 +86,6 @@ const Index = () => {
                             >
                                 {t('hero.ctaSecondary')}
                             </Link>
-                        </div>
-                    </div>
-                </section>
-
-                {/* Shader Animation Section */}
-                <section className="py-8 md:py-16 px-4 md:px-6">
-                    <div className="container mx-auto max-w-6xl">
-                        <div className="relative flex h-[500px] md:h-[650px] w-full flex-col items-center justify-center overflow-hidden rounded-xl border bg-background shadow-2xl">
-                            <ShaderAnimation />
-                            <span className="absolute pointer-events-none z-10 text-center text-4xl md:text-7xl leading-none font-bold tracking-tighter whitespace-pre-wrap text-white drop-shadow-2xl">
-                                axisorai
-                            </span>
-                            <span className="absolute bottom-8 pointer-events-none z-10 text-center text-lg md:text-2xl leading-none font-semibold tracking-tight text-white/90 drop-shadow-lg">
-                                Yapay Zeka ile Geleceği Şekillendirin
-                            </span>
                         </div>
                     </div>
                 </section>

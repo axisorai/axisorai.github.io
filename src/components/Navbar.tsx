@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { ShaderLogo } from '@/components/ui/shader-logo';
 import { useTranslation } from '@/hooks/useTranslation';
 import { LanguageToggle } from '@/components/LanguageToggle';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
@@ -59,8 +60,9 @@ export function Navbar() {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold gradient-text">
-            axisorai
+          <Link to="/" className="flex items-center gap-2">
+            <ShaderLogo size={36} className="rounded-md" />
+            <span className="text-xl font-bold text-foreground">axisorai</span>
           </Link>
 
           {/* Desktop Navigation */}
