@@ -301,7 +301,7 @@ export const tr: Translations = {
             },
             gemini: {
                 name: 'Gemini AI Pro',
-                price: '₺600/year',
+                price: '₺850/year',
                 badge: 'Yeni',
             },
             cta: 'Tüm paketleri incele',
