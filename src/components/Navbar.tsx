@@ -71,12 +71,12 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.href}
-                className="text-muted-foreground hover:text-foreground transition-colors duration-200 text-sm font-medium cursor-pointer"
+                className="text-white hover:text-cyan-400 transition-colors duration-200 text-base font-semibold cursor-pointer drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]"
               >
                 {t(`nav.${link.name}`)}
               </Link>
@@ -107,7 +107,7 @@ export function Navbar() {
                 <Link
                   key={link.name}
                   to={link.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors py-2 text-lg cursor-pointer"
+                  className="text-white hover:text-cyan-400 transition-colors py-2 text-xl font-semibold cursor-pointer"
                   onClick={() => setIsOpen(false)}
                 >
                   {t(`nav.${link.name}`)}
