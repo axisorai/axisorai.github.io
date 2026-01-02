@@ -102,11 +102,11 @@ const Index = () => {
                             <p className="text-xs md:text-sm text-primary uppercase tracking-[0.3em] mb-4 font-semibold">
                                 {t('portfolio.technologies.label')}
                             </p>
-                            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                            <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg mb-4">
                                 AI Paketlerimiz
                             </h2>
-                            <p className="text-muted-foreground/70 max-w-xl mx-auto">
-                                En güncel yapay zeka modellerine uygun fiyatlarla erişin
+                            <p className="text-lg font-medium text-gray-200 drop-shadow-md max-w-xl mx-auto">
+                                {t('portfolio.technologies.subtitle')}
                             </p>
                         </div>
                         

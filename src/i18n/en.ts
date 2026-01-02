@@ -287,6 +287,7 @@ export const en: Translations = {
         },
         technologies: {
             label: 'Supported technologies',
+            subtitle: 'Access the latest AI models at affordable prices',
         },
         pricing: {
             monthly: {

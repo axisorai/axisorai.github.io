@@ -287,6 +287,7 @@ export const tr: Translations = {
         },
         technologies: {
             label: 'Desteklenen teknolojiler',
+            subtitle: 'En güncel yapay zeka modellerine uygun fiyatlarla erişin',
         },
         pricing: {
             monthly: {
