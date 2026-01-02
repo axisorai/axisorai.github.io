@@ -21,6 +21,7 @@ export const tr: Translations = {
         subtitle: 'ChatGPT, Claude ve Gemini tabanlı çözümlerle yazın, araştırın ve üretin.',
         ctaPrimary: 'Paketleri Gör',
         ctaSecondary: 'İletişime Geç',
+        ctaServices: 'Hizmetleri Gör',
         disclaimer: 'Gösterilen AI modelleri, axisorai paketlerinin desteklediği teknolojileri temsil eder.',
     },
 

@@ -21,6 +21,7 @@ export const en: Translations = {
         subtitle: 'Write, research, and produce faster with solutions built on ChatGPT, Claude, and Gemini.',
         ctaPrimary: 'View Packages',
         ctaSecondary: 'Contact Us',
+        ctaServices: 'View Services',
         disclaimer: 'Displayed AI models represent technologies supported by axisorai bundles.',
     },
 
