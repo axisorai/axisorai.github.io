@@ -35,6 +35,8 @@ const Index = () => {
             models: ["Gemini Pro 2.0", "Gemini Advanced", "1.5 Pro Deep Research"],
             icon: <GeminiIcon />,
             price: t('portfolio.technologies.gemini.price'),
+            originalPrice: t('portfolio.technologies.gemini.originalPrice'),
+            savingsPercent: t('portfolio.technologies.gemini.savingsPercent'),
             badge: t('portfolio.technologies.gemini.badge'),
         },
     ];

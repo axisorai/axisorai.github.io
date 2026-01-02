@@ -302,6 +302,8 @@ export const en: Translations = {
             gemini: {
                 name: 'Gemini AI Pro',
                 price: '₺850/year',
+                originalPrice: '₺8,639',
+                savingsPercent: '90%',
                 badge: 'Brand New',
             },
             cta: 'View all packages',
