@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ShaderLogo } from '@/components/ui/shader-logo';
+import { MorphingText } from '@/components/ui/liquid-text';
 import { useTranslation } from '@/hooks/useTranslation';
 import { LanguageToggle } from '@/components/LanguageToggle';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
@@ -10,6 +11,8 @@ const navLinks = [
   { name: 'services', href: '/solutions' },
   { name: 'contact', href: '/contact' },
 ];
+
+const brandTexts = ['axisorai', 'AI', 'Web', 'axisorai'];
 
 export function Navbar() {
   const { t } = useTranslation();
@@ -61,7 +64,10 @@ export function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <ShaderLogo size={36} className="rounded-md" />
-            <span className="text-xl font-bold text-foreground">axisorai</span>
+            <MorphingText 
+              texts={brandTexts} 
+              className="h-8 w-24 text-[16pt] md:text-[18pt] lg:text-[20pt] text-foreground"
+            />
           </Link>
 
           {/* Desktop Navigation */}
