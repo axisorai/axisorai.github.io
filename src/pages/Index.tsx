@@ -145,11 +145,11 @@ const Index = () => {
                         {/* CTA to packages */}
                         <div className="text-center mt-10">
                             <Link
-                                to="/packages"
-                                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold transition-colors"
+                                to="/solutions"
+                                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 text-lg font-bold transition-colors"
                             >
                                 {t('portfolio.technologies.cta')}
-                                <ArrowRight className="w-4 h-4" />
+                                <ArrowRight className="w-5 h-5" />
                             </Link>
                         </div>
                     </div>
