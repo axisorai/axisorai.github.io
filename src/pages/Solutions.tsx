@@ -51,7 +51,7 @@ const Solutions = () => {
                 </section>
 
                 {/* Technologies Section */}
-                <section className="py-8 md:py-16 px-4 md:px-6">
+                <section className="py-8 md:py-12 px-4 md:px-6">
                     <div className="container mx-auto max-w-4xl">
                         <p className="section-label text-center text-[10px] md:text-xs text-muted-foreground/60 uppercase tracking-[0.2em] mb-6 md:mb-10">
                             {t('portfolio.technologies.label')}
@@ -70,45 +70,7 @@ const Solutions = () => {
                     </div>
                 </section>
 
-                {/* AI Pricing Section */}
-                <section className="py-10 md:py-20 px-4 md:px-6">
-                    <div className="container mx-auto max-w-3xl">
-                        <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
-                            AI Paket Fiyatları
-                        </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
-                            {/* ChatGPT Package */}
-                            <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                                <PricingCard
-                                    title="ChatGPT Paketi"
-                                    price="₺800"
-                                    period="/ay"
-                                    description={[
-                                        "GPT-5.2, GPT-5.2 Thinking, GPT-5.2 Pro, GPT-5 Thinking Mini",
-                                        "Aylık abonelik",
-                                        "Kendi hesabınız",
-                                    ]}
-                                />
-                            </div>
-
-                            {/* Claude Package */}
-                            <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
-                                <PricingCard
-                                    title="Claude Paketi"
-                                    price="₺800"
-                                    period="/ay"
-                                    description={[
-                                        "Claude Sonnet 4.5 + Opus 4.5 Thinking",
-                                        "Aylık abonelik",
-                                        "Kendi hesabınız",
-                                    ]}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* Web Design Service Section */}
+                {/* Web Design Service Section - immediately after technologies */}
                 <WebDesignService />
 
                 {/* Features/Benefits Section */}
