@@ -36,15 +36,15 @@ const Index = () => {
             {/* Ethereal Three.js Background */}
             <EtherealHero />
 
-            {/* Background glow effects */}
-            <div className="absolute inset-0 pointer-events-none z-[1]">
+            {/* Background glow effects - fixed to follow scroll */}
+            <div className="fixed inset-0 pointer-events-none z-[1]">
                 <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/15 rounded-full blur-[120px] animate-glow-pulse" />
                 <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-secondary/15 rounded-full blur-[100px] animate-glow-pulse" style={{ animationDelay: '2s' }} />
                 <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-purple-500/10 rounded-full blur-[80px] animate-glow-pulse" style={{ animationDelay: '4s' }} />
             </div>
 
-            {/* Subtle grid overlay */}
-            <div className="absolute inset-0 subtle-grid opacity-20 pointer-events-none z-[1]" />
+            {/* Subtle grid overlay - fixed */}
+            <div className="fixed inset-0 subtle-grid opacity-20 pointer-events-none z-[1]" />
 
             <Navbar />
 

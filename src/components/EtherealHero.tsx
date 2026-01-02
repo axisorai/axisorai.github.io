@@ -230,7 +230,7 @@ export const EtherealHero = () => {
   return (
     <div 
       ref={containerRef} 
-      className="absolute inset-0 z-0"
+      className="fixed inset-0 z-0"
       style={{ 
         background: 'radial-gradient(ellipse at center, rgba(99, 102, 241, 0.15) 0%, rgba(0, 0, 0, 0) 70%)'
       }}
