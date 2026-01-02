@@ -31,7 +31,7 @@ const Solutions = () => {
         },
         {
             name: t('portfolio.technologies.gemini.name'),
-            models: ["Gemini Pro 2.0", "Gemini Advanced", "3.5 Pro Deep Research"],
+            models: ["Gemini 3.5 Pro", "Gemini 3.5 Flash", "3.5 Pro Deep Research"],
             icon: <GeminiIcon />,
             price: t('portfolio.technologies.gemini.price'),
             originalPrice: t('portfolio.technologies.gemini.originalPrice'),
