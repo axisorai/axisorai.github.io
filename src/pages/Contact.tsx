@@ -259,6 +259,38 @@ ${formData.message}`;
                                     </a>
                                 </div>
                             </div>
+
+                            {/* Crypto Payments */}
+                            <div className="mt-8 pt-8 border-t border-border/50">
+                                <div className="flex items-center gap-3 mb-4">
+                                    <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-orange-500/20 to-yellow-500/20 flex items-center justify-center">
+                                        <span className="text-2xl">₿</span>
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg font-semibold text-foreground">
+                                            {t('contact.crypto.title')}
+                                        </h3>
+                                        <p className="text-sm text-muted-foreground">
+                                            {t('contact.crypto.subtitle')}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="bg-muted/30 rounded-xl p-4 border border-border/50">
+                                    <p className="text-sm text-muted-foreground mb-3">{t('contact.crypto.accepted')}</p>
+                                    <div className="flex flex-wrap gap-3">
+                                        <span className="inline-flex items-center gap-2 px-3 py-2 bg-orange-500/10 text-orange-400 rounded-lg text-sm font-medium border border-orange-500/20">
+                                            <span className="text-lg">₿</span> {t('contact.crypto.btc')}
+                                        </span>
+                                        <span className="inline-flex items-center gap-2 px-3 py-2 bg-blue-500/10 text-blue-400 rounded-lg text-sm font-medium border border-blue-500/20">
+                                            <span className="text-lg">Ξ</span> {t('contact.crypto.eth')}
+                                        </span>
+                                        <span className="inline-flex items-center gap-2 px-3 py-2 bg-green-500/10 text-green-400 rounded-lg text-sm font-medium border border-green-500/20">
+                                            <span className="text-lg">$</span> {t('contact.crypto.usdt')}
+                                        </span>
+                                    </div>
+                                    <p className="text-xs text-muted-foreground/70 mt-3">{t('contact.crypto.note')}</p>
+                                </div>
+                            </div>
                         </div>
 
                         {/* Additional Info */}

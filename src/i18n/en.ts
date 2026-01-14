@@ -159,6 +159,15 @@ export const en: Translations = {
             mailto: 'celebifinans@proton.me',
             microtext: 'Delivery: celebifinans@proton.me',
         },
+        crypto: {
+            title: 'Crypto Payments',
+            subtitle: 'We accept cryptocurrency payments',
+            accepted: 'Accepted Cryptocurrencies',
+            btc: 'Bitcoin (BTC)',
+            eth: 'Ethereum (ETH)',
+            usdt: 'Tether (USDT)',
+            note: 'Contact us for wallet addresses',
+        },
     },
 
     footer: {

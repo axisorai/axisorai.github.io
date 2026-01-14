@@ -159,6 +159,15 @@ export const tr: Translations = {
             mailto: 'celebifinans@proton.me',
             microtext: 'Gönderimler: celebifinans@proton.me',
         },
+        crypto: {
+            title: 'Kripto Ödemeler',
+            subtitle: 'Kripto para ile ödeme kabul ediyoruz',
+            accepted: 'Kabul Edilen Kripto Paralar',
+            btc: 'Bitcoin (BTC)',
+            eth: 'Ethereum (ETH)',
+            usdt: 'Tether (USDT)',
+            note: 'Cüzdan adresleri için bizimle iletişime geçin',
+        },
     },
 
     footer: {
