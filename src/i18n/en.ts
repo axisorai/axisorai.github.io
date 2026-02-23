@@ -316,7 +316,7 @@ export const en: Translations = {
             },
             gemini: {
                 name: 'Gemini AI Pro',
-                price: '$30/year',
+                price: '$33/year',
                 originalPrice: '$180',
                 savingsPercent: '90%',
                 savingsText: 'Savings',
