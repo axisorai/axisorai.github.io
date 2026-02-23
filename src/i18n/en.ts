@@ -308,15 +308,15 @@ export const en: Translations = {
             title: 'AI Packages',
             chatgpt: {
                 name: 'ChatGPT Package',
-                price: '$22/month',
+                price: '$30/month',
             },
             claude: {
                 name: 'Claude Package',
-                price: '$22/month',
+                price: '$30/month',
             },
             gemini: {
                 name: 'Gemini AI Pro',
-                price: '$22/year',
+                price: '$30/year',
                 originalPrice: '$180',
                 savingsPercent: '90%',
                 savingsText: 'Savings',

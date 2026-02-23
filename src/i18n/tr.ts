@@ -308,15 +308,15 @@ export const tr: Translations = {
             title: 'AI Paketlerimiz',
             chatgpt: {
                 name: 'ChatGPT Package',
-                price: '₺1.250/ay',
+                price: '$30/ay',
             },
             claude: {
                 name: 'Claude Package',
-                price: '₺1.350/ay',
+                price: '$30/ay',
             },
             gemini: {
                 name: 'Gemini AI Pro',
-                price: '₺1.400/yıl',
+                price: '$30/yıl',
                 originalPrice: '₺14.000',
                 savingsPercent: '%90',
                 savingsText: 'Tasarruf',
