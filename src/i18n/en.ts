@@ -306,16 +306,16 @@ export const en: Translations = {
             title: 'AI Packages',
             chatgpt: {
                 name: 'ChatGPT Package',
-                price: '$18/month',
+                price: '₺1.250/month',
             },
             claude: {
                 name: 'Claude Package',
-                price: '$18/month',
+                price: '₺1.350/month',
             },
             gemini: {
                 name: 'Gemini AI Pro',
-                price: '$18/year',
-                originalPrice: '$180',
+                price: '₺1.400/year',
+                originalPrice: '₺14.000',
                 savingsPercent: '90%',
                 savingsText: 'Savings',
                 badge: 'Brand New',
@@ -327,7 +327,7 @@ export const en: Translations = {
             title: 'Choose Your Plan',
             monthly: {
                 title: 'ChatGPT Package',
-                price: '$18',
+                price: '₺1.250',
                 period: 'month',
                 originalPrice: '$180',
                 savingsPercent: '90%',
@@ -338,7 +338,7 @@ export const en: Translations = {
             yearly: {
                 title: 'Claude Package',
                 subtitle: 'Premium Claude Models',
-                price: '$18',
+                price: '₺1.350',
                 period: 'month',
                 originalPrice: '$180',
                 savingsPercent: '90%',
