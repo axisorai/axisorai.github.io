@@ -16,14 +16,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-1 gap-8 mb-12">
           {/* Brand */}
           <div className="text-center">
-            <button 
+            <button
               type="button"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               className="text-2xl font-bold gradient-text"
             >
               axisorai
             </button>
-            
+
             {/* Social Links */}
             <div className="flex gap-6 mt-6 justify-center">
               {socialLinks.map((social) => (
@@ -51,6 +51,13 @@ export function Footer() {
                 className="inline-flex items-center gap-2 text-lg md:text-xl font-medium text-primary hover:text-primary/80 transition-colors"
               >
                 {t('footer.howWeOffer')} →
+              </Link>
+              <br />
+              <Link
+                to="/why-cheaper"
+                className="inline-flex items-center gap-2 text-lg md:text-xl font-medium text-primary hover:text-primary/80 transition-colors mt-3"
+              >
+                {t('footer.whyCheaper')} →
               </Link>
             </div>
           </div>

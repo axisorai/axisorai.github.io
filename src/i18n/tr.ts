@@ -179,6 +179,7 @@ export const tr: Translations = {
         privacy: 'Gizlilik Politikası',
         terms: 'Hizmet Şartları',
         howWeOffer: 'Nasıl Ucuza Sunuyoruz?',
+        whyCheaper: 'Neden Daha Ucuz?',
         links: {
             about: 'Hakkımızda',
             blog: 'Blog',
@@ -396,6 +397,43 @@ export const tr: Translations = {
         cta: {
             title: 'Tasarruf Etmeye Hazır mısınız?',
             description: 'Premium AI\'ı uygun fiyatlarla kullanan binlerce kullanıcıya katılın.',
+            button: 'Paketleri Görüntüle',
+        },
+    },
+
+    whyCheaper: {
+        badge: 'Şeffaf Fiyatlandırma',
+        title: 'Neden Daha Ucuz?',
+        subtitle: 'Premium AI erişimini çok daha uygun fiyata sunuyoruz. Bunu mümkün kılan tek önemli fark nedir?',
+        keyMessage: {
+            title: 'Konuşmalar Her Ay Siliniyor',
+            description: 'En büyük fiyat avantajımız basit bir politikadan geliyor: tüm konuşma geçmişi her ayın sonunda otomatik olarak siliniyor. Bu sayede altyapı maliyetlerimizi düşük tutarak tasarrufu doğrudan size yansıtıyoruz — siz ise en güçlü AI modellerine kesintisiz tam erişim elde ediyorsunuz.',
+        },
+        reasons: {
+            reason1: {
+                title: 'Aylık Konuşma Sıfırlaması',
+                description: 'Her ay sonunda konuşma geçmişiniz temizlenir. Bu, temel maliyet düşürme mekanizmamızdır — daha düşük depolama ve veri saklama maliyetleri, size daha düşük fiyat olarak yansır.',
+            },
+            reason2: {
+                title: 'Düşük Altyapı Maliyeti',
+                description: 'Uzun vadeli konuşma günlükleri tutmayarak sunucu ve depolama giderlerimizi önemli ölçüde azaltıyoruz. Bu sayede AI erişimini piyasa fiyatının %90\'una varan indirimle sunabiliyoruz.',
+            },
+            reason3: {
+                title: 'Her Zaman Tam Model Erişimi',
+                description: 'Aylık sıfırlama, kullanabileceğiniz modelleri kısıtlamaz. GPT-5, Claude Sonnet, Gemini Pro ve daha fazlasına tam erişiminiz devam eder — sadece kalıcı geçmiş olmadan.',
+            },
+            reason4: {
+                title: 'Tasarruf Doğrudan Size Yansır',
+                description: 'Azalttığımız her maliyet, abonelik fiyatınıza yansır. Gizli kar marjı yok, sürpriz ödeme yok. Sadece dürüst ve uygun fiyatlı AI erişimi.',
+            },
+        },
+        tradeoff: {
+            title: 'Tek Fark Bu',
+            description: 'Çok daha düşük fiyatlar karşılığında konuşmalarınız ayda bir kez sıfırlanır. Konuşma geçmişi iş akışınız için kritikse, sıfırlamadan önce önemli konuşmalarınızı dışa aktarabilirsiniz. Çoğu kullanıcı için bu, değer verilen bir tercih olmaktadır.',
+        },
+        cta: {
+            title: 'AI\'da Tasarruf Etmeye Hazır mısınız?',
+            description: 'Hemen başlayın ve mantıklı bir fiyatla premium AI erişiminin keyfini çıkarın.',
             button: 'Paketleri Görüntüle',
         },
     },

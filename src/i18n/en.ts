@@ -179,6 +179,7 @@ export const en: Translations = {
         privacy: 'Privacy Policy',
         terms: 'Terms of Service',
         howWeOffer: 'How We Offer Affordably?',
+        whyCheaper: 'Why Cheaper?',
         links: {
             about: 'About',
             blog: 'Blog',
@@ -396,6 +397,43 @@ export const en: Translations = {
         cta: {
             title: 'Ready to Start Saving?',
             description: 'Join thousands of users already enjoying premium AI at affordable prices.',
+            button: 'View Packages',
+        },
+    },
+
+    whyCheaper: {
+        badge: 'Transparent Pricing',
+        title: 'Why Are We Cheaper?',
+        subtitle: 'We offer premium AI access at a fraction of the cost. Here is the one key trade-off that makes it possible.',
+        keyMessage: {
+            title: 'Conversations Are Deleted Monthly',
+            description: 'Our biggest pricing advantage comes from one simple policy: all conversation history is automatically deleted at the end of each month. This keeps our infrastructure costs low and allows us to pass the savings directly to you — while you still get full, uninterrupted access to the most powerful AI models available.',
+        },
+        reasons: {
+            reason1: {
+                title: 'Monthly Conversation Reset',
+                description: 'Every month, your conversation history is wiped clean. This is our primary cost-saving mechanism — lower storage and data retention costs mean lower prices for you.',
+            },
+            reason2: {
+                title: 'Lower Infrastructure Costs',
+                description: 'By not maintaining long-term conversation logs, we significantly reduce our server and storage overhead, enabling us to offer AI access at up to 90% below retail.',
+            },
+            reason3: {
+                title: 'Full Model Access, Always',
+                description: 'The monthly reset does not limit which models you can use. You still get full access to GPT-5, Claude Sonnet, Gemini Pro and more — just without persistent history.',
+            },
+            reason4: {
+                title: 'Savings Passed Directly to You',
+                description: 'Every cost we cut is reflected in your subscription price. No hidden markups, no surprise fees. Just honest, affordable AI access.',
+            },
+        },
+        tradeoff: {
+            title: 'The One Trade-Off',
+            description: 'In exchange for significantly lower prices, your conversations are reset once a month. If conversation history is critical for your workflow, you can always export your important exchanges before the reset. For most users, this is a worthwhile trade.',
+        },
+        cta: {
+            title: 'Ready to Save on AI?',
+            description: 'Get started today and enjoy premium AI access at a price that makes sense.',
             button: 'View Packages',
         },
     },

@@ -135,6 +135,7 @@ export interface Translations {
     privacy: string;
     terms: string;
     howWeOffer: string;
+    whyCheaper: string;
     links: {
       about: string;
       blog: string;
@@ -243,5 +244,38 @@ export interface Translations {
   };
   trustedBy: {
     title: string;
+  };
+  howWeOffer: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    stepLabel: string;
+    keyMessage: { title: string; description: string };
+    steps: {
+      step1: { title: string; description: string };
+      step2: { title: string; description: string };
+      step3: { title: string; description: string };
+      step4: { title: string; description: string };
+    };
+    benefitsTitle: string;
+    benefits: {
+      benefit1: { title: string; description: string };
+      benefit2: { title: string; description: string };
+    };
+    cta: { title: string; description: string; button: string };
+  };
+  whyCheaper: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    keyMessage: { title: string; description: string };
+    reasons: {
+      reason1: { title: string; description: string };
+      reason2: { title: string; description: string };
+      reason3: { title: string; description: string };
+      reason4: { title: string; description: string };
+    };
+    tradeoff: { title: string; description: string };
+    cta: { title: string; description: string; button: string };
   };
 }
