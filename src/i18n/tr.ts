@@ -312,7 +312,7 @@ export const tr: Translations = {
             },
             claude: {
                 name: 'Claude Package',
-                price: '₺1.350/ay',
+                price: '₺1.400/ay',
             },
             gemini: {
                 name: 'Gemini AI Pro',
@@ -340,7 +340,7 @@ export const tr: Translations = {
             yearly: {
                 title: 'Claude Package',
                 subtitle: 'Premium Claude Modelleri',
-                price: '₺1.350',
+                price: '₺1.400',
                 period: 'ay',
                 originalPrice: '₺8.000',
                 savingsPercent: '%90',

@@ -312,7 +312,7 @@ export const en: Translations = {
             },
             claude: {
                 name: 'Claude Package',
-                price: '$30/month',
+                price: '$32/month',
             },
             gemini: {
                 name: 'Gemini AI Pro',
@@ -340,7 +340,7 @@ export const en: Translations = {
             yearly: {
                 title: 'Claude Package',
                 subtitle: 'Premium Claude Models',
-                price: '$30',
+                price: '$32',
                 period: 'month',
                 originalPrice: '$180',
                 savingsPercent: '90%',
