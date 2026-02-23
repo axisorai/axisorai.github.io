@@ -329,7 +329,7 @@ export const tr: Translations = {
             title: 'Size Uygun Planı Seçin',
             monthly: {
                 title: 'ChatGPT Package',
-                price: '₺1.250',
+                price: '$30',
                 period: 'ay',
                 originalPrice: '₺8.000',
                 savingsPercent: '%90',
@@ -340,7 +340,7 @@ export const tr: Translations = {
             yearly: {
                 title: 'Claude Package',
                 subtitle: 'Premium Claude Modelleri',
-                price: '₺1.350',
+                price: '$30',
                 period: 'ay',
                 originalPrice: '₺8.000',
                 savingsPercent: '%90',

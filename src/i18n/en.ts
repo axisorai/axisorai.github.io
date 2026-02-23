@@ -329,7 +329,7 @@ export const en: Translations = {
             title: 'Choose Your Plan',
             monthly: {
                 title: 'ChatGPT Package',
-                price: '$22',
+                price: '$30',
                 period: 'month',
                 originalPrice: '$180',
                 savingsPercent: '90%',
@@ -340,7 +340,7 @@ export const en: Translations = {
             yearly: {
                 title: 'Claude Package',
                 subtitle: 'Premium Claude Models',
-                price: '$22',
+                price: '$30',
                 period: 'month',
                 originalPrice: '$180',
                 savingsPercent: '90%',
