@@ -227,7 +227,7 @@ export const en: Translations = {
             domainIncluded: 'domain included',
             github: {
                 name: 'Starter Package',
-                price: '$75',
+                price: '₺5.000',
                 period: 'one-time',
                 feature1: 'GitHub domain (.github.io)',
                 feature2: 'Professional modern design',
@@ -237,7 +237,7 @@ export const en: Translations = {
             },
             custom: {
                 name: 'Professional Package',
-                price: '$105',
+                price: '₺8.500 + ₺1.000/month',
                 period: '12-month commitment',
                 feature1: 'Custom domain (.com or .com.tr)',
                 feature2: 'Premium hosting included',
@@ -245,7 +245,7 @@ export const en: Translations = {
                 feature4: 'Google Maps and form integration',
                 feature5: 'Advanced SEO and analytics',
                 feature6: '12 months maintenance & support',
-                pricing: 'Design: $105 (one-time)',
+                pricing: 'Design: ₺8.500 (one-time) + ₺1.000/month (12-month commitment)',
             },
         },
         cta: 'Get Quote',
