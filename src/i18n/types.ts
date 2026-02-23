@@ -19,6 +19,8 @@ export interface Translations {
     subtitle: string;
     ctaPrimary: string;
     ctaSecondary: string;
+    ctaServices: string;
+    ctaWhyCheaper: string;
     disclaimer: string;
   };
   products: {

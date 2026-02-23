@@ -22,6 +22,7 @@ export const en: Translations = {
         ctaPrimary: 'View Packages',
         ctaSecondary: 'Contact Us',
         ctaServices: 'View Services',
+        ctaWhyCheaper: 'Why Cheaper?',
         disclaimer: 'Displayed AI models represent technologies supported by axisorai bundles.',
     },
 

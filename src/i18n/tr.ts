@@ -22,6 +22,7 @@ export const tr: Translations = {
         ctaPrimary: 'Paketleri Gör',
         ctaSecondary: 'İletişime Geç',
         ctaServices: 'Hizmetleri Gör',
+        ctaWhyCheaper: 'Neden Ucuz?',
         disclaimer: 'Gösterilen AI modelleri, axisorai paketlerinin desteklediği teknolojileri temsil eder.',
     },
 

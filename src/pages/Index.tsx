@@ -67,20 +67,20 @@ const Index = () => {
                             <Sparkles className="w-3 h-3 text-cyan-400" />
                             <span className="text-xs text-cyan-300 font-medium">{t('portfolio.hero.badge')}</span>
                         </div>
-                        
+
                         <h1 className="hero-title text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight tracking-tight drop-shadow-2xl" style={{ textShadow: '0 0 30px rgba(0,0,0,0.8), 0 0 60px rgba(0,0,0,0.6)' }}>
                             <span className="block mb-1">{t('portfolio.hero.title')}</span>
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-gradient">
                                 {t('portfolio.hero.titleHighlight')}
                             </span>
                         </h1>
-                        
+
                         <p className="hero-subtitle text-sm md:text-base text-gray-200 max-w-lg mx-auto leading-relaxed px-2 mb-8" style={{ textShadow: '0 0 20px rgba(0,0,0,0.9)' }}>
                             {t('portfolio.hero.subtitle')}
                         </p>
-                        
+
                         {/* Hero CTA Buttons - smaller */}
-                        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                        <div className="flex flex-col sm:flex-row gap-3 justify-center flex-wrap">
                             <Link
                                 to="/solutions"
                                 className="group inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-gradient-to-r from-primary via-purple-600 to-pink-600 rounded-xl hover:opacity-90 transition-all shadow-2xl shadow-primary/30 hover:shadow-primary/50 hover:scale-105"
@@ -93,6 +93,12 @@ const Index = () => {
                                 className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white border border-white/40 rounded-xl hover:bg-white/10 hover:border-primary/50 transition-all backdrop-blur-md bg-black/30"
                             >
                                 {t('hero.ctaSecondary')}
+                            </Link>
+                            <Link
+                                to="/why-cheaper"
+                                className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-amber-300 border border-amber-400/40 rounded-xl hover:bg-amber-400/10 hover:border-amber-400/70 transition-all backdrop-blur-md bg-black/30"
+                            >
+                                {t('hero.ctaWhyCheaper')}
                             </Link>
                         </div>
 
@@ -119,7 +125,7 @@ const Index = () => {
                                 {t('portfolio.technologies.subtitle')}
                             </p>
                         </div>
-                        
+
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
                             {technologies.map((tech, index) => (
                                 <div
@@ -159,7 +165,7 @@ const Index = () => {
                                 </div>
                             ))}
                         </div>
-                        
+
                         {/* CTA to packages */}
                         <div className="text-center mt-10">
                             <Link
@@ -187,7 +193,7 @@ const Index = () => {
                                 {t('portfolio.pricing.title')}
                             </h2>
                         </div>
-                        
+
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
                             {/* Monthly Card */}
                             <div className="animate-fade-in order-2 md:order-1" style={{ animationDelay: '0.2s' }}>
