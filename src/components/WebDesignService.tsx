@@ -44,7 +44,7 @@ const WebDesignService = () => {
     const packages = [
         {
             name: t('webDesign.packages.github.name'),
-            price: '₺3.000',
+            price: '₺5.000',
             period: 'tek seferlik',
             domain: 'github.io',
             features: [
@@ -58,7 +58,7 @@ const WebDesignService = () => {
         },
         {
             name: t('webDesign.packages.custom.name'),
-            price: '₺4.000 + ₺1.000/ay',
+            price: '₺8.500 + ₺1.000/ay',
             period: '12 ay taahhüt',
             domain: '.com / .com.tr',
             features: [
