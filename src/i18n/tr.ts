@@ -308,15 +308,15 @@ export const tr: Translations = {
             title: 'AI Paketlerimiz',
             chatgpt: {
                 name: 'ChatGPT Package',
-                price: '$30/ay',
+                price: '₺1.250/ay',
             },
             claude: {
                 name: 'Claude Package',
-                price: '$30/ay',
+                price: '₺1.350/ay',
             },
             gemini: {
                 name: 'Gemini AI Pro',
-                price: '$30/yıl',
+                price: '₺1.400/yıl',
                 originalPrice: '₺14.000',
                 savingsPercent: '%90',
                 savingsText: 'Tasarruf',
@@ -329,7 +329,7 @@ export const tr: Translations = {
             title: 'Size Uygun Planı Seçin',
             monthly: {
                 title: 'ChatGPT Package',
-                price: '$30',
+                price: '₺1.250',
                 period: 'ay',
                 originalPrice: '₺8.000',
                 savingsPercent: '%90',
@@ -340,7 +340,7 @@ export const tr: Translations = {
             yearly: {
                 title: 'Claude Package',
                 subtitle: 'Premium Claude Modelleri',
-                price: '$30',
+                price: '₺1.350',
                 period: 'ay',
                 originalPrice: '₺8.000',
                 savingsPercent: '%90',
