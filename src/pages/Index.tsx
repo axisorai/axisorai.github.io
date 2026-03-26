@@ -60,7 +60,7 @@ const Index = () => {
 
             <main className="relative z-10 pt-24 pb-16">
                 {/* Hero Section - Inside the sphere */}
-                <section className="min-h-[60vh] flex items-center justify-center py-8 md:py-16 px-4 md:px-6">
+                <section className="flex flex-col items-center justify-center pt-8 pb-4 md:pt-12 md:pb-6 px-4 md:px-6">
                     <div className="container mx-auto text-center max-w-xl">
                         {/* Floating badge */}
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-6 rounded-full bg-black/40 border border-cyan-400/30 backdrop-blur-md animate-fade-in">
@@ -103,7 +103,7 @@ const Index = () => {
                         </div>
 
                         {/* Scroll indicator */}
-                        <div className="mt-6 md:mt-10 animate-bounce">
+                        <div className="mt-4 animate-bounce">
                             <div className="w-5 h-8 mx-auto rounded-full border-2 border-white/30 flex items-start justify-center p-1.5">
                                 <div className="w-1 h-2 bg-cyan-400 rounded-full animate-pulse" />
                             </div>
@@ -112,7 +112,7 @@ const Index = () => {
                 </section>
 
                 {/* Technologies Section - Redesigned */}
-                <section id="technologies" className="pt-4 pb-10 md:pt-6 md:pb-16 px-4 md:px-6">
+                <section id="technologies" className="pt-2 pb-10 md:pt-4 md:pb-16 px-4 md:px-6">
                     <div className="container mx-auto max-w-5xl">
                         <div className="text-center mb-6">
                             <p className="text-xs md:text-sm text-primary uppercase tracking-[0.3em] mb-2 font-semibold">
