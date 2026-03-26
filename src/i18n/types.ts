@@ -9,6 +9,7 @@ export interface Translations {
     products: string;
     solutions: string;
     services: string;
+    legal: string;
     method: string;
     about: string;
     contact: string;

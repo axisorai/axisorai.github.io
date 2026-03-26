@@ -64,7 +64,11 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 border-t border-border/50 text-center">
+        <div className="pt-8 border-t border-border/50 text-center flex flex-col sm:flex-row justify-center items-center gap-4">
+          <Link to="/legal" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+            {t('nav.legal')}
+          </Link>
+          <span className="hidden sm:inline text-muted-foreground/50">•</span>
           <p className="text-sm text-muted-foreground">
             {t('footer.copyright')}
           </p>

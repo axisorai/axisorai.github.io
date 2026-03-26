@@ -10,6 +10,7 @@ export const tr: Translations = {
         products: 'Paketler',
         solutions: 'Çözümler',
         services: 'Hizmetler',
+        legal: 'Hukuki Bilgilendirme',
         method: 'Yöntem',
         about: 'Hakkımızda',
         contact: 'İletişim',

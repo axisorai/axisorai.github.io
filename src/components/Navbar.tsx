@@ -9,6 +9,7 @@ import { useLocation, useNavigate, Link } from 'react-router-dom';
 
 const navLinks = [
   { name: 'services', href: '/solutions' },
+  { name: 'legal', href: '/legal' },
   { name: 'contact', href: '/contact' },
 ];
 

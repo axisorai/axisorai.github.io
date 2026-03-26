@@ -10,6 +10,7 @@ export const en: Translations = {
         products: 'Packages',
         solutions: 'Solutions',
         services: 'Services',
+        legal: 'Legal',
         method: 'Method',
         about: 'About',
         contact: 'Contact',

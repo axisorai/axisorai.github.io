@@ -167,7 +167,7 @@ const Index = () => {
                         </div>
 
                         {/* CTA to packages */}
-                        <div className="text-center mt-10">
+                        <div className="text-center mt-6">
                             <Link
                                 to="/solutions"
                                 className="inline-flex items-center gap-2 text-primary hover:text-primary/80 text-lg font-bold transition-colors"
@@ -183,7 +183,7 @@ const Index = () => {
                 <WebDesignService />
 
                 {/* Pricing Section - Redesigned */}
-                <section id="pricing" className="pt-4 pb-10 md:pt-8 md:pb-16 px-4 md:px-6">
+                <section id="pricing" className="pt-2 pb-10 md:pt-4 md:pb-16 px-4 md:px-6">
                     <div className="container mx-auto max-w-4xl">
                         <div className="text-center mb-6">
                             <p className="text-xs md:text-sm text-primary uppercase tracking-[0.3em] mb-2 font-semibold">
@@ -244,17 +244,10 @@ const Index = () => {
                     </div>
                 </section>
 
-                {/* Legal Disclaimer / Hukuki Bilgilendirme */}
-                <section className="py-12 px-4 md:px-6 border-t border-border/50 bg-background/50">
-                    <div className="container mx-auto max-w-4xl opacity-75 text-xs md:text-sm text-muted-foreground space-y-4 text-justify">
-                        <h3 className="font-bold text-sm md:text-base text-foreground mb-2">Hukuki Bilgilendirme</h3>
-                        <p>Bu internet sitesi, genel kamuya açık bir e-ticaret satış platformu olarak değil; tanıtım, ön bilgilendirme, ön talep toplama ve bireysel değerlendirme amacıyla kullanılmaktadır.</p>
-                        <p>Sitede yer alan açıklamalar, içerikler, paketler, örnek çalışmalar, fiyat göstergeleri, kapsam özetleri ve benzeri tüm bilgiler yalnızca genel bilgilendirme niteliğindedir. Bunlar tek başına bağlayıcı teklif, kesin kabul, otomatik sipariş onayı veya doğrudan satış taahhüdü oluşturmaz.</p>
-                        <p>Bu site üzerinden otomatik satış ilişkisi kurulmaz; sepet, anlık onay, tek taraflı kabul, otomatik ifa veya kendiliğinden kesinleşen bir mesafeli sözleşme mekanizması işletilmez. Her talep ayrıca incelenir ve uygun görülmesi halinde taraflar arasında ayrıca yazılı teyit ve açık mutabakat ile değerlendirilir.</p>
-                        <p>Sitede belirtilen tutarlar, aksi açıkça yazılı olarak teyit edilmedikçe, yalnızca referans, ön değerlendirme veya başlangıç seviyesi bilgilendirmesi niteliğindedir. Nihai kapsam, uygunluk, süre, teslim/ifa koşulları ve varsa uygulanacak bedel; talebin niteliğine göre ayrıca ve bireysel olarak belirlenir.</p>
-                        <p>Bu internet sitesinde yer alan hiçbir içerik, herhangi bir kişi bakımından hizmet sunma, talebi kabul etme, belirli bir sonucu garanti etme, sürekli erişim sağlama veya belirli bir koşulla işlem yapma zorunluluğu doğurmaz. Taleplerin değerlendirilip değerlendirilmemesi ve hangi kapsamda ele alınacağı tamamen ayrıca yapılacak incelemeye bağlıdır.</p>
-                        <p>Site içeriği, kapsamı, açıklamalar, referans bedeller, hizmet başlıkları ve erişim koşulları herhangi bir zamanda önceden bildirim yapılmaksızın değiştirilebilir, durdurulabilir veya kaldırılabilir.</p>
-                        <p className="font-medium">Emredici mevzuattan doğan ve uygulanması zorunlu olan hükümler saklıdır.</p>
+                {/* Legal Summary */}
+                <section className="py-6 px-4 md:px-6 border-t border-border/50 bg-background/50">
+                    <div className="container mx-auto text-center max-w-3xl opacity-70 text-xs md:text-sm text-muted-foreground">
+                        <p>Bu sitede yer alan içerik ve fiyat bilgileri yalnızca genel bilgilendirme amaçlıdır; bağlayıcı teklif, sipariş onayı veya kendiliğinden kesinleşen bir işlem niteliği taşımaz.</p>
                     </div>
                 </section>
             </main>

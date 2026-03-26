@@ -74,7 +74,7 @@ const WebDesignService = () => {
     ];
 
     return (
-        <section className="pt-4 pb-10 md:pt-6 md:pb-16 px-4 md:px-6">
+        <section className="pt-4 pb-4 md:pt-6 md:pb-8 px-4 md:px-6">
             <div className="container mx-auto">
                 {/* Header */}
                 <div className="text-center mb-6 md:mb-8">
