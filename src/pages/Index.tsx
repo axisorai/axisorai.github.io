@@ -243,6 +243,20 @@ const Index = () => {
                         </div>
                     </div>
                 </section>
+
+                {/* Legal Disclaimer / Hukuki Bilgilendirme */}
+                <section className="py-12 px-4 md:px-6 border-t border-border/50 bg-background/50">
+                    <div className="container mx-auto max-w-4xl opacity-75 text-xs md:text-sm text-muted-foreground space-y-4 text-justify">
+                        <h3 className="font-bold text-sm md:text-base text-foreground mb-2">Hukuki Bilgilendirme</h3>
+                        <p>Bu internet sitesi, genel kamuya açık bir e-ticaret satış platformu olarak değil; tanıtım, ön bilgilendirme, ön talep toplama ve bireysel değerlendirme amacıyla kullanılmaktadır.</p>
+                        <p>Sitede yer alan açıklamalar, içerikler, paketler, örnek çalışmalar, fiyat göstergeleri, kapsam özetleri ve benzeri tüm bilgiler yalnızca genel bilgilendirme niteliğindedir. Bunlar tek başına bağlayıcı teklif, kesin kabul, otomatik sipariş onayı veya doğrudan satış taahhüdü oluşturmaz.</p>
+                        <p>Bu site üzerinden otomatik satış ilişkisi kurulmaz; sepet, anlık onay, tek taraflı kabul, otomatik ifa veya kendiliğinden kesinleşen bir mesafeli sözleşme mekanizması işletilmez. Her talep ayrıca incelenir ve uygun görülmesi halinde taraflar arasında ayrıca yazılı teyit ve açık mutabakat ile değerlendirilir.</p>
+                        <p>Sitede belirtilen tutarlar, aksi açıkça yazılı olarak teyit edilmedikçe, yalnızca referans, ön değerlendirme veya başlangıç seviyesi bilgilendirmesi niteliğindedir. Nihai kapsam, uygunluk, süre, teslim/ifa koşulları ve varsa uygulanacak bedel; talebin niteliğine göre ayrıca ve bireysel olarak belirlenir.</p>
+                        <p>Bu internet sitesinde yer alan hiçbir içerik, herhangi bir kişi bakımından hizmet sunma, talebi kabul etme, belirli bir sonucu garanti etme, sürekli erişim sağlama veya belirli bir koşulla işlem yapma zorunluluğu doğurmaz. Taleplerin değerlendirilip değerlendirilmemesi ve hangi kapsamda ele alınacağı tamamen ayrıca yapılacak incelemeye bağlıdır.</p>
+                        <p>Site içeriği, kapsamı, açıklamalar, referans bedeller, hizmet başlıkları ve erişim koşulları herhangi bir zamanda önceden bildirim yapılmaksızın değiştirilebilir, durdurulabilir veya kaldırılabilir.</p>
+                        <p className="font-medium">Emredici mevzuattan doğan ve uygulanması zorunlu olan hükümler saklıdır.</p>
+                    </div>
+                </section>
             </main>
 
             <div id="footer">
