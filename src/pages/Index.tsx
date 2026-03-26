@@ -103,7 +103,7 @@ const Index = () => {
                         </div>
 
                         {/* Scroll indicator */}
-                        <div className="mt-10 animate-bounce">
+                        <div className="mt-6 md:mt-10 animate-bounce">
                             <div className="w-5 h-8 mx-auto rounded-full border-2 border-white/30 flex items-start justify-center p-1.5">
                                 <div className="w-1 h-2 bg-cyan-400 rounded-full animate-pulse" />
                             </div>
@@ -112,7 +112,7 @@ const Index = () => {
                 </section>
 
                 {/* Technologies Section - Redesigned */}
-                <section id="technologies" className="py-16 md:py-24 px-4 md:px-6">
+                <section id="technologies" className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 md:px-6">
                     <div className="container mx-auto max-w-5xl">
                         <div className="text-center mb-12">
                             <p className="text-xs md:text-sm text-primary uppercase tracking-[0.3em] mb-4 font-semibold">
