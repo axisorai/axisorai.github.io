@@ -74,10 +74,10 @@ const WebDesignService = () => {
     ];
 
     return (
-        <section className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 md:px-6">
+        <section className="pt-4 pb-10 md:pt-6 md:pb-16 px-4 md:px-6">
             <div className="container mx-auto">
                 {/* Header */}
-                <div className="text-center mb-8 md:mb-10">
+                <div className="text-center mb-6 md:mb-8">
                     <h2 className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg mb-2">
                         {t('webDesign.title')}
                     </h2>
@@ -87,7 +87,7 @@ const WebDesignService = () => {
                 </div>
 
                 {/* Services Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                     {services.map((service, index) => (
                         <div
                             key={index}
@@ -108,7 +108,7 @@ const WebDesignService = () => {
                 </div>
 
                 {/* Pricing Packages */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-6">
                     {packages.map((pkg, index) => (
                         <div
                             key={index}

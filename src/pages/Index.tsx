@@ -112,9 +112,9 @@ const Index = () => {
                 </section>
 
                 {/* Technologies Section - Redesigned */}
-                <section id="technologies" className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 md:px-6">
+                <section id="technologies" className="pt-4 pb-10 md:pt-6 md:pb-16 px-4 md:px-6">
                     <div className="container mx-auto max-w-5xl">
-                        <div className="text-center mb-8">
+                        <div className="text-center mb-6">
                             <p className="text-xs md:text-sm text-primary uppercase tracking-[0.3em] mb-2 font-semibold">
                                 {t('portfolio.technologies.label')}
                             </p>
@@ -183,9 +183,9 @@ const Index = () => {
                 <WebDesignService />
 
                 {/* Pricing Section - Redesigned */}
-                <section id="pricing" className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 md:px-6">
+                <section id="pricing" className="pt-4 pb-10 md:pt-8 md:pb-16 px-4 md:px-6">
                     <div className="container mx-auto max-w-4xl">
-                        <div className="text-center mb-8">
+                        <div className="text-center mb-6">
                             <p className="text-xs md:text-sm text-primary uppercase tracking-[0.3em] mb-2 font-semibold">
                                 {t('portfolio.pricing.label')}
                             </p>
