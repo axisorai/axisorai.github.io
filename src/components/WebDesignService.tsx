@@ -44,8 +44,8 @@ const WebDesignService = () => {
     const packages = [
         {
             name: t('webDesign.packages.github.name'),
-            price: '₺5.000',
-            period: 'tek seferlik',
+            price: t('webDesign.packages.github.price'),
+            period: t('webDesign.packages.github.period'),
             domain: 'github.io',
             features: [
                 t('webDesign.packages.github.feature1'),
@@ -58,8 +58,8 @@ const WebDesignService = () => {
         },
         {
             name: t('webDesign.packages.custom.name'),
-            price: '₺8.500 + ₺1.000/ay',
-            period: '12 ay taahhüt',
+            price: t('webDesign.packages.custom.price'),
+            period: t('webDesign.packages.custom.period'),
             domain: '.com / .com.tr',
             features: [
                 t('webDesign.packages.custom.feature1'),
@@ -74,11 +74,11 @@ const WebDesignService = () => {
     ];
 
     return (
-        <section className="py-16 md:py-24 px-4 md:px-6">
+        <section className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 md:px-6">
             <div className="container mx-auto">
                 {/* Header */}
-                <div className="text-center mb-12 md:mb-16">
-                    <h2 className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg mb-4">
+                <div className="text-center mb-8 md:mb-10">
+                    <h2 className="text-3xl md:text-5xl font-bold text-white drop-shadow-lg mb-2">
                         {t('webDesign.title')}
                     </h2>
                     <p className="text-lg md:text-xl text-gray-200 font-medium drop-shadow-md max-w-2xl mx-auto">
@@ -87,7 +87,7 @@ const WebDesignService = () => {
                 </div>
 
                 {/* Services Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
                     {services.map((service, index) => (
                         <div
                             key={index}
@@ -108,7 +108,7 @@ const WebDesignService = () => {
                 </div>
 
                 {/* Pricing Packages */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-8">
                     {packages.map((pkg, index) => (
                         <div
                             key={index}

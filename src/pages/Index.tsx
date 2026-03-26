@@ -114,11 +114,11 @@ const Index = () => {
                 {/* Technologies Section - Redesigned */}
                 <section id="technologies" className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 md:px-6">
                     <div className="container mx-auto max-w-5xl">
-                        <div className="text-center mb-12">
-                            <p className="text-xs md:text-sm text-primary uppercase tracking-[0.3em] mb-4 font-semibold">
+                        <div className="text-center mb-8">
+                            <p className="text-xs md:text-sm text-primary uppercase tracking-[0.3em] mb-2 font-semibold">
                                 {t('portfolio.technologies.label')}
                             </p>
-                            <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg mb-4">
+                            <h2 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg mb-2">
                                 {t('portfolio.technologies.title')}
                             </h2>
                             <p className="text-lg font-medium text-gray-200 drop-shadow-md max-w-xl mx-auto">
@@ -183,10 +183,10 @@ const Index = () => {
                 <WebDesignService />
 
                 {/* Pricing Section - Redesigned */}
-                <section id="pricing" className="py-16 md:py-24 px-4 md:px-6">
+                <section id="pricing" className="pt-8 pb-16 md:pt-12 md:pb-24 px-4 md:px-6">
                     <div className="container mx-auto max-w-4xl">
-                        <div className="text-center mb-12">
-                            <p className="text-xs md:text-sm text-primary uppercase tracking-[0.3em] mb-4 font-semibold">
+                        <div className="text-center mb-8">
+                            <p className="text-xs md:text-sm text-primary uppercase tracking-[0.3em] mb-2 font-semibold">
                                 {t('portfolio.pricing.label')}
                             </p>
                             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
