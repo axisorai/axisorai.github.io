@@ -118,6 +118,19 @@ const Legal = () => {
                             </p>
                         </section>
 
+                        <section className="space-y-4">
+                            <h2 className="text-xl md:text-2xl font-bold text-foreground tracking-tight pb-2 border-b border-border/30">9. Kullanıcı Sorumluluğu ve Girilen İçerikler</h2>
+                            <p>
+                                Site ve/veya hizmetler aracılığıyla kullanıcılar tarafından girilen, iletilen, paylaşılan veya üretilen her türlü metin, veri, bilgi, mesaj, komut (prompt) ve benzeri içeriklerden münhasıran ilgili kullanıcı sorumludur. Kullanıcıların yapay zeka araçları üzerinden oluşturdukları veya ilettikleri içerikler, yalnızca o kullanıcının kişisel tercih ve sorumluluğu dahilindedir.
+                            </p>
+                            <p>
+                                Site yönetimi; kullanıcıların girdiği, paylaştığı veya yapay zeka araçlarına ilettiği bilgilerin doğruluğundan, hukuka uygunluğundan, üçüncü kişilerin haklarını ihlal edip etmediğinden veya bu içeriklerin herhangi bir şekilde kullanılmasından doğabilecek sonuçlardan sorumlu tutulamaz. Kullanıcı, platform üzerinden gerçekleştirdiği tüm işlemlerin ve ilettiği tüm içeriklerin sorumluluğunun kendisine ait olduğunu kabul eder.
+                            </p>
+                            <p>
+                                Kullanıcılar; kişisel verilerin korunması mevzuatı, fikri mülkiyet hakları, kişilik hakları ve ilgili diğer yasal düzenlemeler kapsamında, üçüncü kişilere ait bilgileri izinsiz paylaşmamakla ve hukuka aykırı içerik oluşturmamakla yükümlüdür.
+                            </p>
+                        </section>
+
                         <div className="mt-16 pt-8 border-t border-border/50 text-center">
                             <p className="inline-flex items-center justify-center font-bold px-6 py-3 bg-secondary/30 rounded-xl text-primary border border-primary/20 shadow-inner">
                                 Emredici mevzuattan doğan ve uygulanması zorunlu olan hükümler saklıdır.
