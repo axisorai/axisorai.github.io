@@ -19,19 +19,19 @@ const Solutions = () => {
     const technologies = [
         {
             name: t('portfolio.technologies.chatgpt.name'),
-            models: ["GPT-5.2", "GPT-5.2 Thinking", "GPT-5.2 Pro", "GPT-5 Thinking Mini"],
+            models: ["GPT-5.4", "GPT-5.4 Thinking", "GPT-5.4 Pro", "GPT-5.4 Thinking Mini"],
             icon: <OpenAIIcon />,
             price: t('portfolio.technologies.chatgpt.price'),
         },
         {
             name: t('portfolio.technologies.claude.name'),
-            models: ["Claude Sonnet 4.5", "Opus 4.5 Thinking"],
+            models: ["Claude Sonnet 4.7", "Opus 4.7 Thinking"],
             icon: <ClaudeIcon />,
             price: t('portfolio.technologies.claude.price'),
         },
         {
             name: t('portfolio.technologies.gemini.name'),
-            models: ["Gemini 3.5 Pro", "Gemini 3.5 Flash", "3.5 Pro Deep Research"],
+            models: ["Gemini 3.1 Pro", "Gemini 3.1 Flash", "3.1 Pro Deep Research"],
             icon: <GeminiIcon />,
             price: t('portfolio.technologies.gemini.price'),
             originalPrice: t('portfolio.technologies.gemini.originalPrice'),
