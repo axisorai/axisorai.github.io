@@ -317,7 +317,7 @@ export const tr: Translations = {
             },
             gemini: {
                 name: 'Gemini AI Pro',
-                price: '₺400/ay',
+                price: '₺1.450/ay',
                 originalPrice: '₺14.000',
                 savingsPercent: '%90',
                 savingsText: 'Tasarruf',
